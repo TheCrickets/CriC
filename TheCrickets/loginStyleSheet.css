@@ -1,0 +1,60 @@
+/* CSS Document */
+nav {
+	margin: 0px 0px 0px;
+	position: relative;
+	width: 50%;
+	background-color: #34495e;
+	border-radius: 30px 0 0 30px;
+	font-size: 0;
+	float: right;
+}
+nav a {
+	padding-left: 40px;
+	padding-right: 40px;
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+	display: inline-block;
+	position: left;
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	color: white;
+	cursor: pointer;
+}
+
+nav a:hover
+{
+	background-color: #1abc9c;
+}
+
+nav a:hover#leftMostMenuItem
+{
+	background-color: #1abc9c;
+	border-radius: 30px 0 0 30px;
+}
+
+body {
+	font-size: 30px;
+	font-family: loginPageTextFont;
+	background: #2c3e50;
+}
+
+p {
+	color: aliceblue;
+}
+
+p#paragraphOne {
+	clear: both;
+}
+
+img#navBarImage {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+@font-face {
+	font-family: loginPageTextFont;
+	src: url(navBarTextFont.ttf);
+}
