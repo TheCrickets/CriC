@@ -1,60 +1,92 @@
 #loginContainer {
-    width: 528px;
-    height: 700px;
-    background-color: #ffffff;
-    padding-left: 58px; 
-  }
-
-  .Welcome {
-    height: 57px;
-    font-family: Roboto;
-    font-size: 48px;
-    color: #000000;
-    text-align: center;
-    margin-left: -164px;
-    margin-bottom: 160px;
-  }
-
-  #email {
-    height: 22px;
-    font-family: Roboto;
-    font-size: 18px;
-    color: #000000;
-  }
-
-  #password {
-    margin-top: 46px;
-    height: 22px;
-    font-family: Roboto;
-    font-size: 18px;
-    color: #000000;
-  }
-
-  .inputText {
-    height: 50px;
-    padding-left:20px; 
-    width: 410px;
-    opacity: 0.22;
-    background-color: #cccccc;
-    font-size: 18px;
-    font-weight: 500;
-    border: 1px solid rgba(0, 0, 0, 0.96);
-    color: black;
-  }
-
-#rememberContainer{
-    position: relative;
-    left: -5px;
-    top: 46px;
-    font-family: Roboto;
-    font-size: 18px;
-    color: #000000;
+  width: 528px;
+  height: 700px;
+  background-color: #ffffff;
+  padding-left: 58px;
 }
 
-  #rememberBox{
-    width: 20px;
-    height: 20px;
-    background: #F5F2F2;
-    border: 1px solid #595959;
-    box-sizing: border-box;
-  }
+.Welcome {
+  height: 57px;
+  font-family: Roboto;
+  font-size: 48px;
+  color: #000000;
+  text-align: center;
+  margin-left: -164px;
+  margin-bottom: 160px;
+}
+
+#email {
+  height: 22px;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #000000;
+}
+
+#password {
+  margin-top: 46px;
+  height: 22px;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #000000;
+}
+
+.inputText {
+  height: 50px;
+  padding-left: 20px;
+  width: 410px;
+  opacity: 0.3;
+  background-color: #cccccc;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.96);
+  color: black;
+}
+
+#rememberContainer {
+  position: relative;
+  left: -5px;
+  top: 46px;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #000000;
+}
+
+#rememberBox {
+  width: 20px;
+  height: 20px;
+  background: #F5F2F2;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#forgotPassword {
+  position: relative;
+  left: 266px;
+  top: 24px;
+  height: 22px;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #666666;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  margin-top: 40px;
+  width: 409px;
+  height: 53px;
+  background-color: #4286f4;
+  font-family: Roboto;
+  font-size: 36px;
+  color: #ffffff;
+  border-color: #091e44;
+  border-style: solid;
+  cursor: pointer;
+}
+
+input[type="submit"]:active
+{
+  background-color: #124496;
+}
+
