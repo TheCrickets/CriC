@@ -8,9 +8,13 @@
 
 </head>
 
-<body>
+<body onload="onLoad();">
     <div id="loginContainer">
         <div class="Welcome">Welcome</div>
+
+        <div id="error">
+           
+        </div>
 
         <form>
             <div id="emailLabel">
@@ -23,13 +27,13 @@
                 Password
             </div>
 
-            <input type="password" id="password"><br>
+            <input type="password" id="password">
+            <br>
 
             <img src="resources\eye\006-eye.png" id="passEye" onclick="togglePass();">
 
             <label id="rememberContainer">
-            <input type="checkbox" id="rememberBox">
-            Remember me
+                <input type="checkbox" id="rememberBox"> Remember me
             </label>
 
             <div id="forgotPassword">Forgot password?</div>
@@ -37,6 +41,7 @@
             <input type="submit" value="Log In">
         </form>
     </div>
+
 </body>
 
 </html>
