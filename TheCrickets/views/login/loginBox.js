@@ -1,3 +1,6 @@
+var mailRegex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+
 function onLoad() {
     document.getElementById("email").addEventListener('change', checkMail);
 }
@@ -20,10 +23,26 @@ function toggleError(error) {
 }
 
 function checkMail() {
-    var regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-
-    if (!regex.test(this.value))
+    if (!mailRegex.test(this.value)) {
         toggleError("Invalid email address");
-    else
+    }
+    else {
         toggleError();
+    }
+}
+
+function validation(email) {
+    return mailRegex.test(email);
+}
+
+function submitForm() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if (validation(email)) {
+        document.getElementsByTagName("form")[0].submit();
+        alert(email + " i wont show the password tho..");
+    }
+    else
+        alert("error");
 }
