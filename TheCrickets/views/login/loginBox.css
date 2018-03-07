@@ -15,14 +15,14 @@
   margin-bottom: 160px;
 }
 
-#email {
+#emailLabel {
   height: 22px;
   font-family: Roboto;
   font-size: 18px;
   color: #000000;
 }
 
-#password {
+#passwordLabel {
   margin-top: 46px;
   height: 22px;
   font-family: Roboto;
@@ -30,7 +30,8 @@
   color: #000000;
 }
 
-.inputText {
+#email,
+#password {
   height: 50px;
   padding-left: 20px;
   width: 410px;
@@ -45,7 +46,7 @@
 #rememberContainer {
   position: relative;
   left: -5px;
-  top: 46px;
+  top: 35px;
   font-family: Roboto;
   font-size: 18px;
   color: #000000;
@@ -63,7 +64,7 @@
 #forgotPassword {
   position: relative;
   left: 266px;
-  top: 24px;
+  top: 14px;
   height: 22px;
   font-family: Roboto;
   font-size: 18px;
@@ -88,5 +89,13 @@ input[type="submit"] {
 input[type="submit"]:active
 {
   background-color: #124496;
+}
+
+#passEye{
+  position: relative;
+  display: block;
+  top: -32px;
+  left: 380px;
+  cursor: pointer;
 }
 
