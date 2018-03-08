@@ -28,17 +28,6 @@ body {
 	margin: 0;
 }
 
-nav a:hover
-{
-	background-color: #1abc9c;
-}
-
-nav a:hover#leftMostMenuItem
-{
-	background-color: #1abc9c;
-	border-radius: 30px 0 0 30px;
-}
-
 body {
 	font-size: 30px;
 	font-family: loginPageTextFont;
@@ -103,4 +92,30 @@ div#navDivWrapper {
 @font-face {
 	font-family: loginPageTextFont;
 	src: url(resources/navBarTextFont.ttf);
+}
+
+.lineFromCenter {
+  display: inline-block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+.lineFromCenter:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #1ABC9C;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
+  left: 0;
+  right: 0;
 }
