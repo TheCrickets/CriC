@@ -1,33 +1,43 @@
 #loginContainer {
-  width: 528px;
-  height: 700px;
-  background-color: #ffffff;
+  width: 500px;
+  height: 550px;
+  background-color: #1abc9c;
   padding-left: 58px;
+	display: none;
+	position: fixed;
+	right: 0;
+	left: 0;
+	margin: auto;
+	top: 20%;
+	z-index: 100;
+}
+
+#loginContainer:target {
+	display: block;
 }
 
 .Welcome {
   height: 57px;
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 48px;
-  color: #000000;
-  text-align: center;
-  margin-left: -164px;
-  margin-bottom: 60px;
+  color: white;
+	padding-top: 30px;
+	text-align: center;
 }
 
 #emailLabel {
   height: 22px;
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 18px;
-  color: #000000;
+  color: white;
 }
 
 #passwordLabel {
   margin-top: 46px;
   height: 22px;
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 18px;
-  color: #000000;
+  color: white;
 }
 
 #email,
@@ -40,16 +50,16 @@
   font-size: 18px;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.96);
-  color: black;
+  color: white;
 }
 
 #rememberContainer {
   position: relative;
   left: -5px;
   top: 35px;
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 18px;
-  color: #000000;
+  color: white;
 }
 
 #rememberBox {
@@ -66,9 +76,9 @@
   left: 266px;
   top: 14px;
   height: 22px;
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 18px;
-  color: #666666;
+  color: white;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -78,7 +88,7 @@ input[type="submit"] {
   width: 409px;
   height: 53px;
   background-color: #4286f4;
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 36px;
   color: #ffffff;
   border-color: #091e44;
@@ -100,7 +110,7 @@ input[type="submit"]:active
 }
 
 #error{
-  font-family: Roboto;
+  font-family: loginPageTextFont;
   font-size: 18px;
   color: red;
   display: block;
