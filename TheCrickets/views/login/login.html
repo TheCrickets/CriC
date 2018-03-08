@@ -6,36 +6,60 @@
 	
 	<title>Login</title>
 	<link href = "loginStyleSheet.css" rel = "stylesheet" type = "text/css">
-	
+	<link href="https://fonts.googleapis.com/css?family=loginPageTextFont" rel="stylesheet">
+  <link href="loginBox.css" rel="stylesheet" type="text/css">
+  <script src="loginBox.js" type="text/javascript"></script>
 </head>
 
-<body>
-<nav>
-	<a id="leftMostMenuItem" href="#"><img id = "navBarImage" src="resources/about.png">About</a>
-	<a href="#"><img id = "navBarImage" src="resources/login.png">Login</a>
-	<a href="#"><img id = "navBarImage" src="resources/register.png">Register</a>
-	<a href="#"><img id = "navBarImage" src="resources/contact.png">Contact</a>
-</nav>
+<body onload="onLoad();">
+	<div class="scrollbar" id="customizeScrollbar">
+  	<div class="force-overflow">
+   
+	<div id="navDivWrapper" class="doNotBlurr">
+		<nav>
+			<a id="leftMostMenuItem" href="#"><img class = "navBarImage" src="resources/about.png" alt="About">About</a>
+			<a href="#loginContainer"><img class = "navBarImage" src="resources/login.png" alt="Login">Login</a>
+			<a href="#"><img class = "navBarImage" src="resources/register.png" alt="Register">Register</a>
+			<a href="#"><img class = "navBarImage" src="resources/contact.png" alt="Contact">Contact</a>
+		</nav>
+		</div>
+	<div id="loginContainer" class="doNotBlurr">
+        <div class="Welcome">Welcome</div>
+
+        <div id="error">
+           
+        </div>
+
+        <form>
+            <div id="emailLabel">
+                Email
+            </div>
+
+            <input type="text" id="email" placeholder="ex: something@email.com">
+
+            <div id="passwordLabel">
+                Password
+            </div>
+
+            <input type="password" id="password" placeholder="*****************">
+            <br>
+
+            <img src="resources\eye\006-eye.png" id="passEye" onclick="togglePass();">
+
+            <label id="rememberContainer">
+                <input type="checkbox" id="rememberBox"> Remember me
+            </label>
+
+            <div id="forgotPassword">Forgot password?</div>
+
+            <input type="submit" value="Log In" name="form" onclick="submitForm();">
+        </form>
+    </div>
+<div id="image1" class="loginImages">.</div>
+<div id="image2" class="loginImages">.</div>
+<div id="image3" class="loginImages">.</div>
+<div id="image4" class="loginImages">.</div>
+</div>
+		</div>
 </body>
-	<!--<p id="paragraphOne">
-		Lorem ipsum dolor sit amet, his ad volumus maluisset intellegam. Vim sale augue semper et. Causae aliquid vix eu, est an alia prompta sadipscing. Te quo veniam corrumpit intellegat, movet petentium vim no, eu mea odio minim. Eam ne illud pericula splendide, eos equidem fuisset efficiendi in.
-	</p>
-	<p>Sed exerci theophrastus an, vel quidam pericula urbanitas at. Detracto pertinax electram at quo, dico cibo virtute mei ea, cu eos harum omittam erroribus. Esse alterum referrentur qui ad, ea qui clita aliquando interesset. Nonumy albucius offendit et mei. Ex quo aliquando vulputate dissentiet, duo illud vocibus cu, mea labore volutpat cu. Ius persius inimicus concludaturque et, vim te argumentum appellantur.
-	</p>
-	<p>Vis te sonet expetenda, ex sed nominati periculis. Nam volumus fabellas at, ferri prima molestiae ius cu, eu mazim equidem euripidis eum. Te iudico deseruisse repudiandae vim. Libris utamur ne per, duo melius disputando reformidans in.
-	</p>
-	<p>No nam vidisse complectitur deterruisset, regione perpetua ad pri. Antiopam mediocritatem no eos, dolor atomorum adversarium vel et. Euismod interesset ex eum. Fabulas saperet suscipit et per, eirmod latine eruditi ei sea. Ex sed vocent eligendi moderatius. Cu sea vide illud adversarium, ius te nulla phaedrum splendide, mea periculis assueverit no.
-	</p>
-	<p>Animal volumus phaedrum mel ad. Dolore omittam instructior at sed, eam mucius comprehensam necessitatibus id, duis pertinax est ei. Erant ancillae sea an, maluisset democritum intellegam has ne. Sea esse consul ei.
-	</p>
-	<p>Mel no audiam inermis intellegebat, omittam senserit in vim. At qui amet melius, at omnium delicata mei, vim at dolore gloriatur voluptaria. Enim verterem ocurreret ea his, appetere omittantur an sed. Forensibus efficiantur at pri, error dicant eripuit eu cum. Soluta moderatius intellegebat eu sit, sumo falli maiorum cum an.
-	</p>
-	<p>In doctus sententiae pri, nam quis nullam explicari id. Postulant iracundia reformidans ex nec. Ex utroque accusata vis, cu vim justo saepe quando, his ex meis efficiantur definitionem. Te integre interpretaris sea.
-	</p>
-	<p>Sed at detraxit accommodare, te repudiare appellantur instructior quo, vis ad choro putant adversarium. His at paulo singulis incorrupte. Oporteat percipitur no mea. Quo nostro dolores menandri te, usu persecuti accommodare et.
-	</p>
-	<p>Id vim omnium petentium, ne pro constituto dissentias, nullam minimum his te. Eam no soluta definitiones, purto expetenda principes eum te. Duo ad doctus ponderum repudiandae, nam magna soluta no, tamquam utroque at has. Ad sed movet fabulas minimum.
-	</p>
-	<p>Deleniti efficiantur te his. Vis et errem postulant persequeris, no eius commodo sit, quem quis persecuti ut sed. Et unum civibus voluptatum per, mei an homero legere. In nec ullum voluptatibus, eum consul iracundia intellegam in. Vel ex ubique nominavi oporteat, eos summo aperiri ne.
-	</p>-->
 </html>

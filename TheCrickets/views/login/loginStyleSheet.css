@@ -1,6 +1,5 @@
 /* CSS Document */
 nav {
-	margin: 0px 0px 0px;
 	position: relative;
 	width: 50%;
 	background-color: #34495e;
@@ -17,9 +16,16 @@ nav a {
 	display: inline-block;
 	position: left;
 	text-decoration: none;
-	/*text-transform: uppercase;*/
 	color: white;
 	cursor: pointer;
+}
+
+/*body > *:not(.doNotBlurr) {
+  filter: blur(3px);
+}*/
+
+body {
+	margin: 0;
 }
 
 nav a:hover
@@ -36,25 +42,65 @@ nav a:hover#leftMostMenuItem
 body {
 	font-size: 30px;
 	font-family: loginPageTextFont;
-	background: #2c3e50;
+	background-color: black;
 }
 
-p {
-	color: aliceblue;
+div.loginImages {
+	width: 100%;
+	z-index: 90;
+	top: 0; right: 0; bottom: 0; left: 0;
+	opacity: 0.3;
 }
 
-p#paragraphOne {
-	clear: both;
+div#image1 {
+	
+	content: url(resources/Login/fire.jpg);
 }
 
-img#navBarImage {
+div#image2 {
+	content: url(resources/Login/flooding.jpg);	
+}
+
+div#image3 {
+	content: url(resources/Login/ground-crack.jpg);	
+}
+
+div#image4 {
+	content: url(resources/Login/tornado.jpg);
+}
+
+img.navBarImage {
 	width: 30px;
 	height: 30px;
 	vertical-align: middle;
 	padding-right: 5px;
 }
 
+/*div#loginWindow {
+	background: rgba(34,34,34,0.75);
+	display: none;
+	width: 400px;
+	height: 500px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
+	top: 20%;
+}*/
+
+div#navDivWrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+/*div#loginWindow:target {
+	display: block;
+}*/
+
 @font-face {
 	font-family: loginPageTextFont;
-	src: url(navBarTextFont.ttf);
+	src: url(resources/navBarTextFont.ttf);
 }
