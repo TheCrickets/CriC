@@ -83,7 +83,7 @@
   text-decoration: underline;
 }
 
-input[type="submit"] {
+input[type="button"] {
   margin-top: 40px;
   width: 409px;
   height: 53px;
@@ -97,7 +97,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:active
+input[type="button"]:active
 {
   background-color: #124496;
 }
