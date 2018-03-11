@@ -1,0 +1,120 @@
+#registerContainer {
+  width: 500px;
+  height: 650px;
+  background-color: #1abc9c;
+  padding-left: 58px;
+	display: block;
+	position: fixed;
+	right: 0;
+	left: 0;
+	margin: auto;
+	top: 20%;
+	z-index: 100;
+}
+
+#registerContainer:target {
+	display: block;
+}
+
+.Welcome {
+  font-family: loginPageTextFont;
+  font-size: 48px;
+  color: white;
+  padding-top: 30px;
+  padding-right: 58px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#emailLabel {
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#passwordLabel {
+  margin-top: 46px;
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#passwordAgainLabel {
+  margin-top: 32px;
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#email,
+#password,
+#passwordAgain {
+  height: 50px;
+  padding-left: 20px;
+  width: 410px;
+  opacity: 0.4;
+  background-color: #d6d6d6;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.96);
+  color: white;
+}
+
+input[type="submit"] {
+  margin-top: 40px;
+  width: 409px;
+  height: 53px;
+  margin-left: 15px;
+  background-color: #4286f4;
+  font-family: loginPageTextFont;
+  font-size: 36px;
+  color: #ffffff;
+  border-color: #091e44;
+  border-style: solid;
+  cursor: pointer;
+}
+
+input[type="submit"]:active
+{
+  background-color: #124496;
+}
+
+#passEye{
+  position: relative;
+  display: block;
+  top: -33px;
+  left: 380px;
+  cursor: pointer;
+}
+
+#error{
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: red;
+  display: block;
+  margin-left: -64px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#acceptContainer {
+  position: relative;
+  top: 10px;
+  left: -5px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#acceptBox {
+  width: 20px;
+  height: 20px;
+  background: #F5F2F2;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+

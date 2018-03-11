@@ -12,10 +12,19 @@ function togglePass() {
     else passwordInput.setAttribute("type", "password");
 }
 
+function togglePassAgain() {
+    var passwordInput = document.getElementById("passwordAgain");
+    if (passwordInput.getAttribute("type") == "password")
+        passwordInput.setAttribute("type", "text");
+    else passwordInput.setAttribute("type", "password");
+}
+
 function toggleError(error) {
     var errorElement = document.getElementById("error");
-    if (errorElement.style.display == "block" || error == undefined)
+    if (error == undefined) {
         errorElement.style.display = "none";
+        errorElement.innerHTML = "";
+    }
     else {
         errorElement.style.display = "block";
         errorElement.innerHTML = error;
@@ -35,7 +44,7 @@ function validation(email) {
     return mailRegex.test(email);
 }
 
-function submitForm() {
+function login() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
@@ -45,4 +54,18 @@ function submitForm() {
     }
     else
         alert("error");
+}
+
+function checkPassword() {
+    var password = document.getElementById("password").value;
+    var passwordAgain = document.getElementById("passwordAgain").value;
+
+    if (password != passwordAgain)
+        toggleError("Passwords do not match.")
+    else
+        toggleError();
+}
+
+function register() {
+
 }
