@@ -1,0 +1,73 @@
+#formContainer
+{
+    position: relative;
+    width: 1157px;
+    height: 1024px;
+
+    background: #FFFFFF;
+}
+
+#PersonalInformation
+{
+    position: absolute;
+    width: 453px;
+    left: 352px;
+    top: 98px;
+    
+    font-family: Roboto;
+    font-size: 48px;
+    
+    color: #000000;
+}
+
+#personalInformationContainer
+{  
+    position: absolute;
+    width: 1039px;
+    height: 801px;
+    left: 59px;
+    top: 169px;
+    
+    background: #F0EDED;
+}
+
+#ProfilePicture
+{
+    width: 153px;
+    height: 135px;
+    margin: 0 auto;
+    top: 20px;
+    background: #C4C4C4;
+}
+
+#ProfilePictureText 
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 77px;
+    
+    font-family: Roboto;
+    font-size: 24px;
+    
+    color: #000000;
+}
+
+#Name, #Surname, #DateOfBirth
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 196px;
+    
+    font-family: Roboto;
+    font-size: 24px;
+    
+    color: #000000;
+}
+
+#NameContainer, #SurnameContainer, #DateOfBirthContainer 
+{
+    margin: 0 auto;
+    width: 548px;
+    height: 59px;    
+    background: #C4C4C4;
+}
