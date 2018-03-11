@@ -41,7 +41,7 @@ function checkMail() {
 }
 
 function validation(email) {
-    return mailRegex.test(email);
+    return mailRegex.test(email) && checkPassword() && checkTerms();
 }
 
 function login() {
@@ -60,12 +60,35 @@ function checkPassword() {
     var password = document.getElementById("password").value;
     var passwordAgain = document.getElementById("passwordAgain").value;
 
-    if (password != passwordAgain)
-        toggleError("Passwords do not match.")
-    else
+    if (password != passwordAgain) {
+        toggleError("Passwords do not match.");
+        return false;
+    }
+    else {
         toggleError();
+        return true;
+    }
+}
+
+function checkTerms()
+{
+    if(!document.getElementById("acceptBox").checked)
+    {
+        toggleError("You must accept the terms and conditions");
+        return false;
+    }
+    toggleError();
+    return true;
 }
 
 function register() {
-
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    if(validation(email))
+    {
+        document.getElementsByTagName("form")[0].submit();
+        alert(email + " registered");
+    }
+    else
+        alert("error");
 }
