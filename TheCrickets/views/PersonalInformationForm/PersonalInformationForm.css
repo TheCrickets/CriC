@@ -33,21 +33,15 @@
 
 #ProfilePicture
 {
-    width: 153px;
-    height: 135px;
-    margin: 0 auto;
-    background: #C4C4C4;
-}
-
-#ProfilePictureText 
-{
-    margin: 0 auto;
-    text-align: center;
-    
-    font-family: Roboto;
+    margin-left: 245px;
+    width: 158px;
+    height: 135px;        
+    opacity: 0.4;
+    background-color: #d6d6d6;
     font-size: 24px;
-    
-    color: #000000;
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.96);
+    color: white;
 }
 
 #Name, #Surname, #DateOfBirth
@@ -62,7 +56,8 @@
 
 #NameContainer, #SurnameContainer, #DateOfBirthContainer 
 {
-    position: relative;
+    margin-left: 245px;
+    
     width: 540px;
     padding-left: 20px; 
     height: 50px;    
