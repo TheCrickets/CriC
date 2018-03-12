@@ -33,6 +33,7 @@
 
 #ProfilePicture
 {
+    margin-top: 20px;
     margin-left:435px;
     width: 158px;
     height: 135px;        
@@ -44,7 +45,7 @@
     color: white;
 }
 
-#Name, #Surname, #DateOfBirth
+#Name, #Surname, #DateOfBirth, #PhoneNumber
 {
     margin-left: 245px;
     
@@ -57,7 +58,7 @@
     color: #000000;
 }
 
-#NameContainer, #SurnameContainer, #DateOfBirthContainer 
+#NameContainer, #SurnameContainer, #DateOfBirthContainer, #PhoneNumberContainer
 {
     margin-left: 245px;
     
@@ -69,7 +70,7 @@
     font-size: 18px;
     font-weight: 500;
     border: 1px solid rgba(0, 0, 0, 0.96);
-    color: white;
+    color: black;
 }
 
 #cubeTick 
@@ -97,6 +98,7 @@
 
 #UseMyLocationBox
 {
+    margin-top: 20px;
     width: 30px;
     height: 30px;
     background: #F5F2F2;
