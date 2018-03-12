@@ -104,19 +104,31 @@
     box-sizing: border-box;
     cursor: pointer;
     margin-left: 245px;
-    top: 10px;
-    bottom: 5px;
-
-    font-family: Roboto;
-    font-size: 24px;
-    font-weight: 500;
 }
 
 #checkboxContainer 
 {   
     font-family: Roboto;
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 500;
-    
-    color: white;
+    color: black;
+}
+
+input[type="button"] {
+    margin-top: 40px;
+    width: 409px;
+    height: 53px;
+    margin-left: 300px;
+    background-color: #4286f4;
+    font-family: loginPageTextFont;
+    font-size: 36px;
+    color: #ffffff;
+    border-color: #091e44;
+    border-style: solid;
+    cursor: pointer;
+  }
+  
+  input[type="button"]:active
+  {
+    background-color: #124496;
   }
