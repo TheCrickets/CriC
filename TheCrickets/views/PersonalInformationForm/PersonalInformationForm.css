@@ -33,7 +33,7 @@
 
 #ProfilePicture
 {
-    margin-left: 245px;
+    margin-left:435px;
     width: 158px;
     height: 135px;        
     opacity: 0.4;
@@ -48,6 +48,9 @@
 {
     margin-left: 245px;
     
+    padding-top: 10px;
+    padding-bottom: 5px;
+
     font-family: Roboto;
     font-size: 24px;
     
@@ -94,20 +97,26 @@
 
 #UseMyLocationBox
 {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: #F5F2F2;
     border: 1px solid #595959;
     box-sizing: border-box;
     cursor: pointer;
+    margin-left: 245px;
+    top: 10px;
+    bottom: 5px;
+
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
 }
 
-#UseMyLocationContainer
-{
-    position: relative;
-    left: -5px;
-    top: 35px;
-    font-family: loginPageTextFont;
-    font-size: 18px;
+#checkboxContainer 
+{   
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 500;
+    
     color: white;
-}
+  }
