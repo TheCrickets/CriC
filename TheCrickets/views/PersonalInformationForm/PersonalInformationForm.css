@@ -1,6 +1,5 @@
 #formContainer
 {
-    position: relative;
     width: 1157px;
     height: 1024px;
 
@@ -9,10 +8,9 @@
 
 #PersonalInformation
 {
-    position: absolute;
     width: 453px;
     left: 352px;
-    top: 98px;
+    top: 98px; 
     
     font-family: Roboto;
     font-size: 48px;
@@ -22,12 +20,14 @@
 
 #personalInformationContainer
 {  
-    position: absolute;
     width: 1039px;
     height: 801px;
     left: 59px;
     top: 169px;
-    
+   
+    background-color: #1abc9c;
+    padding-left: 58px;
+    z-index: 100;
     background: #F0EDED;
 }
 
@@ -43,7 +43,6 @@
 {
     margin: 0 auto;
     text-align: center;
-    width: 77px;
     
     font-family: Roboto;
     font-size: 24px;
@@ -53,9 +52,7 @@
 
 #Name, #Surname, #DateOfBirth
 {
-    margin: 0 auto;
-    text-align: center;
-    width: 196px;
+    margin-left: 245px;
     
     font-family: Roboto;
     font-size: 24px;
@@ -65,10 +62,16 @@
 
 #NameContainer, #SurnameContainer, #DateOfBirthContainer 
 {
-    margin: 0 auto;
-    width: 548px;
-    height: 59px;    
-    background: #C4C4C4;
+    position: relative;
+    width: 540px;
+    padding-left: 20px; 
+    height: 50px;    
+    opacity: 0.4;
+    background-color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.96);
+    color: white;
 }
 
 #cubeTick 
@@ -92,4 +95,24 @@
     top: 822px;
   
     background: #C4C4C4;
+}
+
+#UseMyLocationBox
+{
+    width: 20px;
+    height: 20px;
+    background: #F5F2F2;
+    border: 1px solid #595959;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#UseMyLocationContainer
+{
+    position: relative;
+    left: -5px;
+    top: 35px;
+    font-family: loginPageTextFont;
+    font-size: 18px;
+    color: white;
 }
