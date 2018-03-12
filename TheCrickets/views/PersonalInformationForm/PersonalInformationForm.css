@@ -36,7 +36,6 @@
     width: 153px;
     height: 135px;
     margin: 0 auto;
-    top: 20px;
     background: #C4C4C4;
 }
 
@@ -69,5 +68,28 @@
     margin: 0 auto;
     width: 548px;
     height: 59px;    
+    background: #C4C4C4;
+}
+
+#cubeTick 
+{
+
+    margin: 0 auto;  
+    width: 43px;
+    height: 34px;
+    left: 305px;
+    top: 669px;
+  
+    background: #C4C4C4;
+}
+
+#Save 
+{
+    margin: 0 auto;
+    width: 211px;
+    height: 59px;
+    left: 473px;
+    top: 822px;
+  
     background: #C4C4C4;
 }
