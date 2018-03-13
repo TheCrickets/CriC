@@ -24,6 +24,38 @@
   }
 }
 
+#loginText {
+  width: 500px;
+  height: 550px;
+  position: fixed;
+  margin-left: 10%;
+	top: 10%;
+  z-index: 100;
+  color: white;
+}
+
+#loginText:target {
+  animation-duration: 1s;
+  animation-name: slideinText;
+
+}
+
+p#Welcome {
+  font-size: 40px;
+}
+
+@keyframes slideinText {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 60%;
+    width: 100%;
+  }
+}
+
 .Welcome {
   font-family: loginPageTextFont;
   font-size: 48px;
