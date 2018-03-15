@@ -48,8 +48,8 @@ function login() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    if (validation(email)) {
-        document.getElementsByTagName("form")[0].submit();
+    if (mailRegex.test(email)) {
+        document.getElementsByName("loginForm")[0].submit();
         alert(email + " i wont show the password tho..");
     }
     else
