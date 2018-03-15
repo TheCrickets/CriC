@@ -1,9 +1,9 @@
-#loginContainer {
+#registerContainer {
   width: 500px;
-  height: 550px;
+  height: 650px;
   background-color: #1abc9c;
   padding-left: 58px;
-	display: none;
+	display: block;
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -12,7 +12,7 @@
 	z-index: 100;
 }
 
-#loginContainer:target {
+#registerContainer:target {
 	display: block;
 }
 
@@ -22,7 +22,8 @@
   color: white;
   padding-top: 30px;
   padding-right: 58px;
-	text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #emailLabel {
@@ -40,8 +41,17 @@
   color: white;
 }
 
+#passwordAgainLabel {
+  margin-top: 32px;
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
 #email,
-#password {
+#password,
+#passwordAgain {
   height: 50px;
   padding-left: 20px;
   width: 410px;
@@ -51,36 +61,6 @@
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.96);
   color: white;
-}
-
-#rememberContainer {
-  position: relative;
-  left: -5px;
-  top: 35px;
-  font-family: loginPageTextFont;
-  font-size: 18px;
-  color: white;
-}
-
-#rememberBox {
-  width: 20px;
-  height: 20px;
-  background: #F5F2F2;
-  border: 1px solid #595959;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-#forgotPassword {
-  position: relative;
-  left: 266px;
-  top: 14px;
-  height: 22px;
-  font-family: loginPageTextFont;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 input[type="button"] {
@@ -105,7 +85,7 @@ input[type="button"]:active
 #passEye{
   position: relative;
   display: block;
-  top: -32px;
+  top: -33px;
   left: 380px;
   cursor: pointer;
 }
@@ -118,5 +98,23 @@ input[type="button"]:active
   margin-left: -64px;
   margin-bottom: 40px;
   text-align: center;
+}
+
+#acceptContainer {
+  position: relative;
+  top: 10px;
+  left: -5px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#acceptBox {
+  width: 20px;
+  height: 20px;
+  background: #F5F2F2;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
