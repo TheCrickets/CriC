@@ -1,6 +1,6 @@
 nav {
 	position: relative;
-	width: 50%;
+	width: 55%;
 	background-color: #34495e;
 	border-radius: 30px 0 0 30px;
 	font-size: 0;
@@ -54,7 +54,7 @@ img.navBarImage {
 	width: 30px;
 	height: 30px;
 	vertical-align: middle;
-	padding-right: 5px;
+	padding-right: 10px;
 }
 
 div#navDivWrapper {
@@ -100,7 +100,7 @@ div#navDivWrapper {
 #loginLeftText {
 	width: 500px;
 	height: 600px;
-	position: absolute;
+	position: fixed;
 	color: aliceblue;
 	left: -500px;
 	top: 10%;
