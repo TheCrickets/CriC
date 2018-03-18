@@ -16,11 +16,19 @@
 	border-width: 5px;
 	color: white;
 }
+html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	height: 100%;
+	width: 100%;
+}
 
 #scrollButton {
 	content: url(resources/down-arrow.png);
 	position: fixed;
-	bottom: 10px;
+	bottom: 20px;
 	left: 50%;
 	height: 60px;
 	width: 60px;
@@ -29,9 +37,43 @@
 #firstPart {
 	background-color: #85DCBE;
 	width: 100%;
+	height: 85%;
 	z-index: 50;
 	text-align: center;
-	height: 600px;
+}
+
+#secondPart {
+	background-color: white;
+	width: 100%;
+	height: 15%;
+	z-index: 50;
+}
+
+.thirdPart {
+	background-color: white;
+	width: 100%;
+	height: 75%;
+	z-index: 50;
+	display: inline-block;
+}
+
+#thirdPartOne {
+	width: 50%;
+	float: left;
+}
+
+#thirdPartTwo {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+p#thirdPartText {
+	text-align: left;
+	padding-left: 10%;
+	padding-top: 8%;
+	font-family: partText;
+	font-size: 50px;
 }
 
 #textFirstPart {
@@ -124,11 +166,6 @@
 	color: white;
 }
 
-#secondPart {
-	background-color: rgb(220, 161, 133);
-	width: 100%;
-	min-height: 600px;
-}
 #middlePart {
 	background-color: white;
 	width: 100%;
@@ -200,6 +237,11 @@ div#navDivWrapper {
 @font-face {
 	font-family: menuTextLabel;
 	src: url(resources/teen.ttf);
+}
+
+@font-face {
+	font-family: partText;
+	src: url(resources/Yano.ttf);
 }
 
 
