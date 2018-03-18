@@ -1,3 +1,22 @@
+#logoWrapper {
+	position: fixed;
+	top: 0;
+	left: 30px;
+	height: 10%;
+	width: 10%;
+	z-index: 100;
+	font-family: menuTextLabel;
+	background-color: #41B3A3;
+	font-size: 60px;
+	text-align: center;
+	border-radius: 0px 0px 30px 30px;
+	border-color: white;
+	border-style: solid;
+	border-top: hidden;
+	border-width: 5px;
+	color: white;
+}
+
 #scrollButton {
 	content: url(resources/down-arrow.png);
 	position: fixed;
