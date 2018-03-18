@@ -1,4 +1,4 @@
-#loginContainer {
+.loginContainer {
   width: 500px;
   height: 550px;
   position: fixed;
@@ -8,7 +8,7 @@
   visibility: hidden;
 }
 
-#loginContainer:target {
+.loginContainer:target {
   animation-duration: 1s;
   animation-name: slidein;
   visibility: visible;
@@ -124,7 +124,7 @@ input[type="button"] {
   width: 409px;
   height: 53px;
   margin-left: 15px;
-  background-color: #4286f4;
+  background-color: steelblue;;
   font-size: 36px;
   color: #ffffff;
   border: none;

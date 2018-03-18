@@ -1,7 +1,130 @@
+#scrollButton {
+	content: url(resources/down-arrow.png);
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+#firstPart {
+	background-color: #85DCBE;
+	width: 100%;
+	z-index: 50;
+	text-align: center;
+	height: 600px;
+}
+
+#textFirstPart {
+	color: white;
+	text-align: center;
+	font-size: 350%;
+	padding-top: 130px;
+}
+
+#fire {
+	padding-top: 60px;
+	content: url(resources/Login/flame.png);
+	height: 100px;
+	width: 100px;
+}
+
+#fireContainer {
+	display: inline-block;
+}
+#fireText {
+	color: #ED4337;
+	font-size: 50px;
+	padding-top: 10px;
+}
+
+#flooding {
+	padding-top: 60px;
+	content: url(resources/Login/sea.png);
+	height: 100px;
+	width: 100px;
+	padding-left: 200px;
+}
+
+#floodingContainer {
+	display: inline-block;
+}
+
+#floodingText {
+	color: #4BAAB9;
+	font-size: 50px;
+	padding-left: 200px;
+
+}
+
+#earthquake {
+	padding-top: 60px;
+	content: url(resources/Login/earthquake.png);
+	height: 100px;
+	width: 100px;
+	padding-left: 200px;
+}
+
+#earthquakeContainer {
+	display:inline-block;
+}
+
+#earthquakeText {
+	color: #7C0227;
+	font-size: 50px;
+	padding-left: 200px;
+	padding-top: 10px;
+}
+
+#tornado {
+	padding-top: 60px;
+	content: url(resources/Login/tornado.png);
+	height: 100px;
+	width: 100px;
+	padding-left: 200px;
+}
+
+#tornadoContainer {
+	display:inline-block;
+}
+
+#tornadoText {
+	color: #A4A4A1;
+	font-size: 50px;
+	padding-top: 10px;
+	padding-left: 200px;
+}
+
+#firstPartContainer {
+	text-align:center;
+}
+
+#textFirstPartUnder {
+	text-align: center;
+	font-size: 130%;
+	color: white;
+}
+
+#secondPart {
+	background-color: rgb(220, 161, 133);
+	width: 100%;
+	min-height: 600px;
+}
+#middlePart {
+	background-color: white;
+	width: 100%;
+	min-height: 200px;
+	font-family: homePageText;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	font-size: 150px;
+}
+
 nav {
 	position: relative;
 	width: 55%;
-	background-color: #34495e;
+	background-color: #41B3A3;
 	border-radius: 30px 0 0 30px;
 	font-size: 0;
 	float: right;
@@ -22,33 +145,13 @@ nav a {
 body {
 	margin: 0;
 	font-size: 30px;
-	font-family: loginPageTextFont;
-	background-color: black;
+	font-family: homePageText;
+	font-style: bold;
 }
 
-div.loginImages {
-	width: 100%;
-	z-index: 90;
-	top: 0; right: 0; bottom: 0; left: 0;
-	opacity: 0.3;
-}
-
-div#image1 {
-	
-	content: url(resources/Login/fire.jpg);
-}
-
-div#image2 {
-	content: url(resources/Login/flooding.jpg);	
-}
-
-div#image3 {
-	content: url(resources/Login/ground-crack.jpg);	
-}
-
-div#image4 {
-	content: url(resources/Login/tornado.jpg);
-}
+/*body > *:not(.loginContainer):not(#loginLeftText):not(#navDivWrapper) {
+	filter: blur(3px);
+  }*/
 
 img.navBarImage {
 	width: 30px;
@@ -63,6 +166,7 @@ div#navDivWrapper {
 	right: 0;
 	width: 100%;
 	z-index: 100;
+	font-family: menuTextLabel;
 }
 
 
@@ -70,6 +174,15 @@ div#navDivWrapper {
 	font-family: loginPageTextFont;
 	src: url(resources/navBarTextFont.ttf);
 }
+@font-face {
+	font-family: homePageText;
+	src: url(resources/Pack.ttf);
+}
+@font-face {
+	font-family: menuTextLabel;
+	src: url(resources/teen.ttf);
+}
+
 
 .lineFromCenter {
   display: inline-block;
@@ -105,6 +218,11 @@ div#navDivWrapper {
 	left: -500px;
 	top: 10%;
 	visibility: hidden;
+	background-color: mediumaquamarine;
+	padding-left: 15px;
+	border-left: solid steelblue;
+	border-width: 10px;
+	z-index: 100;
 	
   }
   #loginLeftText:active {

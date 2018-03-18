@@ -14,12 +14,12 @@
 		<nav>
             <div class="lineFromCenter"><a href="#"></a></div>
 			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButAbout()"><img class = "navBarImage" src="resources/about.png" alt="About">About</a></div>
-			<div class="lineFromCenter"><a href="#loginContainer" onclick="showLoginText()"><img class = "navBarImage" src="resources/login.png" alt="Login">Login</a></div>
+			<div class="lineFromCenter"><a href="#loginBox" onclick="showLoginText()"><img class = "navBarImage" src="resources/login.png" alt="Login">Login</a></div>
 			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButRegister()"><img class = "navBarImage" src="resources/register.png" alt="Register">Register</a></div>
 			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButContact()"><img class = "navBarImage" src="resources/contact.png" alt="Contact">Contact</a></div>
 		</nav>
 	</div>
-	<div id="loginContainer">
+	<div id = "loginBox" class = "loginContainer">
         <div id = "loginText"><p id = "Welcome">Welcome</p></div>
         <div id = "error"></div>
         <form name="loginForm">
@@ -50,10 +50,39 @@
         <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-<div id="image1" class="loginImages">.</div>
+<!--<div id="image1" class="loginImages">.</div>
 <div id="image2" class="loginImages">.</div>
 <div id="image3" class="loginImages">.</div>
-<div id="image4" class="loginImages">.</div>
+<div id="image4" class="loginImages">.</div>-->
+
+<div id = "scrollButton">Button</div>
+
+<div id = "firstPart">
+    <div id = "textFirstPart"><font style="color: #ED4337">Crisis</font> Containment Service</div>
+    <div id = "textFirstPartUnder">Helping people to find and use critical emergency information when they <font style="color: #ED4337">need it most</font></div>
+    <div id = "firstPartContainer">
+        <div id = "fireContainer">
+            <div id = "fire"></div>
+            <div id = "fireText">Fire</div>
+        </div>
+        <div id = "floodingContainer">
+            <div id = "flooding"></div>
+            <div id = "floodingText">Water</div>
+        </div>
+        <div id = "tornadoContainer">
+            <div id = "tornado"></div>
+            <div id = "tornadoText">Air</div>
+        </div>
+        <div id = "earthquakeContainer">
+            <div id = "earthquake"></div>
+            <div id = "earthquakeText">Earth</div>
+        </div>
+    </div>
+</div>
+<!--<div id = "middlePart">Lorem ipsum dolor sit amet</div>
+<div id = "secondPart"></div>-->
+
+
 </body>
 </html>
 
