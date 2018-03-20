@@ -12,6 +12,18 @@ function checkName()
     }
 }
 
+function checkSurname()
+{
+    var auxiliary = document.getElementById("SurnameContainer");
+    if(!regexNameSurname.test(auxiliary.value))
+    {
+        toggleError("Invalid surname.");
+    }
+    else
+    {
+        toggleError();
+    }
+}
 
 function toggleError(error) 
 {
