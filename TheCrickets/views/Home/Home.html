@@ -29,10 +29,10 @@
 
 
 
-<div class="vertical-menu"  >
-  <a href="#" class="active" >Home</a>
-  <a href="#">Harta</a>
-  <a href="#">Place Holder</a>
+<div class="vertical-menu" id="myDIV"  >
+  <a href="#" class="option active" >Home</a>
+  <a href="#" class="option">Harta</a>
+  <a href="#" class="option">Place Holder</a>
   <div class="icon-bar">
   <a href="https://ro-ro.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a> 
   <a href="https://twitter.com/twitter" class="twitter"><i class="fa fa-twitter"></i></a> 
@@ -41,10 +41,21 @@
 </div>
 </div>
 
+	
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("option");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 
 
-
-</body>
 	<p >
 		Lorem ipsum dolor sit amet, his ad volumus maluisset intellegam. Vim sale augue semper et. Causae aliquid vix eu, est an alia prompta sadipscing. Te quo veniam corrumpit intellegat, movet petentium vim no, eu mea odio minim. Eam ne illud pericula splendide, eos equidem fuisset efficiendi in.
 	</p>
@@ -66,4 +77,6 @@
 	</p>
 	<p>Deleniti efficiantur te his. Vis et errem postulant persequeris, no eius commodo sit, quem quis persecuti ut sed. Et unum civibus voluptatum per, mei an homero legere. In nec ullum voluptatibus, eum consul iracundia intellegam in. Vel ex ubique nominavi oporteat, eos summo aperiri ne.
 	</p>
+
+</body>
 </html>
