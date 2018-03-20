@@ -1,4 +1,5 @@
 var regexNameSurname = /^[a-zA-Z ]{2,30}$/;
+var regexPhoneNumber = /^[0-9]{10}$/;
 function checkName()
 {
     var auxiliary = document.getElementById("NameContainer");
@@ -43,6 +44,21 @@ function checkBirthDate()
     }
 }
 
+function checkPhoneNumber()
+{
+    var auxiliary = document.getElementById("PhoneNumberContainer");
+    if(!regexPhoneNumber.test(auxiliary.value))
+    {
+        toggleError("Invalid phone number.");
+        return 0;
+    }
+    else
+    {
+        toggleError();
+        return 1;
+    }
+}
+
 function toggleError(error) 
 {
     var errorElement = document.getElementById("error");
@@ -64,7 +80,8 @@ function saveChanges()
     var name = document.getElementById("NameContainer").value;
     var surname = document.getElementById("SurnameContainer").value;
     var birthday = document.getElementById("DateOfBirthContainer").value;
-    if(checkName(name) && checkSurname(surname) && checkBirthDate(birthday))
+    var phoneNumber = document.getElementById("PhoneNumberContainer");
+    if(checkName(name) && checkSurname(surname) && checkBirthDate(birthday) && checkPhoneNumber(phoneNumber))
     {
         //document.getElementsByTagName("form")[0].submit();
         alert("Your data have been saved.");
