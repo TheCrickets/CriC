@@ -9,10 +9,10 @@ function removeOtherTextButLogin() {
     Array.from( elements ).forEach( s => s.style.filter = "none" );
     var element = document.getElementById("registerLeftText");
     element.style.visibility = "hidden";
-    var element = document.getElementById("registerContainer");
-    element.style.visibility = "hidden";
+
     element = document.getElementById("coverBlurrDiv");
     element.style.visibility = "hidden";
+    showLoginText();
 }
 
 function showLoginText() {
@@ -42,24 +42,25 @@ function showLoginText() {
   }
 
 
-function removeOtherTextButRegister () {
+function removeOtherTextButRegister() {
+    
     var elements = document.querySelectorAll( "body > *" );
     Array.from( elements ).forEach( s => s.style.filter = "none" );
-
+    
     var element = document.getElementById("loginLeftText");
     element.style.visibility = "hidden";
-    element = document.getElementsByClassName("loginContainer");
-    element.style.visibility = "hidden";
-
+    
     element = document.getElementById("coverBlurrDiv");
     element.style.visibility = "hidden";
+    
+    showRegisterText();
     
 }
 
 function showRegisterText() {
   var elements = document.querySelectorAll( "body > *:not(#registerContainer):not(#navDivWrapper):not(#registerLeftText)" );
   Array.from( elements ).forEach( s => s.style.filter = "blur(3px)" );
-  
+
   var background = document.getElementById("coverBlurrDiv");
   background.style.visibility = "visible";
   
@@ -67,6 +68,7 @@ function showRegisterText() {
 
   if(elem.style.visibility == "hidden")
     {
+        
         elem.style.visibility = "visible"; 
         var pos = -50;
         var id = setInterval(frame, 1);
@@ -96,6 +98,8 @@ function removeOtherTextButAbout() {
 
 function removeOtherTextButContact() {
     var element = document.getElementById("loginLeftText");
+    element.style.visibility = "hidden";
+    var element = document.getElementById("registerLeftText");
     element.style.visibility = "hidden";
     element = document.getElementById("coverBlurrDiv");
     element.style.visibility = "hidden";

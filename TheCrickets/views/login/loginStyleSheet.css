@@ -269,7 +269,7 @@ div#navDivWrapper {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #1ABC9C;
+  background: steelblue;
   height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
