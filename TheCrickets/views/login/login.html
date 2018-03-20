@@ -10,6 +10,7 @@
 </head>
 
 <body onload="onLoad();">
+    <div id = "coverBlurrDiv"></div>
     <div id = "logoWrapper"><font style="color: #ED4337">C</font>riC</div>
 
 	<div id="navDivWrapper">
@@ -110,6 +111,14 @@
 
 <script>
     function showLoginText() {
+
+      var elements = document.querySelectorAll( "body > *:not(.loginContainer):not(#navDivWrapper):not(#loginLeftText)" );
+      //elements.style.filter = "blur(3px)";
+      Array.from( elements ).forEach( s => s.style.filter = "blur(3px)" );
+      //Array.from( elements ).forEach( s => s.style.filter = "none" );
+      var background = document.getElementById("coverBlurrDiv");
+      background.style.visibility = "visible";
+      
       var elem = document.getElementById("loginLeftText");
       if(elem.style.visibility == "hidden")
         {
@@ -131,15 +140,27 @@
     function removeOtherTextButAbout() {
         var element = document.getElementById("loginLeftText");
         element.style.visibility = "hidden";
+        element = document.getElementById("coverBlurrDiv");
+        element.style.visibility = "hidden";
+        var elements = document.querySelectorAll( "body > *:not(.loginContainer):not(#navDivWrapper):not(#loginLeftText)" );
+        Array.from( elements ).forEach( s => s.style.filter = "none" );
     }
 
     function removeOtherTextButContact() {
         var element = document.getElementById("loginLeftText");
         element.style.visibility = "hidden";
+        element = document.getElementById("coverBlurrDiv");
+        element.style.visibility = "hidden";
+        var elements = document.querySelectorAll( "body > *:not(.loginContainer):not(#navDivWrapper):not(#loginLeftText)" );
+        Array.from( elements ).forEach( s => s.style.filter = "none" );
     }
 
     function removeOtherTextButRegister () {
         var element = document.getElementById("loginLeftText");
         element.style.visibility = "hidden";
+        element = document.getElementById("coverBlurrDiv");
+        element.style.visibility = "hidden";
+        var elements = document.querySelectorAll( "body > *:not(.loginContainer):not(#navDivWrapper):not(#loginLeftText)" );
+        Array.from( elements ).forEach( s => s.style.filter = "none" );
     }
 </script>

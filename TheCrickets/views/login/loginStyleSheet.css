@@ -1,10 +1,21 @@
+#coverBlurrDiv {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	visibility: visible;
+	z-index: 100;
+}
+
 #logoWrapper {
 	position: fixed;
 	top: 0;
 	left: 30px;
 	height: 10%;
 	width: 10%;
-	z-index: 100;
+	z-index: 99;
 	font-family: menuTextLabel;
 	background-color: #41B3A3;
 	font-size: 60px;
@@ -277,7 +288,7 @@ div#navDivWrapper {
 	position: fixed;
 	color: aliceblue;
 	left: -500px;
-	top: 10%;
+	top: 13%;
 	visibility: hidden;
 	background-color: mediumaquamarine;
 	padding-left: 15px;
