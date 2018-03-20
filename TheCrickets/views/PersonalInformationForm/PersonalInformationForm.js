@@ -5,10 +5,12 @@ function checkName()
     if(!regexNameSurname.test(auxiliary.value))
     {
         toggleError("Invalid name.");
+        return 0;
     }
     else
     {
         toggleError();
+        return 1;
     }
 }
 
@@ -18,10 +20,12 @@ function checkSurname()
     if(!regexNameSurname.test(auxiliary.value))
     {
         toggleError("Invalid surname.");
+        return 0;
     }
     else
     {
         toggleError();
+        return 1;
     }
 }
 
@@ -30,10 +34,12 @@ function checkBirthDate()
     if(new Date(document.getElementById('DateOfBirthContainer').value) > new Date())
     {
         toggleError("Your birthday is in the future.");
+        return 0;
     }
     else
     {
         toggleError();
+        return 1;
     }
 }
 
