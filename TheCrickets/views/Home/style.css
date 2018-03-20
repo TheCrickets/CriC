@@ -3,7 +3,8 @@ nav {
 	margin: 0px 0px 0px 0px;
 	 
 	width: 45%;
-	background-color: #34495e;
+	/*background-color: #34495e;*/
+  background-color: #41B3A3;
 	border-radius: 30px 0px 0px 30px;
 	font-size: 0;
 	float: right;
@@ -30,7 +31,6 @@ nav a {
 	height: 100%;
 	font-size: 20px;
 	display: inline-block;
-	position: left;
 	text-decoration: none;
 	/*text-transform: uppercase;*/
 	color: white;
@@ -51,7 +51,7 @@ nav a:hover#leftMostMenuItem
 body {
 	font-size: 30px;
 	font-family:  homePageText;
-	background: black;
+  background: #85DCBE;
 	margin: 0;
 
 }
@@ -60,7 +60,7 @@ body {
 p {
 	margin-left:17%;
 	padding:1px 16px;
-	color: aliceblue;
+	color: black;
 }
 
 
@@ -88,14 +88,13 @@ text-align: center;
 }
 
 .dropbtn a {
-    background-color: #34495e;
+    background-color: #41B3A3;
    padding-left: 40px;
 	padding-right: 40px;
 	line-height: 50px;
 	height: 100%;
 	font-size: 20px;
 	display: inline-block;
-	position: left;
 	text-decoration: none;
 	/*text-transform: uppercase;*/
 	color: white;
@@ -123,8 +122,6 @@ text-align: center;
 	 
 	border-color: white;
 	border-style: solid;
-	border-top: hidden;
-		border-left:  hidden;
 	border-width: 5px;
 }
 
@@ -133,7 +130,7 @@ text-align: center;
 	text-decoration: none;
 	padding: 10px 38px 10px 38px; 
 	color: white;
-	background: #34495e;
+	background: #41B3A3;
 	display: block;
 	border:none;
 	font-size: 20px;
@@ -167,7 +164,7 @@ margin: 0px 0px 0px;
   list-style-type: none;
     padding: 0;
     width: 15%;
-    background-color: #34495e;
+    background-color:#41B3A3;
     border-radius: 0px 50px 50px 0px;
     position: fixed;
 
@@ -183,7 +180,7 @@ margin: 0px 0px 0px;
     
 }
 
-.vertical-menu a {
+.vertical-menu .option {
 
   /*display: block;*/
   display: flex;
@@ -199,7 +196,7 @@ margin: 0px 0px 0px;
 }
 
 .vertical-menu a:hover:not(.active) {
-	 background: rgb(26, 188, 156, 0.3) ;
+	 background: rgba(26, 188, 156, 0.3) ;
    
     color: white;
 }
@@ -243,7 +240,7 @@ margin: 0px 0px 0px;
 }
 
 .facebook {
-size :1px;
+ 
   background: #3B5998;
   color: white;
 }
