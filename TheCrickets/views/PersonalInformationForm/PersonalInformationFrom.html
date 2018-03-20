@@ -6,6 +6,8 @@
 </head>
 <body>
 <div id="formContainer">
+    <div id="error"></div>
+    
     <div id="PersonalInformation">
         Personal Information
     </div>
@@ -13,20 +15,20 @@
     <form>
         <input type="upload" id="ProfilePicture" placeholder=" Profile picture ">
         
-        <div id="Name">
+        <div id="Name"> 
             Name
         </div>
-        <input type="text" id="NameContainer" placeholder="Tucsi">
+        <input type="text" id="NameContainer" placeholder="Tucsi" onchange="checkName();">
         
         <div id="Surname">
             Surname
         </div>
-        <input type="text" id="SurnameContainer" placeholder="Pinguinescu">
+        <input type="text" id="SurnameContainer" placeholder="Pinguinescu" >
         
         <div id="DateOfBirth">
             Date of Birth
         </div>
-        <input type="text" id="DateOfBirthContainer" placeholder="dd-mm-yyyy">
+        <input type="date" id="DateOfBirthContainer" placeholder="dd-mm-yyyy" >
         
         <div id="PhoneNumber">
             Phone Number
@@ -46,7 +48,7 @@
         </label>
         
         <br>
-        <input type="button" value="Save" name="form" onclick="saveChanges();">
+        <input type="button" value="Save" name="form" >
     </form>
     </div>
 </div>

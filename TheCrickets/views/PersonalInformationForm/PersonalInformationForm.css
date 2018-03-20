@@ -134,3 +134,13 @@ input[type="button"] {
   {
     background-color: #124496;
   }
+
+  #error{
+    font-family: loginPageTextFont;
+    font-size: 18px;
+    color: red;
+    display: block;
+    margin-left: -164px;
+    margin-bottom: 40px;
+    text-align: center;
+  }

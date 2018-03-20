@@ -1,18 +1,30 @@
-var regexName = /^[a-zA-Z ]{2,30}$/;
-
-function validateNameAndSurname(id)
+var regexNameSurname = /^[a-zA-Z ]{2,30}$/;
+function checkName()
 {
-    var control = document.getElemetnById(id);
-    return regexName.test(id);
-}
-
-function saveChanges()
-{
-    var name = document.getElementById("NameContainer").value;
-    var surname = document.getElementById("SurnameContainer").value;
-
-    if(validateNameAndSurname(name) || validateNameAndSurname(surname))
+    var auxiliary = document.getElementById("NameContainer");
+    if(!regexNameSurname.test(auxiliary.value))
     {
-        document.getElementsByTagName("form")[0].submit();
+        toggleError("Invalid name.");
+    }
+    else
+    {
+        toggleError();
     }
 }
+
+
+function toggleError(error) 
+{
+    var errorElement = document.getElementById("error");
+    if (error == undefined) 
+    {
+        errorElement.style.display = "none";
+        errorElement.innerHTML = "";
+    }
+    else 
+    {
+        errorElement.style.display = "block";
+        errorElement.innerHTML = error;
+    }
+}
+
