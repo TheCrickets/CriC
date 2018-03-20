@@ -35,14 +35,14 @@
   margin-bottom: 20px;
 }
 
-#emailLabel {
+#emailLabelRegister {
   height: 22px;
   font-family: loginPageTextFont;
   font-size: 18px;
   color: white;
 }
 
-#passwordLabel {
+#passwordLabelRegister {
   margin-top: 46px;
   height: 22px;
   font-family: loginPageTextFont;
@@ -58,8 +58,8 @@
   color: white;
 }
 
-#email,
-#password,
+#emailRegister,
+#passwordRegister,
 #passwordAgain {
   height: 50px;
   padding-left: 20px;
@@ -91,7 +91,7 @@ input[type="button"]:active
   background-color: #124496;
 }
 
-#passEye{
+.passEyeRegister {
   position: relative;
   display: block;
   top: -33px;
@@ -99,7 +99,7 @@ input[type="button"]:active
   cursor: pointer;
 }
 
-#error{
+#errorRegister{
   font-family: loginPageTextFont;
   font-size: 18px;
   color: red;

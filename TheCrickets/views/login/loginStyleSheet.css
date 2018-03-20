@@ -69,18 +69,18 @@ body {
 	display: inline-block;
 }
 
-#thirdPartOne {
+.thirdPartOne {
 	width: 50%;
 	float: left;
 }
 
-#thirdPartTwo {
+.thirdPartTwo {
 	width: 50%;
 	float: left;
 	text-align: center;
 }
 
-p#thirdPartText {
+.thirdPartText {
 	text-align: left;
 	padding-left: 10%;
 	padding-top: 8%;
@@ -204,7 +204,6 @@ nav a {
 	height: 100%;
 	font-size: 20px;
 	display: inline-block;
-	position: left;
 	text-decoration: none;
 	color: white;
 	cursor: pointer;
@@ -214,7 +213,6 @@ body {
 	margin: 0;
 	font-size: 30px;
 	font-family: homePageText;
-	font-style: bold;
 }
 
 /*body > *:not(.loginContainer):not(#loginLeftText):not(#navDivWrapper) {
@@ -271,11 +269,8 @@ div#navDivWrapper {
   bottom: 0;
   background: steelblue;
   height: 4px;
-  -webkit-transition-property: left, right;
   transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 .lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
@@ -319,4 +314,9 @@ div#navDivWrapper {
   }
   #registerLeftText:active {
 	visibility: visible;
+  }
+
+  .redLetter {
+	color: #ED4337;
+	display: inline;
   }
