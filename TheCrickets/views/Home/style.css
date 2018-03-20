@@ -380,7 +380,7 @@ right: 0;
        width: 40%;
         }
     }
- @media screen   and  (min-width: 940px)   and (max-height : 9000px)  {
+ @media screen   and  (min-width: 940px)   and (max-height : 497px)  {
    .vertical-menu {  
   /*
      padding: 40px  8px 40px;
