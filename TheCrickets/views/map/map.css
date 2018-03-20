@@ -1,22 +1,32 @@
 #mapContainer {
     position: relative;
-    width: 75%;
-    height: calc(100% - 100px);
+    top: 10%;
+    left: 15%;
+    width: 85%;
+    height: 85%;
+    overflow: auto;
+    clear: both;
 }
 
 #map {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 80%;
     height: 100%;
+    border: none;
 }
 
 #options{
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 80%;
     width: 20%;
     height: 100%;
     word-wrap: break-word;
+    font-family: loginPageTextFont;
+    font-size: 18px;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
 }
