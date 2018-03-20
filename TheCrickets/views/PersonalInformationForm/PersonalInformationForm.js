@@ -25,6 +25,18 @@ function checkSurname()
     }
 }
 
+function checkBirthDate()
+{
+    if(new Date(document.getElementById('DateOfBirthContainer').value) > new Date())
+    {
+        toggleError("Your birthday is in the future.");
+    }
+    else
+    {
+        toggleError();
+    }
+}
+
 function toggleError(error) 
 {
     var errorElement = document.getElementById("error");
