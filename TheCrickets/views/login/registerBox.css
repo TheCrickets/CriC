@@ -1,23 +1,32 @@
 #registerContainer {
   width: 500px;
   height: 650px;
-  background-color: #1abc9c;
-  padding-left: 58px;
-	display: block;
+  margin-left: 60%;
+	top: 10%;
 	position: fixed;
-	right: 0;
-	left: 0;
-	margin: auto;
-	top: 20%;
-	z-index: 100;
+  z-index: 100;
+  visibility: hidden;
 }
 
 #registerContainer:target {
-	display: block;
+  animation-duration: 1s;
+  animation-name: slidein;
+  visibility: visible;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 60%;
+    width: 100%;
+  }
 }
 
 .Welcome {
-  font-family: loginPageTextFont;
   font-size: 48px;
   color: white;
   padding-top: 30px;

@@ -5,7 +5,7 @@
 	width: 100%;
 	background-color: black;
 	opacity: 0.7;
-	visibility: visible;
+	visibility: hidden;
 	z-index: 100;
 }
 
@@ -30,6 +30,7 @@
 html {
 	height: 100%;
 	width: 100%;
+	scroll-behavior: smooth;
 }
 body {
 	height: 100%;
@@ -298,5 +299,24 @@ div#navDivWrapper {
 	
   }
   #loginLeftText:active {
+	visibility: visible;
+  }
+
+  #registerLeftText {
+	width: 500px;
+	height: 600px;
+	position: fixed;
+	color: aliceblue;
+	left: -500px;
+	top: 13%;
+	visibility: hidden;
+	background-color: mediumaquamarine;
+	padding-left: 15px;
+	border-left: solid steelblue;
+	border-width: 10px;
+	z-index: 100;
+	
+  }
+  #registerLeftText:active {
 	visibility: visible;
   }
