@@ -52,3 +52,19 @@ function toggleError(error)
     }
 }
 
+function saveChanges()
+{
+    console.log("Hello");
+    var name = document.getElementById("NameContainer").value;
+    var surname = document.getElementById("SurnameContainer").value;
+    var birthday = document.getElementById("DateOfBirthContainer").value;
+    if(checkName(name) && checkSurname(surname) && checkBirthDate(birthday))
+    {
+        //document.getElementsByTagName("form")[0].submit();
+        alert("Your data have been saved.");
+    }
+    else
+    {
+        alert("error");
+    }
+}
