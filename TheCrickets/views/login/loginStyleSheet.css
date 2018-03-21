@@ -89,6 +89,8 @@ body {
 	width: 100%;
 }
 
+
+
 #scrollButton {
 	content: url(resources/down-arrow.png);
 	position: fixed;
@@ -97,6 +99,8 @@ body {
 	height: 60px;
 	width: 60px;
 }
+
+
 
 #firstPart {
 	background-color: #85DCBE;
@@ -169,6 +173,60 @@ body {
 	height: 100px;
 	width: 100px;
 	padding-left: 200px;
+}
+
+
+@media only screen and (min-width: 1050px) and (max-width: 1200px) {
+	#firstPart {
+		height: 90%;
+	}
+}
+
+
+@media only screen and (max-width: 1050px)
+{
+
+	#firstPart {
+		height: 120%;
+	}
+
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 50px !important;
+		width: 50px !important;
+		padding-left: 100px !important;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 30px !important;
+		padding-top: 5px !important;
+		padding-left: 100px !important;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 730px) {
+	#firstPart {
+		height: 130%;
+	}
+	#flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
+		padding-left: 50px !important;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+	#firstPart {
+		height: 140%;
+	}
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 30px !important;
+		width: 30px !important;
+		padding-left: 20px !important;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 20px !important;
+		padding-top: 5px !important;
+		padding-left: 20px !important;
+	}
 }
 
 #floodingContainer {
@@ -311,6 +369,12 @@ nav {
 		font-size: 0;
 	}
 
+	#scrollButton {
+		bottom: 2px;
+		height: 14px;
+		width: 14px;
+	}
+
 	nav a {
 		padding-left: 5px;
 		padding-right: 5px;
@@ -340,6 +404,12 @@ nav {
 		font-size: 0;
 	}
 
+	#scrollButton {
+		bottom: 10px;
+		height: 20px;
+		width: 20px;
+	}
+
 	nav a {
 		padding-left: 10px;
 		padding-right: 10px;
@@ -364,7 +434,7 @@ nav {
 
   @media only screen and (min-width: 650px) and (max-width: 800px) {
 	nav {
-		width: 60%;
+		width: 450px;
 	}
 	nav a {
 		padding-left: 10px;
@@ -372,6 +442,12 @@ nav {
 		line-height: 35px;
 		height: 100%;
 		font-size: 14px;
+	}
+
+	#scrollButton {
+		bottom: 10px;
+		height: 30px;
+		width: 30px;
 	}
 
 	.lineFromCenter:before { 
@@ -387,14 +463,21 @@ nav {
 
   @media only screen and (min-width: 800px) and (max-width: 1000px) {
 	nav {
-		width: 60%;
+		width: 600px;
 	}
+
+	#scrollButton {
+		bottom: 10px;
+		height: 35px;
+		width: 35px;
+	}
+
 	nav a {
 		padding-left: 10px;
 		padding-right: 10px;
-		line-height: 35px;
+		line-height: 60px;
 		height: 100%;
-		font-size: 15px;
+		font-size: 25px;
 	}
 
 	.lineFromCenter:before { 
@@ -402,16 +485,37 @@ nav {
 	}
 
 	img.navBarImage {
-		width: 20px;
-		height: 20px;
+		width: 25px;
+		height: 25px;
 		padding-right: 5px;
 	}
   }
+
+
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+
+	#scrollButton {
+	bottom: 10px;
+	height: 40px;
+	width: 40px;
+	}
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+	#scrollButton {
+	bottom: 10px;
+	height: 35px;
+	width: 35px;
+	}
+}
+
 
   @media only screen and (min-width: 1000px) and (max-width: 1400px) {
 	nav {
 		width: 60%;
 	}
+
 	nav a {
 		padding-left: 10px;
 		padding-right: 10px;
@@ -435,6 +539,11 @@ nav {
 	nav {
 		width: 60%;
 	}
+	#scrollButton {
+		bottom: 10px;
+		height: 35px;
+		width: 35px;
+		}
 	nav a {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -459,6 +568,11 @@ nav {
 		width: 60%;
 		border-radius: 70px 0 0 70px;
 	}
+	#scrollButton {
+		bottom: 20px;
+		height: 70px;
+		width: 70px;
+		}
 	nav a {
 		padding-left: 40px;
 		padding-right: 40px;
