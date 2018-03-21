@@ -188,7 +188,7 @@ body {
 {
 
 	#firstPart {
-		height: 120%;
+		height: 130%;
 	}
 
 	#flooding, #tornado, #earthquake, #fire { 
@@ -219,24 +219,30 @@ body {
 	.thirdPartText {
 		padding-left: 10%;
 		padding-top: 1%;
-		font-size: 40px;
+		font-size: 35px;
 	}
 
 }
 
 @media only screen and (min-width: 500px) and (max-width: 730px) {
 	#firstPart {
-		height: 130%;
+		height: 170%;
 	}
 	#flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
 		padding-left: 50px !important;
+	}
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 30px;
 	}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
 	#firstPart {
-		height: 140%;
+		height: 60%;
 	}
+	/* dfsjfgdfjgifjgijjjjjgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
 	#flooding, #tornado, #earthquake, #fire { 
 		height: 30px !important;
 		width: 30px !important;
@@ -247,6 +253,21 @@ body {
 		font-size: 20px !important;
 		padding-top: 5px !important;
 		padding-left: 20px !important;
+	}
+
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 20px;
+	}
+
+	#textFirstPart {
+		font-size: 100%;
+		padding-top: 30px;
+	}
+
+	#textFirstPartUnder {
+		font-size: 70% !important;
 	}
 }
 
@@ -451,7 +472,9 @@ nav {
 	.lineFromCenter:before { 
 		height: 1px;
 	}
+	
   }
+
 
   @media only screen and (min-width: 650px) and (max-width: 800px) {
 	nav {
@@ -520,9 +543,38 @@ nav {
 	height: 40px;
 	width: 40px;
 	}
+
+	#firstPart {
+		height: 85%;
+	}
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 60px !important;
+		width: 60px !important;
+		padding-left: 100px !important;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 40px !important;
+		padding-top: 5px !important;
+		padding-left: 100px !important;
+	}
+
+	#textFirstPart {
+		font-size: 250%;
+		padding-top: 130px;
+	}
+
+	#textFirstPartUnder {
+		font-size: 80%;
+	}
+	
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+	#firstPart {
+		height: 130%;
+	}
 
 	#scrollButton {
 	bottom: 10px;
