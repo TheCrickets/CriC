@@ -1,6 +1,4 @@
 /* CSS Document */
-
-
 nav {
 	margin: 0px 0px 0px 0px;
 	 
@@ -56,7 +54,7 @@ body {
 
 
 p {
-	margin-left:10%;
+	margin-left:17%;
 	padding:1px 16px;
 	color: black;
 }
@@ -112,26 +110,25 @@ text-align: center;
 .dropdown-content {
     display: none;
     position: absolute;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	width:auto;
-		white-space: nowrap;
- 
-
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width:auto;
+    white-space: nowrap;
+	 
 }
 
 .dropdown-content a {
    
-	text-decoration: none;
-	padding: 10px 54px 10px 38px; 
-	color: white;
-	background: #41B3A3;
-	display: block;
-	border:none;
-	font-size: 20px;
-	text-align: left;
-	margin: 0;
-	border-left:solid 6px #1abc9c;
-	line-height: 30px;
+	 text-decoration: none;
+  padding: 10px 54px 10px 38px; 
+  color: white;
+  background: #41B3A3;
+  display: block;
+  border:none;
+  font-size: 20px;
+  text-align: left;
+  margin: 0;
+  border-left:solid 6px #1abc9c;
+  line-height: 30px;
 }
 
 
@@ -149,74 +146,80 @@ text-align: center;
 }
 
 
-#mySidenav a {
+
+
+.vertical-menu {
+top: 30%;
+margin: 0px 0px 0px;
+
+  list-style-type: none;
+    padding: 0;
+    width: 15%;
+    background-color:#41B3A3;
+    border-radius: 0px 50px 50px 0px;
     position: fixed;
-    left: -80px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 100px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 0 5px 5px 0;
-}
 
-#mySidenav a:hover {
-    left: 0;
-}
-/*
-#home {
-    top: 30%;
-    background-color: #4CAF50;
-}
+    height: 50%;
+    overflow: auto;
 
-#map {
-    top: 38%;
-    background-color: #2196F3;
-}
-#placeholder {
-    top: 46%;
-    background-color: #f44336;
-}
 
-#links{
-    top: 57%;
-    background-color: #555
+    border-radius: 0px 50px 50px 0px;
+	border-color: white;
+	border-style: solid;
+	border-left: hidden;
+	border-width: 5px;
+    
 }
-
-*/
-#home {
-    top: 250px;
-    background-color: #4CAF50;
-}
-#mySidenav img#menuImage{
+.vertical-menu img#menuImage{
   width: 30px;
   height: 30px;
   vertical-align: middle;
   position: absolute;
-  right: 14px;
-top:10px;
-}
-#map {
-    top: 315px;
-    background-color: #2196F3;
-}
-#placeholder {
-    top: 384px;
-    background-color: #f44336;
+  left: 14px;
+ 
 }
 
-#links{
-    top: 455px;
-    background-color: #555
+.vertical-menu .option {
+
+  /*display: block;*/
+  display: flex;
+    color: white;
+    padding: 10px  50px 16px;
+    text-decoration: none;
+ 
+
+}
+.vertical-menu a.active {
+    background-color:  #1abc9c;
+    color: white;
+}
+
+.vertical-menu a:hover:not(.active) {
+	 background: rgba(26, 188, 156, 0.3) ;
+   
+    color: white;
 }
 
 
 
+.icon-bar {
+	/*  flex-direction: row;
+ 
 
-.icon-bar {  
-   position: relative;
 
+-webkit-transform: translateY(-90%);
+  -ms-transform: translateY(-90%);
+  top: 67%;
+
+
+
+
+ position: fixed; 
+*/
+  
+   position: absolute;
+ bottom: 10px;
+  
   transform: none;
 }
 
@@ -258,6 +261,150 @@ top:10px;
 }
 
 
+@media screen and (max-width: 940px)  and (min-width: 857px) {
+    nav {  
+    /* 
+        flex-direction: column;
+        */
+
+ top: 56px;
+position: fixed;
+    float: right;
+    width: 100%;
+
+   border-color: white;
+   border-style: solid;
+	border-right: hidden;
+	border-width: 5px;
+    }
+}
+
+/*
+@media screen and (max-width: 940px) {
+   .vertical-menu {  
+  flex-direction: row;
+    display: inline-flex;
+    position: sticky;
+    width: 100%;
+   height: 50px;
+    }
+}
+
+@media screen and (max-width: 1450px) and (min-width: 940px) {
+   .vertical-menu {  
+  
+    width: 220px;
+ 
+    }
+}
+
+@media screen and (max-height: : 100px)  {
+   .vertical-menu {  
+  
+    height: 2px;
+ 
+    }
+}
+@media screen and (max-width: 940px) {
+   .icon-bar {  
+right: 0;
+ position: sticky;
+    }
+}
+*/
+ 
+
+   @media screen and (max-width: 940px)  and (min-width: 857px){
+   .vertical-menu {  
+   flex-direction: row;
+    display: inline-flex;
+    position: fixed;
+    width: 100%;
+   height: 50px;
+  top:0;
+   
+
+    }
+}
+@media screen and (max-width: 940px) and (min-width: 857px)  {
+   .icon-bar {  
+    right: 0;
+    
+ top: 3px;
+    }
+}
+@media screen and (max-width: 940px) and (min-width: 857px) {
+   .icon-bar a {  
+     padding: 10px  20px 10px;
+ 
+    }
+}
+@media screen and (max-width: 940px) and (min-width: 857px) {
+   .linkedin {
+	 border-radius: 0px 30px 30px 0px;
+ 
+    }
+}
+
+
+@media screen and (max-width: 857px)  {
+  .vertical-menu{
+  	/*
+
+	flex-direction: column;
+   width: 100%;
+   position: fixed;
+   */
+    flex-direction: column;
+  
+    display: inline-flex;
+    position: relative;
+    width: 50%;
+   height: 255px;
+    
+    top: 0;
+    
+    }
+}
+@media screen and (max-width: 857px) {
+    nav {  
+    
+        
+      top: 40px; 
+      right: 0;
+ position: relative;
+       width: 40%;
+        }
+    }
+ @media screen   and  (min-width: 940px)   and (max-height : 497px)  {
+   .vertical-menu {  
+  /*
+     padding: 40px  8px 40px;
+ */
+ height: 250px;
+    }
+}
+
+@media screen and (max-width : 1450px) and (min-width: 940px)      {
+   .vertical-menu a {  
+    padding: 17px  8px 9px;
+  
+ 
+    }
+}
+
+@media screen and (max-width: 1450px) and (min-width: 940px) {
+   .vertical-menu {  
+  
+    width: 190px;
+ 
+    }
+}
+
+
+
+
+
 
 #firstPart {
   background-color: #85DCBE;
@@ -271,6 +418,8 @@ padding-bottom: 100px;
   text-align: center;
   font-size: 350%;
   padding-top: 130px;
+   padding-right: 100px;
+  padding-left: 300px;
 }
 
 #fire {
@@ -278,12 +427,15 @@ padding-bottom: 100px;
   content: url(resources/Login/flame.png);
   height: 100px;
   width: 100px;
+
+  padding-left: 200px;
 }
 
 #fireContainer {
   display: inline-block;
 }
 #fireText {
+   padding-left: 200px;
   color: #ED4337;
   font-size: 50px;
   padding-top: 10px;
@@ -354,6 +506,8 @@ padding-bottom: 100px;
   text-align: center;
   font-size: 130%;
   color: white;
+  padding-right: 100px;
+  padding-left: 300px;
 }
 .redLetter {
   color: #ED4337;
@@ -376,31 +530,6 @@ div#textUserName{
    
 white-space: nowrap;
 }
-
-
-
-@media screen and (max-width: 857px) {
-    nav {  
-    
-        
-      top: 0; 
-      right: 0;
- position: fixed;
-       width: 100%;
-        }
-    }
-@media screen and (max-width: 857px) {
-    div.photouser {  
-    
-        
-      top: 50px; 
-     
- position: fixed;
-        }
-    }
-
-
-
 @font-face {
   font-family: loginPageTextFont;
   src: url(resources/navBarTextFont.ttf);
@@ -418,3 +547,5 @@ white-space: nowrap;
   font-family: partText;
   src: url(resources/Yano.ttf);
 }
+
+
