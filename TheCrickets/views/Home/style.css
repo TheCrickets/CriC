@@ -149,7 +149,7 @@ text-align: center;
 }
 
 
-#mySidenav a {
+#mySidenav>a {
     position: fixed;
     left: -80px;
     transition: 0.3s;
@@ -161,9 +161,12 @@ text-align: center;
     border-radius: 0 5px 5px 0;
 }
 
-#mySidenav a:hover {
+
+#mySidenav>a:hover {
     left: 0;
 }
+
+
 /*
 #home {
     top: 30%;
@@ -197,6 +200,14 @@ text-align: center;
   right: 14px;
 top:10px;
 }
+#mySidenav img#menuImageForLinks{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  position: absolute;
+  right: 14px;
+top:25px;
+}
 #map {
     top: 315px;
     background-color: #2196F3;
@@ -205,20 +216,36 @@ top:10px;
     top: 384px;
     background-color: #f44336;
 }
+ 
+
 
 #links{
+    height: 55px;
+    position: fixed;
+    left: -220px;
+    transition: 0.3s;
+    padding: 15px ;
+    width: 240px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+
     top: 455px;
-    background-color: #555
+    background-color: #555;
 }
 
-
-
-
-.icon-bar {  
-   position: relative;
-
-  transform: none;
+#links:hover{
+  left: 0px;
+      
 }
+
+.icon-bar { 
+  display: inline-block;
+   position: absolute;
+  
+}
+
 
 .icon-bar a {
 
@@ -461,12 +488,7 @@ display: inline-flex;
   src: url(resources/Yano.ttf);
 }
 
-@media only screen and (max-width: 1920px)
-{
-  #firstPart {
-    height: 700px;
-  }
-}
+
 
 
 @media only screen and (max-width: 1050px)
