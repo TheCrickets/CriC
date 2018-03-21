@@ -16,68 +16,7 @@ body {
 }
 
 
-@media only screen and (min-width: 1080px) {
-	#logoWrapper {
-		position: fixed;
-		top: 0;
-		left: 30px;
-		height: 100px;
-		width: 150px;
-		z-index: 99;
-		font-family: menuTextLabel;
-		background-color: #41B3A3;
-		font-size: 70px;
-		text-align: center;
-		border-radius: 0px 0px 30px 30px;
-		border-color: white;
-		border-style: solid;
-		border-top: hidden;
-		border-width: 5px;
-		color: white;
-	}
-}
 
-@media only screen and (max-width: 1080px) {
-	#logoWrapper {
-		position: fixed;
-		top: 0;
-		left: 1%;
-		height: 10;
-		width: 100px;
-		z-index: 99;
-		font-family: menuTextLabel;
-		background-color: #41B3A3;
-		font-size: 50px;
-		text-align: center;
-		border-radius: 0px 0px 30px 30px;
-		border-color: white;
-		border-style: solid;
-		border-top: hidden;
-		border-width: 5px;
-		color: white;
-	}
-}
-
-@media only screen and (max-width: 500px) {
-	#logoWrapper {
-		position: fixed;
-		top: 0;
-		left: 1%;
-		height: 25px;
-		width: 40px;
-		z-index: 99;
-		font-family: menuTextLabel;
-		background-color: #41B3A3;
-		font-size: 20px;
-		text-align: center;
-		border-radius: 0px 0px 10px 10px;
-		border-color: white;
-		border-style: solid;
-		border-top: hidden;
-		border-width: 1px;
-		color: white;
-	}
-}
 
 html {
 	height: 100%;
@@ -176,100 +115,7 @@ body {
 }
 
 
-@media only screen and (min-width: 1050px) and (max-width: 1200px) {
-	#firstPart {
-		height: 90%;
-	}
-}
 
-/* ------------------------------------------------------------------------- */
-
-@media only screen and (max-width: 1050px)
-{
-
-	#firstPart {
-		height: 130%;
-	}
-
-	#flooding, #tornado, #earthquake, #fire { 
-		height: 50px !important;
-		width: 50px !important;
-		padding-left: 100px !important;
-	}
-	
-	#floodingText, #fireText, #earthquakeText, #tornadoText {
-		font-size: 30px !important;
-		padding-top: 5px !important;
-		padding-left: 100px !important;
-	}
-
-	.thirdPart {
-		width: 130%;
-		height: 50%;
-	}
-	
-	.thirdPartOne {
-		width: 40%;
-	}
-	
-	.thirdPartTwo {
-		width: 40%;
-	}
-
-	.thirdPartText {
-		padding-left: 10%;
-		padding-top: 1%;
-		font-size: 35px;
-	}
-
-}
-
-@media only screen and (min-width: 500px) and (max-width: 730px) {
-	#firstPart {
-		height: 170%;
-	}
-	#flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
-		padding-left: 50px !important;
-	}
-	.thirdPartText {
-		padding-left: 10%;
-		padding-top: 1%;
-		font-size: 30px;
-	}
-}
-
-@media only screen and (min-width: 300px) and (max-width: 500px) {
-	#firstPart {
-		height: 60%;
-	}
-	/* dfsjfgdfjgifjgijjjjjgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
-	#flooding, #tornado, #earthquake, #fire { 
-		height: 30px !important;
-		width: 30px !important;
-		padding-left: 20px !important;
-	}
-	
-	#floodingText, #fireText, #earthquakeText, #tornadoText {
-		font-size: 20px !important;
-		padding-top: 5px !important;
-		padding-left: 20px !important;
-	}
-
-	.thirdPartText {
-		padding-left: 10%;
-		padding-top: 1%;
-		font-size: 20px;
-	}
-
-	#textFirstPart {
-		font-size: 100%;
-		padding-top: 30px;
-	}
-
-	#textFirstPartUnder {
-		font-size: 70% !important;
-	}
-}
 
 #floodingContainer {
 	display: inline-block;
@@ -404,7 +250,229 @@ nav {
 	right: 0;
   }
    
-  @media only screen and (min-width: 0px) and (max-width: 500px) {
+  
+
+
+@font-face {
+	font-family: loginPageTextFont;
+	src: url(resources/navBarTextFont.ttf);
+}
+@font-face {
+	font-family: homePageText;
+	src: url(resources/Pack.ttf);
+}
+@font-face {
+	font-family: menuTextLabel;
+	src: url(resources/teen.ttf);
+}
+
+@font-face {
+	font-family: partText;
+	src: url(resources/Yano.ttf);
+}
+
+
+#loginLeftText {
+	width: 500px;
+	height: 600px;
+	position: fixed;
+	color: aliceblue;
+	left: -500px;
+	top: 13%;
+	visibility: hidden;
+	background-color: mediumaquamarine;
+	padding-left: 15px;
+	border-left: solid steelblue;
+	border-width: 10px;
+	z-index: 100;
+	
+  }
+  #loginLeftText:active {
+	visibility: visible;
+  }
+
+  #registerLeftText {
+	width: 500px;
+	height: 600px;
+	position: fixed;
+	color: aliceblue;
+	left: -500px;
+	top: 13%;
+	visibility: hidden;
+	background-color: mediumaquamarine;
+	padding-left: 15px;
+	border-left: solid steelblue;
+	border-width: 10px;
+	z-index: 100;
+	
+  }
+  #registerLeftText:active {
+	visibility: visible;
+  }
+
+  .redLetter {
+	color: #ED4337;
+	display: inline;
+  }
+
+  @media only screen and (min-width: 1080px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 30px;
+		height: 100px;
+		width: 150px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 70px;
+		text-align: center;
+		border-radius: 0px 0px 30px 30px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 5px;
+		color: white;
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 1%;
+		height: 10;
+		width: 100px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 50px;
+		text-align: center;
+		border-radius: 0px 0px 30px 30px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 5px;
+		color: white;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 1%;
+		height: 25px;
+		width: 40px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 20px;
+		text-align: center;
+		border-radius: 0px 0px 10px 10px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 1px;
+		color: white;
+	}
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1200px) {
+	#firstPart {
+		height: 90%;
+	}
+}
+
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1050px)
+{
+
+	#firstPart {
+		height: 130%;
+	}
+
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 50px;
+		width: 50px;
+		padding-left: 100px;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 30px;
+		padding-top: 5px;
+		padding-left: 100px;
+	}
+
+	.thirdPart {
+		width: 130%;
+		height: 50%;
+	}
+	
+	.thirdPartOne {
+		width: 40%;
+	}
+	
+	.thirdPartTwo {
+		width: 40%;
+	}
+
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 35px;
+	}
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 730px) {
+	#firstPart {
+		height: 170%;
+	}
+	#flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
+		padding-left: 50px !important;
+	}
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+	#firstPart {
+		height: 60%;
+	}
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 30px;
+		width: 30px;
+		padding-left: 20px;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 20px;
+		padding-top: 5px;
+		padding-left: 20px;
+	}
+
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 20px;
+	}
+
+	#textFirstPart {
+		font-size: 100%;
+		padding-top: 30px;
+	}
+
+	#textFirstPartUnder {
+		font-size: 70%;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
 	nav {
 		width: 65%;
 		border-radius: 10px 0 0 10px;
@@ -548,15 +616,15 @@ nav {
 		height: 85%;
 	}
 	#flooding, #tornado, #earthquake, #fire { 
-		height: 60px !important;
-		width: 60px !important;
-		padding-left: 100px !important;
+		height: 60px;
+		width: 60px;
+		padding-left: 100px;
 	}
 	
 	#floodingText, #fireText, #earthquakeText, #tornadoText {
-		font-size: 40px !important;
-		padding-top: 5px !important;
-		padding-left: 100px !important;
+		font-size: 40px;
+		padding-top: 5px;
+		padding-left: 100px;
 	}
 
 	#textFirstPart {
@@ -663,67 +731,4 @@ nav {
 		height: 60px;
 		padding-right: 5px;
 	}
-  }
-
-
-@font-face {
-	font-family: loginPageTextFont;
-	src: url(resources/navBarTextFont.ttf);
-}
-@font-face {
-	font-family: homePageText;
-	src: url(resources/Pack.ttf);
-}
-@font-face {
-	font-family: menuTextLabel;
-	src: url(resources/teen.ttf);
-}
-
-@font-face {
-	font-family: partText;
-	src: url(resources/Yano.ttf);
-}
-
-
-#loginLeftText {
-	width: 500px;
-	height: 600px;
-	position: fixed;
-	color: aliceblue;
-	left: -500px;
-	top: 13%;
-	visibility: hidden;
-	background-color: mediumaquamarine;
-	padding-left: 15px;
-	border-left: solid steelblue;
-	border-width: 10px;
-	z-index: 100;
-	
-  }
-  #loginLeftText:active {
-	visibility: visible;
-  }
-
-  #registerLeftText {
-	width: 500px;
-	height: 600px;
-	position: fixed;
-	color: aliceblue;
-	left: -500px;
-	top: 13%;
-	visibility: hidden;
-	background-color: mediumaquamarine;
-	padding-left: 15px;
-	border-left: solid steelblue;
-	border-width: 10px;
-	z-index: 100;
-	
-  }
-  #registerLeftText:active {
-	visibility: visible;
-  }
-
-  .redLetter {
-	color: #ED4337;
-	display: inline;
   }
