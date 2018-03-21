@@ -4,7 +4,7 @@
 nav {
 	margin: 0px 0px 0px 0px;
 	 
-	width: 45%;
+	width: 680px;
 	/*background-color: #34495e;*/
   background-color: #41B3A3;
 	border-radius: 30px 0px 0px 30px;
@@ -271,7 +271,24 @@ padding-bottom: 100px;
   text-align: center;
   font-size: 350%;
   padding-top: 130px;
+  margin-left:130px;
 }
+#textFirstPartUnder {
+  text-align: center;
+  font-size: 130%;
+  color: white;
+   margin-left:100px;
+}
+#firstPartContainer {
+  text-align:center;
+}
+
+
+.redLetter {
+  color: #ED4337;
+  display: inline;
+  }
+
 
 #fire {
   padding-top: 60px;
@@ -346,19 +363,8 @@ padding-bottom: 100px;
   padding-left: 200px;
 }
 
-#firstPartContainer {
-  text-align:center;
-}
 
-#textFirstPartUnder {
-  text-align: center;
-  font-size: 130%;
-  color: white;
-}
-.redLetter {
-  color: #ED4337;
-  display: inline;
-  }
+
 
 div.photouser{
 left:7px;
@@ -389,13 +395,49 @@ white-space: nowrap;
        width: 100%;
         }
     }
+
+@media screen and (max-width: 590px) {
+    nav {  
+      top: 0; 
+      right: 0;
+ 
+ /*width: 400px;
+      
+*/
+ flex-direction: column;
+display: inline-flex;
+     width: 210px;
+  
+        }
+    }
 @media screen and (max-width: 857px) {
     div.photouser {  
     
-        
       top: 50px; 
-     
- position: fixed;
+ 
+        }
+    }
+@media screen and (max-width: 590px) {
+    div.photouser {  
+    
+      top: 0px; 
+ 
+        }
+    }
+
+@media screen and (max-width: 350px) {
+    div.photouser {  
+    
+      top: 150px; 
+ left:auto;
+ right: 150px;
+        }
+    }
+@media screen and (max-width: 350px) {
+ 
+    #textFirstPart {
+  padding-top: 350px; 
+
         }
     }
 
@@ -417,4 +459,73 @@ white-space: nowrap;
 @font-face {
   font-family: partText;
   src: url(resources/Yano.ttf);
+}
+
+
+
+
+@media only screen and (max-width: 1050px)
+{
+
+  #firstPart {
+    height: 120%;
+  }
+
+  #flooding, #tornado, #earthquake, #fire { 
+    height: 50px;
+    width: 50px;
+    padding-left: 100px;
+  }
+  
+  #floodingText, #fireText, #earthquakeText, #tornadoText {
+    font-size: 30px;
+    padding-top: 5px ;
+    padding-left: 100px;
+  }
+
+  .thirdPart {
+    width: 130%;
+    height: 50%;
+  }
+  
+  .thirdPartOne {
+    width: 40%;
+  }
+  
+  .thirdPartTwo {
+    width: 40%;
+  }
+
+  .thirdPartText {
+    padding-left: 10%;
+    padding-top: 1%;
+    font-size: 40px;
+  }
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 730px) {
+  #firstPart {
+    height: 130%;
+  }
+  #flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  #firstPart {
+    height: 140%;
+  }
+  #flooding, #tornado, #earthquake, #fire { 
+    height: 30px;
+    width: 30px;
+    padding-left: 20px;
+  }
+  
+  #floodingText, #fireText, #earthquakeText, #tornadoText {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 20px ;
+  }
 }
