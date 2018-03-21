@@ -1,14 +1,14 @@
-.loginContainer {
+#registerContainer {
   width: 500px;
-  height: 550px;
-  position: fixed;
+  height: 650px;
   margin-left: 60%;
-	top: 20%;
+	top: 10%;
+	position: fixed;
   z-index: 100;
   visibility: hidden;
 }
 
-.loginContainer:target {
+#registerContainer:target {
   animation-duration: 1s;
   animation-name: slidein;
   visibility: visible;
@@ -26,61 +26,41 @@
   }
 }
 
-#loginText {
-  width: 500px;
-  height: 550px;
-  position: fixed;
-  margin-left: 10%;
-	top: 10%;
-  z-index: -1;
-  color: white;
-}
-
-#loginText:target {
-  animation-duration: 1s;
-  animation-name: slideinText;
-
-}
-
-p#Welcome {
-  font-size: 40px;
-}
-
-@keyframes slideinText {
-  from {
-    margin-left: 100%;
-    width: 300%; 
-  }
-
-  to {
-    margin-left: 60%;
-    width: 100%;
-  }
-}
-
 .Welcome {
   font-size: 48px;
   color: white;
   padding-top: 30px;
   padding-right: 58px;
-	text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#emailLabelLogin {
+#emailLabelRegister {
   height: 22px;
+  font-family: loginPageTextFont;
   font-size: 18px;
   color: white;
 }
 
-#passwordLabelLogin {
+#passwordLabelRegister {
   margin-top: 46px;
   height: 22px;
+  font-family: loginPageTextFont;
   font-size: 18px;
   color: white;
 }
 
-#emailLogin,
-#passwordLogin {
+#passwordAgainLabel {
+  margin-top: 32px;
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#emailRegister,
+#passwordRegister,
+#passwordAgain {
   height: 50px;
   padding-left: 20px;
   width: 410px;
@@ -89,34 +69,7 @@ p#Welcome {
   font-size: 18px;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.96);
-}
-
-#rememberContainer {
-  position: relative;
-  left: -5px;
-  top: 35px;
-  font-size: 18px;
   color: white;
-}
-
-#rememberBox {
-  width: 20px;
-  height: 20px;
-  background: #F5F2F2;
-  border: 1px solid #595959;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-#forgotPassword {
-  position: relative;
-  left: 266px;
-  top: 14px;
-  height: 22px;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 input[type="button"] {
@@ -124,13 +77,13 @@ input[type="button"] {
   width: 409px;
   height: 53px;
   margin-left: 15px;
-  background-color: steelblue;;
+  background-color: #4286f4;
+  font-family: loginPageTextFont;
   font-size: 36px;
   color: #ffffff;
-  border: none;
+  border-color: #091e44;
+  border-style: solid;
   cursor: pointer;
-  border-radius: 30px 30px 30px 30px;
-  outline: none;
 }
 
 input[type="button"]:active
@@ -138,20 +91,39 @@ input[type="button"]:active
   background-color: #124496;
 }
 
-#passEyeLogin {
+.passEyeRegister {
   position: relative;
   display: block;
-  top: -32px;
+  top: -33px;
   left: 380px;
   cursor: pointer;
 }
 
-#errorLogin{
+#errorRegister{
+  font-family: loginPageTextFont;
   font-size: 18px;
   color: red;
   display: block;
   margin-left: -64px;
   margin-bottom: 40px;
   text-align: center;
+}
+
+#acceptContainer {
+  position: relative;
+  top: 10px;
+  left: -5px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#acceptBox {
+  width: 20px;
+  height: 20px;
+  background: #F5F2F2;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
