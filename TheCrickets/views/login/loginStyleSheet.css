@@ -1,13 +1,201 @@
-/* CSS Document */
+#coverBlurrDiv {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	visibility: hidden;
+	z-index: 100;
+}
+
+body {
+	margin: 0;
+	font-size: 30px;
+	font-family: homePageText;
+}
+
+
+
+
+html {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+#scrollButton {
+	content: url(resources/down-arrow.png);
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+
+
+#firstPart {
+	background-color: #85DCBE;
+	width: 100%;
+	height: 85%;
+	z-index: 50;
+	text-align: center;
+}
+
+#secondPart {
+	background-color: white;
+	width: 100%;
+	height: 15%;
+	z-index: 50;
+}
+
+.thirdPart {
+	background-color: white;
+	width: 100%;
+	height: 75%;
+	z-index: 50;
+	display: inline-block;
+}
+
+.thirdPartOne {
+	width: 50%;
+	float: left;
+}
+
+.thirdPartTwo {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.thirdPartText {
+	text-align: left;
+	padding-left: 10%;
+	padding-top: 8%;
+	font-family: partText;
+	font-size: 50px;
+}
+
+#textFirstPart {
+	color: white;
+	text-align: center;
+	font-size: 350%;
+	padding-top: 130px;
+}
+
+#fire {
+	padding-top: 60px;
+	content: url(resources/Login/flame.png);
+	height: 100px;
+	width: 100px;
+}
+
+#fireContainer {
+	display: inline-block;
+}
+#fireText {
+	color: #ED4337;
+	font-size: 50px;
+	padding-top: 10px;
+}
+
+#flooding {
+	padding-top: 60px;
+	content: url(resources/Login/sea.png);
+	height: 100px;
+	width: 100px;
+	padding-left: 200px;
+}
+
+
+
+
+#floodingContainer {
+	display: inline-block;
+}
+
+#floodingText {
+	color: #4BAAB9;
+	font-size: 50px;
+	padding-left: 200px;
+
+}
+
+#earthquake {
+	padding-top: 60px;
+	content: url(resources/Login/earthquake.png);
+	height: 100px;
+	width: 100px;
+	padding-left: 200px;
+}
+
+#earthquakeContainer {
+	display:inline-block;
+}
+
+#earthquakeText {
+	color: #7C0227;
+	font-size: 50px;
+	padding-left: 200px;
+	padding-top: 10px;
+}
+
+#tornado {
+	padding-top: 60px;
+	content: url(resources/Login/tornado.png);
+	height: 100px;
+	width: 100px;
+	padding-left: 200px;
+}
+
+#tornadoContainer {
+	display:inline-block;
+}
+
+#tornadoText {
+	color: #A4A4A1;
+	font-size: 50px;
+	padding-top: 10px;
+	padding-left: 200px;
+}
+
+#firstPartContainer {
+	text-align:center;
+}
+
+#textFirstPartUnder {
+	text-align: center;
+	font-size: 130%;
+	color: white;
+}
+
+#middlePart {
+	background-color: white;
+	width: 100%;
+	min-height: 200px;
+	font-family: homePageText;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	font-size: 150px;
+}
+
 nav {
 	position: relative;
-	width: 50%;
-	background-color: #34495e;
+	width: 55%;
+	background-color: #41B3A3;
 	border-radius: 30px 0 0 30px;
 	font-size: 0;
 	float: right;
-}
-nav a {
+  }
+  nav a {
 	padding-left: 40px;
 	padding-right: 40px;
 	line-height: 50px;
@@ -18,104 +206,529 @@ nav a {
 	text-decoration: none;
 	color: white;
 	cursor: pointer;
-}
+  }
 
-/*body > *:not(.doNotBlurr) {
-  filter: blur(3px);
-}*/
-
-body {
-	margin: 0;
-}
-
-body {
-	font-size: 30px;
-	font-family: loginPageTextFont;
-	background-color: black;
-}
-
-div.loginImages {
-	width: 100%;
-	z-index: 90;
-	top: 0; right: 0; bottom: 0; left: 0;
-	opacity: 0.3;
-}
-
-div#image1 {
-	
-	content: url(resources/Login/fire.jpg);
-}
-
-div#image2 {
-	content: url(resources/Login/flooding.jpg);	
-}
-
-div#image3 {
-	content: url(resources/Login/ground-crack.jpg);	
-}
-
-div#image4 {
-	content: url(resources/Login/tornado.jpg);
-}
-
-img.navBarImage {
+  img.navBarImage {
 	width: 30px;
 	height: 30px;
 	vertical-align: middle;
-	padding-right: 5px;
-}
-
-/*div#loginWindow {
-	background: rgba(34,34,34,0.75);
-	display: none;
-	width: 400px;
-	height: 500px;
-	position: absolute;
-	right: 0;
-	left: 0;
-	margin: auto;
-	top: 20%;
-}*/
-
-div#navDivWrapper {
+	padding-right: 10px;
+  }
+   
+  div#navDivWrapper {
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
 	z-index: 100;
-}
+	font-family: menuTextLabel;
+  }
 
-/*div#loginWindow:target {
-	display: block;
-}*/
+  .lineFromCenter {
+	display: inline-block;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+  }
+  .lineFromCenter:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	background: steelblue;
+	height: 4px;
+	-webkit-transition-property: left, right;
+	transition-property: left, right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
+	left: 0;
+	right: 0;
+  }
+   
+  
+
 
 @font-face {
 	font-family: loginPageTextFont;
 	src: url(resources/navBarTextFont.ttf);
 }
+@font-face {
+	font-family: homePageText;
+	src: url(resources/Pack.ttf);
+}
+@font-face {
+	font-family: menuTextLabel;
+	src: url(resources/teen.ttf);
+}
 
-.lineFromCenter {
-  display: inline-block;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
+@font-face {
+	font-family: partText;
+	src: url(resources/Yano.ttf);
 }
-.lineFromCenter:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: #1ABC9C;
-  height: 4px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+
+
+#loginLeftText {
+	width: 500px;
+	height: 600px;
+	position: fixed;
+	color: aliceblue;
+	left: -500px;
+	top: 13%;
+	visibility: hidden;
+	background-color: mediumaquamarine;
+	padding-left: 15px;
+	border-left: solid steelblue;
+	border-width: 10px;
+	z-index: 100;
+	
+  }
+  #loginLeftText:active {
+	visibility: visible;
+  }
+
+  #registerLeftText {
+	width: 500px;
+	height: 600px;
+	position: fixed;
+	color: aliceblue;
+	left: -500px;
+	top: 13%;
+	visibility: hidden;
+	background-color: mediumaquamarine;
+	padding-left: 15px;
+	border-left: solid steelblue;
+	border-width: 10px;
+	z-index: 100;
+	
+  }
+  #registerLeftText:active {
+	visibility: visible;
+  }
+
+  .redLetter {
+	color: #ED4337;
+	display: inline;
+  }
+
+  @media only screen and (min-width: 1080px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 30px;
+		height: 100px;
+		width: 150px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 70px;
+		text-align: center;
+		border-radius: 0px 0px 30px 30px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 5px;
+		color: white;
+	}
 }
-.lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
-  left: 0;
-  right: 0;
+
+@media only screen and (max-width: 1080px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 1%;
+		height: 10;
+		width: 100px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 50px;
+		text-align: center;
+		border-radius: 0px 0px 30px 30px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 5px;
+		color: white;
+	}
 }
+
+@media only screen and (max-width: 500px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 1%;
+		height: 25px;
+		width: 40px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 20px;
+		text-align: center;
+		border-radius: 0px 0px 10px 10px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 1px;
+		color: white;
+	}
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1200px) {
+	#firstPart {
+		height: 90%;
+	}
+}
+
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1050px)
+{
+
+	#firstPart {
+		height: 130%;
+	}
+
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 50px;
+		width: 50px;
+		padding-left: 100px;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 30px;
+		padding-top: 5px;
+		padding-left: 100px;
+	}
+
+	.thirdPart {
+		width: 130%;
+		height: 50%;
+	}
+	
+	.thirdPartOne {
+		width: 40%;
+	}
+	
+	.thirdPartTwo {
+		width: 40%;
+	}
+
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 35px;
+	}
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 730px) {
+	#firstPart {
+		height: 170%;
+	}
+	#flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
+		padding-left: 50px !important;
+	}
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+	#firstPart {
+		height: 60%;
+	}
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 30px;
+		width: 30px;
+		padding-left: 20px;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 20px;
+		padding-top: 5px;
+		padding-left: 20px;
+	}
+
+	.thirdPartText {
+		padding-left: 10%;
+		padding-top: 1%;
+		font-size: 20px;
+	}
+
+	#textFirstPart {
+		font-size: 100%;
+		padding-top: 30px;
+	}
+
+	#textFirstPartUnder {
+		font-size: 70%;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+	nav {
+		width: 65%;
+		border-radius: 10px 0 0 10px;
+		font-size: 0;
+	}
+
+	#scrollButton {
+		bottom: 2px;
+		height: 14px;
+		width: 14px;
+	}
+
+	nav a {
+		padding-left: 5px;
+		padding-right: 5px;
+		line-height: 15px;
+		height: 100%;
+		font-size: 7px;
+	}
+
+	img.navBarImage {
+		width: 10px;
+		height: 10px;
+		padding-right: 5px;
+	}
+
+	div#navDivWrapper {
+		width: 120%;
+	}
+	.lineFromCenter:before { 
+		height: 1px;
+	}
+  } 
+
+  @media only screen and (min-width: 500px) and (max-width: 700px) {
+	nav {
+		width: 60%;
+		border-radius: 20px 0 0 20px;
+		font-size: 0;
+	}
+
+	#scrollButton {
+		bottom: 10px;
+		height: 20px;
+		width: 20px;
+	}
+
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 30px;
+		height: 100%;
+		font-size: 10px;
+	}
+
+	img.navBarImage {
+		width: 20px;
+		height: 20px;
+		padding-right: 5px;
+	}
+
+	div#navDivWrapper {
+		width: 120%;
+	}
+	.lineFromCenter:before { 
+		height: 1px;
+	}
+	
+  }
+
+
+  @media only screen and (min-width: 650px) and (max-width: 800px) {
+	nav {
+		width: 450px;
+	}
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 35px;
+		height: 100%;
+		font-size: 14px;
+	}
+
+	#scrollButton {
+		bottom: 10px;
+		height: 30px;
+		width: 30px;
+	}
+
+	.lineFromCenter:before { 
+		height: 2px;
+	}
+
+	img.navBarImage {
+		width: 20px;
+		height: 20px;
+		padding-right: 5px;
+	}
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 1000px) {
+	nav {
+		width: 600px;
+	}
+
+	#scrollButton {
+		bottom: 10px;
+		height: 35px;
+		width: 35px;
+	}
+
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 60px;
+		height: 100%;
+		font-size: 25px;
+	}
+
+	.lineFromCenter:before { 
+		height: 3px;
+	}
+
+	img.navBarImage {
+		width: 25px;
+		height: 25px;
+		padding-right: 5px;
+	}
+  }
+
+
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+
+	#scrollButton {
+	bottom: 10px;
+	height: 40px;
+	width: 40px;
+	}
+
+	#firstPart {
+		height: 85%;
+	}
+	#flooding, #tornado, #earthquake, #fire { 
+		height: 60px;
+		width: 60px;
+		padding-left: 100px;
+	}
+	
+	#floodingText, #fireText, #earthquakeText, #tornadoText {
+		font-size: 40px;
+		padding-top: 5px;
+		padding-left: 100px;
+	}
+
+	#textFirstPart {
+		font-size: 250%;
+		padding-top: 130px;
+	}
+
+	#textFirstPartUnder {
+		font-size: 80%;
+	}
+	
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+	#firstPart {
+		height: 130%;
+	}
+
+	#scrollButton {
+	bottom: 10px;
+	height: 35px;
+	width: 35px;
+	}
+}
+
+
+  @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+	nav {
+		width: 60%;
+	}
+
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 50px;
+		height: 100%;
+		font-size: 20px;
+	}
+
+	.lineFromCenter:before { 
+		height: 3px;
+	}
+
+	img.navBarImage {
+		width: 30px;
+		height: 30px;
+		padding-right: 5px;
+	}
+  }
+
+  @media only screen and (min-width: 1400px) and (max-width: 1900px) {
+	nav {
+		width: 60%;
+	}
+	#scrollButton {
+		bottom: 10px;
+		height: 35px;
+		width: 35px;
+		}
+	nav a {
+		padding-left: 20px;
+		padding-right: 20px;
+		line-height: 70px;
+		height: 100%;
+		font-size: 30px;
+	}
+
+	.lineFromCenter:before { 
+		height: 4px;
+	}
+
+	img.navBarImage {
+		width: 40px;
+		height: 40px;
+		padding-right: 5px;
+	}
+  }
+
+  @media only screen and (min-width: 1900px) {
+	nav {
+		width: 60%;
+		border-radius: 70px 0 0 70px;
+	}
+	#scrollButton {
+		bottom: 20px;
+		height: 70px;
+		width: 70px;
+		}
+	nav a {
+		padding-left: 40px;
+		padding-right: 40px;
+		line-height: 100px;
+		height: 100%;
+		font-size: 30px;
+	}
+
+	.lineFromCenter:before { 
+		height: 6px;
+	}
+
+	img.navBarImage {
+		width: 60px;
+		height: 60px;
+		padding-right: 5px;
+	}
+  }
