@@ -62,7 +62,7 @@ p {
 }
 
 
-img#navBarImage {
+img.navBarImage {
 	width: 30px;
 	height: 30px;
 	vertical-align: middle;
@@ -192,7 +192,7 @@ text-align: center;
     top: 250px;
     background-color: #4CAF50;
 }
-#mySidenav img#menuImage{
+#mySidenav img.menuImage{
   width: 30px;
   height: 30px;
   vertical-align: middle;
