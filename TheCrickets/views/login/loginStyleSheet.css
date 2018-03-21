@@ -9,24 +9,70 @@
 	z-index: 100;
 }
 
-#logoWrapper {
-	position: fixed;
-	top: 0;
-	left: 30px;
-	height: 10%;
-	width: 10%;
-	z-index: 99;
-	font-family: menuTextLabel;
-	background-color: #41B3A3;
-	font-size: 60px;
-	text-align: center;
-	border-radius: 0px 0px 30px 30px;
-	border-color: white;
-	border-style: solid;
-	border-top: hidden;
-	border-width: 5px;
-	color: white;
+
+@media only screen and (min-width: 1080px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 30px;
+		height: 100px;
+		width: 150px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 70px;
+		text-align: center;
+		border-radius: 0px 0px 30px 30px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 5px;
+		color: white;
+	}
 }
+
+@media only screen and (max-width: 1080px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 1%;
+		height: 10;
+		width: 100px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 50px;
+		text-align: center;
+		border-radius: 0px 0px 30px 30px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 5px;
+		color: white;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#logoWrapper {
+		position: fixed;
+		top: 0;
+		left: 1%;
+		height: 25px;
+		width: 40px;
+		z-index: 99;
+		font-family: menuTextLabel;
+		background-color: #41B3A3;
+		font-size: 20px;
+		text-align: center;
+		border-radius: 0px 0px 10px 10px;
+		border-color: white;
+		border-style: solid;
+		border-top: hidden;
+		border-width: 1px;
+		color: white;
+	}
+}
+
 html {
 	height: 100%;
 	width: 100%;
