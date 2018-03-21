@@ -449,22 +449,7 @@ div#textUserName {
     padding-top: 5px;
     padding-left: 100px;
   }
-  .thirdPart {
-    width: 130%;
-    height: 50%;
-  }
-  .thirdPartOne {
-    width: 40%;
-  }
-  .thirdPartTwo {
-    width: 40%;
-  }
-  .thirdPartText {
-    padding-left: 10%;
-    padding-top: 1%;
-    font-size: 40px;
-  }
-}
+
 
 @media only screen and (min-width: 500px) and (max-width: 730px) {
   #firstPart {
