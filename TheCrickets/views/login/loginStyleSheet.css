@@ -241,143 +241,103 @@ body {
 	font-size: 150px;
 }
 
-@media only screen and (min-width: 1080px) { 
+nav {
+	position: relative;
+	width: 55%;
+	background-color: #41B3A3;
+	border-radius: 30px 0 0 30px;
+	font-size: 0;
+	float: right;
+  }
+  nav a {
+	padding-left: 40px;
+	padding-right: 40px;
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+	display: inline-block;
+	position: left;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+  }
+
+  img.navBarImage {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	padding-right: 10px;
+  }
+   
+  div#navDivWrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+	font-family: menuTextLabel;
+  }
+
+  .lineFromCenter {
+	display: inline-block;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+  }
+  .lineFromCenter:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	background: steelblue;
+	height: 4px;
+	-webkit-transition-property: left, right;
+	transition-property: left, right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
+	left: 0;
+	right: 0;
+  }
+   
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
 	nav {
-		position: relative;
-		width: 70%;
-		background-color: #41B3A3;
-		border-radius: 30px 0 0 30px;
+		width: 65%;
+		border-radius: 10px 0 0 10px;
 		font-size: 0;
-		float: right;
-	}
-	nav a {
-		padding-left: 40px;
-		padding-right: 40px;
-		line-height: 50px;
-		height: 100%;
-		font-size: 20px;
-		display: inline-block;
-		text-decoration: none;
-		color: white;
-		cursor: pointer;
 	}
 
-	img.navBarImage {
-		width: 30px;
-		height: 30px;
-		vertical-align: middle;
-		padding-right: 10px;
-	}
-
-	#navDivWrapper {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		z-index: 100;
-		font-family: menuTextLabel;
-	}
-
-	.lineFromCenter {
-		display: inline-block;
-		-webkit-transform: perspective(1px) translateZ(0);
-		transform: perspective(1px) translateZ(0);
-	  }
-
-	  .lineFromCenter:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 50%;
-		right: 50%;
-		bottom: 0;
-		background: steelblue;
-		height: 4px;
-		transition-property: left, right;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-	  }
-
-	  .lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
-		left: 0;
-		right: 0;
-	  }
-	  
-
-}
-
-
-@media only screen and (max-width: 500px) { 
-	nav {
-		position: relative;
-		width: 70%;
-		background-color: #41B3A3;
-		border-radius: 15px 0 0 15px;
-		font-size: 0;
-		float: right;
-	}
 	nav a {
 		padding-left: 5px;
 		padding-right: 5px;
-		line-height: 20px;
+		line-height: 15px;
 		height: 100%;
 		font-size: 7px;
-		display: inline-block;
-		text-decoration: none;
-		color: white;
-		cursor: pointer;
 	}
 
 	img.navBarImage {
 		width: 10px;
 		height: 10px;
-		vertical-align: middle;
 		padding-right: 5px;
 	}
 
-	#navDivWrapper {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		z-index: 100;
-		font-family: menuTextLabel;
+	div#navDivWrapper {
+		width: 120%;
 	}
-
-	.lineFromCenter {
-		display: inline-block;
-		-webkit-transform: perspective(1px) translateZ(0);
-		transform: perspective(1px) translateZ(0);
-	  }
-
-	  .lineFromCenter:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 50%;
-		right: 50%;
-		bottom: 0;
-		background: steelblue;
+	.lineFromCenter:before { 
 		height: 1px;
-		transition-property: left, right;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-	  }
+	}
+  } 
 
-	  .lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
-		left: 0;
-		right: 0;
-	  }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 1080px) { 
+  @media only screen and (min-width: 500px) and (max-width: 700px) {
 	nav {
-		position: relative;
-		width: 70%;
-		background-color: #41B3A3;
-		border-radius: 15px 0 0 15px;
+		width: 60%;
+		border-radius: 20px 0 0 20px;
 		font-size: 0;
-		float: right;
 	}
 
 	nav a {
@@ -386,53 +346,138 @@ body {
 		line-height: 30px;
 		height: 100%;
 		font-size: 10px;
-		display: inline-block;
-		text-decoration: none;
-		color: white;
-		cursor: pointer;
 	}
 
 	img.navBarImage {
 		width: 20px;
 		height: 20px;
-		vertical-align: middle;
 		padding-right: 5px;
 	}
 
-	#navDivWrapper {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		z-index: 100;
-		font-family: menuTextLabel;
+	div#navDivWrapper {
+		width: 120%;
+	}
+	.lineFromCenter:before { 
+		height: 1px;
+	}
+  }
+
+  @media only screen and (min-width: 650px) and (max-width: 800px) {
+	nav {
+		width: 60%;
+	}
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 35px;
+		height: 100%;
+		font-size: 14px;
 	}
 
-	.lineFromCenter {
-		display: inline-block;
-		-webkit-transform: perspective(1px) translateZ(0);
-		transform: perspective(1px) translateZ(0);
-	  }
+	.lineFromCenter:before { 
+		height: 2px;
+	}
 
-	  .lineFromCenter:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 50%;
-		right: 50%;
-		bottom: 0;
-		background: steelblue;
-		height: 1px;
-		transition-property: left, right;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-	  }
+	img.navBarImage {
+		width: 20px;
+		height: 20px;
+		padding-right: 5px;
+	}
+  }
 
-	  .lineFromCenter:hover:before, .lineFromCenter:focus:before, .lineFromCenter:active:before {
-		left: 0;
-		right: 0;
-	  }
-}
+  @media only screen and (min-width: 800px) and (max-width: 1000px) {
+	nav {
+		width: 60%;
+	}
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 35px;
+		height: 100%;
+		font-size: 15px;
+	}
+
+	.lineFromCenter:before { 
+		height: 3px;
+	}
+
+	img.navBarImage {
+		width: 20px;
+		height: 20px;
+		padding-right: 5px;
+	}
+  }
+
+  @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+	nav {
+		width: 60%;
+	}
+	nav a {
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 50px;
+		height: 100%;
+		font-size: 20px;
+	}
+
+	.lineFromCenter:before { 
+		height: 3px;
+	}
+
+	img.navBarImage {
+		width: 30px;
+		height: 30px;
+		padding-right: 5px;
+	}
+  }
+
+  @media only screen and (min-width: 1400px) and (max-width: 1900px) {
+	nav {
+		width: 60%;
+	}
+	nav a {
+		padding-left: 20px;
+		padding-right: 20px;
+		line-height: 70px;
+		height: 100%;
+		font-size: 30px;
+	}
+
+	.lineFromCenter:before { 
+		height: 4px;
+	}
+
+	img.navBarImage {
+		width: 40px;
+		height: 40px;
+		padding-right: 5px;
+	}
+  }
+
+  @media only screen and (min-width: 1900px) {
+	nav {
+		width: 60%;
+		border-radius: 70px 0 0 70px;
+	}
+	nav a {
+		padding-left: 40px;
+		padding-right: 40px;
+		line-height: 100px;
+		height: 100%;
+		font-size: 30px;
+	}
+
+	.lineFromCenter:before { 
+		height: 6px;
+	}
+
+	img.navBarImage {
+		width: 60px;
+		height: 60px;
+		padding-right: 5px;
+	}
+  }
+
 
 @font-face {
 	font-family: loginPageTextFont;
