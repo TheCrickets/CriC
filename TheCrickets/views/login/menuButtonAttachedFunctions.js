@@ -5,6 +5,7 @@ function topFunction() {
 
 
 function removeOtherTextButLogin() {
+    toggleError();
     var elements = document.querySelectorAll( "body > *" );
     Array.from( elements ).forEach( s => s.style.filter = "none" );
     var element = document.getElementById("registerLeftText");
@@ -43,7 +44,7 @@ function showLoginText() {
 
 
 function removeOtherTextButRegister() {
-    
+    toggleError();
     var elements = document.querySelectorAll( "body > *" );
     Array.from( elements ).forEach( s => s.style.filter = "none" );
     
