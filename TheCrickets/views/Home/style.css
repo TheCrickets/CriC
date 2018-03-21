@@ -2,7 +2,7 @@
 nav {
 	margin: 0px 0px 0px 0px;
 	 
-	width: 45%;
+	width: 600px;
 	/*background-color: #34495e;*/
   background-color: #41B3A3;
 	border-radius: 30px 0px 0px 30px;
@@ -325,6 +325,10 @@ right: 0;
    
 
     }
+
+    .photouser{
+top: 120px;
+    }
 }
 @media screen and (max-width: 940px) and (min-width: 857px)  {
    .icon-bar {  
@@ -373,7 +377,7 @@ right: 0;
       top: 40px; 
       right: 0;
  position: relative;
-       width: 40%;
+       width: 47%;
         }
     }
  @media screen   and  (min-width: 940px)   and (max-height : 497px)  {
