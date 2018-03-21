@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	
 <nav>
 	<a id="leftMostMenuItem" href="#"><img id = "navBarImage" src="resources/Alet_2.png">Notifications</a>
 <div class="dropdown">
@@ -29,16 +30,14 @@
 
 
 
-<div class="vertical-menu" id="myDIV"  >
-  <a href="#" class="option active" > <img id="menuImage" src="resources/home.png">Home</a>
-  <a href="#" class="option"> <img id="menuImage" src="resources/map.png">Map</a>
-  <a href="#" class="option">  Place Holder</a>
-  <div class="icon-bar">
-  <a href="https://ro-ro.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a> 
-  <a href="https://twitter.com/twitter" class="twitter"><i class="fa fa-twitter"></i></a> 
-  <a href="https://www.google.ro" class="google"><i class="fa fa-google"></i></a> 
-  <a href="https://www.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a> 
-</div>
+<div id="mySidenav"  class="sidenav">
+  <a href="#" id="home">Home<img id="menuImage" src="resources/home.png"></a>
+  <a href="#" id="map">Map<img id="menuImage" src="resources/map.png"></a>
+  <a href="#" id="placeholder">Place Holder </a>
+ <a href="#" id="links">Links<img id="menuImage" src="resources/social.png"></a>
+
+
+
 </div>
 <div id = "firstPart">
 <div class="photouser">
@@ -67,19 +66,6 @@
     </div>
 </div>
 	
-<script>
-// Add active class to the current button (highlight it)
-var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("option");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
 
 	<p >
 		Lorem ipsum dolor sit amet, his ad volumus maluisset intellegam. Vim sale augue semper et. Causae aliquid vix eu, est an alia prompta sadipscing. Te quo veniam corrumpit intellegat, movet petentium vim no, eu mea odio minim. Eam ne illud pericula splendide, eos equidem fuisset efficiendi in.
