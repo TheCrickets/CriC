@@ -6,12 +6,12 @@ function checkName()
     if(!regexNameSurname.test(auxiliary.value))
     {
         toggleError("Invalid name.");
-        return 0;
+        return false;
     }
     else
     {
         toggleError();
-        return 1;
+        return true;
     }
 }
 
@@ -21,12 +21,12 @@ function checkSurname()
     if(!regexNameSurname.test(auxiliary.value))
     {
         toggleError("Invalid surname.");
-        return 0;
+        return false;
     }
     else
     {
         toggleError();
-        return 1;
+        return true;
     }
 }
 
@@ -35,12 +35,12 @@ function checkBirthDate()
     if(new Date(document.getElementById('DateOfBirthContainer').value) > new Date())
     {
         toggleError("Your birthday is in the future.");
-        return 0;
+        return false;
     }
     else
     {
         toggleError();
-        return 1;
+        return true;
     }
 }
 
@@ -50,12 +50,12 @@ function checkPhoneNumber()
     if(!regexPhoneNumber.test(auxiliary.value))
     {
         toggleError("Invalid phone number.");
-        return 0;
+        return false;
     }
     else
     {
         toggleError();
-        return 1;
+        return true;
     }
 }
 
@@ -76,12 +76,7 @@ function toggleError(error)
 
 function saveChanges()
 {
-    console.log("Hello");
-    var name = document.getElementById("NameContainer").value;
-    var surname = document.getElementById("SurnameContainer").value;
-    var birthday = document.getElementById("DateOfBirthContainer").value;
-    var phoneNumber = document.getElementById("PhoneNumberContainer");
-    if(checkName(name) && checkSurname(surname) && checkBirthDate(birthday) && checkPhoneNumber(phoneNumber))
+    if(checkName() && checkSurname() && checkBirthDate() && checkPhoneNumber())
     {
         //document.getElementsByTagName("form")[0].submit();
         alert("Your data have been saved.");
