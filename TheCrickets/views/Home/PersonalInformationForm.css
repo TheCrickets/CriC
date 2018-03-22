@@ -6,9 +6,9 @@
 
 #formContainer
 {
-    width: 1157px;
-    height: 1024px;
-
+    position: relative;
+    /*width: 1157px;
+    height: 1024px;*/
     background: #FFFFFF;
 }
 
@@ -23,8 +23,8 @@
 
 #personalInformationContainer
 {  
-    width: 1039px;
-    height: 801px;
+    /*width: 1039px;
+    height: 801px;*/
     left: 59px;
     top: 169px;
    
@@ -139,7 +139,8 @@ input[type="button"] {
     background-color: #124496;
   }
 
-  #error{
+  #error
+  {
     font-family: loginPageTextFont;
     font-size: 18px;
     color: red;
@@ -148,3 +149,119 @@ input[type="button"] {
     margin-bottom: 40px;
     text-align: center;
   }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+    #continut 
+    {
+        width: 50%;
+        left: 180px;
+        top: 120px;
+        overflow: hidden;
+    }
+    #PersonalInformation 
+    {
+        font-size: 34px;
+    }
+    #ProfilePicture
+    {
+        margin-top: 20px;
+        margin-left: 5%;
+        width: 10%px;
+        height: 135px;         
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{
+    #continut 
+    {
+        width: 50%;
+        left: 180px;
+
+        overflow: hidden;
+    }
+    #PersonalInformation 
+    {
+        font-size: 36px;
+    }
+    #ProfilePicture
+    {
+        margin-top: 20px;
+        margin-left:15%;
+        width: 10%px;
+        height: 135px;         
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+    #continut 
+    {
+        width: 60%;
+        left: 200px;
+
+        overflow: hidden;
+    }
+    #PersonalInformation 
+    {
+        font-size: 40px;
+    }
+    #ProfilePicture
+    {
+        margin-top: 20px;
+        margin-left:40%;
+        width: 10%px;
+        height: 135px;         
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{
+    #continut 
+    {
+        width: 70%;
+        left: 250px;
+
+        overflow: hidden;
+    }
+    #PersonalInformation 
+    {
+        font-size: 44px;
+    }
+    #ProfilePicture
+    {
+        margin-top: 20px;
+        margin-left:40%;
+        width: 10%px;
+        height: 135px;         
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1900px)
+{
+    #continut 
+    {
+        width: 75%;
+        left: 260px;
+
+        overflow: hidden;
+    }
+    #PersonalInformation 
+    {
+        font-size: 48px;
+    }
+    #ProfilePicture
+    {
+        margin-top: 20px;
+        margin-left:40%;
+        width: 10%px;
+        height: 135px;         
+    }
+
+}
