@@ -352,6 +352,7 @@ img.navBarImage {
 }
 
 div.photouser {
+  top:0;
   left: 7px;
   position: fixed;
   margin: 5px;
