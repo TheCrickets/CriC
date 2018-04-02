@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.ops4j.pax.tipi:org.ops4j.pax.tipi.xnio.nio:3.3.6.1" type="repository">
+    <properties maven-id="org.ops4j.pax.tipi:org.ops4j.pax.tipi.xnio.nio:3.3.6.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/ops4j/pax/tipi/org.ops4j.pax.tipi.xnio.nio/3.3.6.1/org.ops4j.pax.tipi.xnio.nio-3.3.6.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ops4j/pax/tipi/org.ops4j.pax.tipi.xnio.api/3.3.6.1/org.ops4j.pax.tipi.xnio.api-3.3.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
