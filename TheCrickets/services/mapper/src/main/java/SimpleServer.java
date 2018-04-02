@@ -5,13 +5,16 @@ import io.undertow.Undertow;
 import io.undertow.UndertowOptions;
 import io.undertow.server.HttpHandler;
 
-public class SimpleServer {
+public class SimpleServer
+{
     private static final Logger logger = LoggerFactory.getLogger(SimpleServer.class);
     private static final int DEFAULT_PORT = 55555;
     private static final String DEFAULT_HOST = "localhost";
 
     private final Undertow.Builder undertowBuilder;
-    private SimpleServer(Undertow.Builder undertow) {
+
+    private SimpleServer(Undertow.Builder undertow)
+    {
         this.undertowBuilder = undertow;
     }
 
@@ -20,11 +23,13 @@ public class SimpleServer {
      * its goal is simply to have some common configurations. We expose Undertow
      * if a different service needs to modify it in any way before we call start.
      */
-    public Undertow.Builder getUndertow() {
+    public Undertow.Builder getUndertow()
+    {
         return undertowBuilder;
     }
 
-    public void start() {
+    public void start()
+    {
         Undertow undertow = undertowBuilder.build();
         undertow.start();
         /*
@@ -37,7 +42,8 @@ public class SimpleServer {
                 .forEach(listenerInfo -> logger.info(listenerInfo.toString()));
     }
 
-    public static SimpleServer simpleServer(HttpHandler handler, int port) {
+    public static SimpleServer simpleServer(HttpHandler handler, int port)
+    {
         if (port <= 0)
             port = DEFAULT_PORT;
         Undertow.Builder undertow = Undertow.builder()
@@ -46,8 +52,7 @@ public class SimpleServer {
                  * If you base64 encode any cookie values you probably want it on.
                  */
                 .setServerOption(UndertowOptions.ALLOW_EQUALS_IN_COOKIE_VALUE, true)
-                .addHttpListener(port, DEFAULT_HOST, handler)
-                ;
+                .addHttpListener(port, DEFAULT_HOST, handler);
         return new SimpleServer(undertow);
     }
 }

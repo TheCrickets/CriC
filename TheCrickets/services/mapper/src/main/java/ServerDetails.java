@@ -1,24 +1,30 @@
-public class ServerDetails {
+public class ServerDetails
+{
     private int port;
     private String url;
 
-    public int getPort() {
+    public int getPort()
+    {
         return port;
     }
 
-    public void setPort(int port) {
+    public void setPort(int port)
+    {
         this.port = port;
     }
 
-    public String getUrl() {
+    public String getUrl()
+    {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(String url)
+    {
         this.url = url;
     }
 
-    public ServerDetails(String url, int port) {
+    public ServerDetails(String url, int port)
+    {
         this.port = port;
         this.url = url;
     }
