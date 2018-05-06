@@ -1,6 +1,5 @@
 import io.undertow.server.HttpHandler;
 import io.undertow.server.RoutingHandler;
-import microservice.RoutingHandlers;
 import microservice.Server;
 
 import java.security.InvalidParameterException;
