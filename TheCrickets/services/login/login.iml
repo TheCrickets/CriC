@@ -11,5 +11,6 @@
     <orderEntry type="library" name="io.undertow:undertow-core:2.0.1.Final" level="project" />
     <orderEntry type="library" name="org.ops4j.pax.tipi:org.ops4j.pax.tipi.xnio.nio:3.3.6.1" level="project" />
     <orderEntry type="library" name="org.slf4j:slf4j-ext:1.7.12" level="project" />
+    <orderEntry type="library" name="SimpleMicroservice" level="project" />
   </component>
 </module>
