@@ -6,7 +6,6 @@ import java.security.InvalidParameterException;
 
 public class Main
 {
-
     private static final HttpHandler ROUTES = new RoutingHandler()
             .get("/api/get/{email}", RoutingHandlers::testHandler)
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
