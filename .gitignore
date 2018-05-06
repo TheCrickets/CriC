@@ -12,3 +12,5 @@ TheCrickets/services/mapper/target/
 TheCrickets/services/test-template/\.idea/workspace\.xml
 
 TheCrickets/services/test-template/out/
+
+TheCrickets/services/SimpleMicroservice/target/
