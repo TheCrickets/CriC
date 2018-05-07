@@ -67,9 +67,18 @@ function login() {
 
     if (mailRegex.test(email)) {
         document.getElementsByName("loginForm")[0].submit();
-        alert(email + " i wont show the password tho..");
-    } else
-        alert("error");
+
+	var xhttp = new XMLHttpRequest();
+ 	xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+  			 console.log( xhttp.responseText );
+   			alert(email);
+    }
+  };
+  xhttp.open("GET", "http://localhost:55557/api/login/"+email, true);
+  xhttp.send();
+  } else
+      alert("error");
 }
 
 function checkPassword() {
