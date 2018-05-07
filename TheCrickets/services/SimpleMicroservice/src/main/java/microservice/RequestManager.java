@@ -8,9 +8,16 @@ import java.net.URL;
 
 public class RequestManager
 {
+    public static <T> T executePost(String targetURL, Object object, TypeReference<T> typeReference)
+    {
+        return executePost(targetURL, Json.serializer().toString(object), typeReference);
+    }
+
     public static <T> T executePost(String targetURL, String urlParameters, TypeReference<T> typeReference)
     {
         HttpURLConnection connection = null;
+
+        System.out.println(urlParameters);
 
         try
         {
