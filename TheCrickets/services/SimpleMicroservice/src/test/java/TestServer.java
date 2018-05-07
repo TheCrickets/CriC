@@ -1,6 +1,7 @@
 import com.fasterxml.jackson.core.type.TypeReference;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.RoutingHandler;
+import io.undertow.server.handlers.BlockingHandler;
 import microservice.Json;
 import microservice.RequestManager;
 import microservice.Server;
@@ -79,6 +80,8 @@ public class TestServer
 {
     private static final HttpHandler ROUTES = new RoutingHandler()
             .get("/api/test/{n1}/{n2}", RoutingHandlers::testHandler)
+            //.post("api/post",RoutingHandlers::postHandler)
+            .post("api/post",new BlockingHandler(RoutingHandlers::postHandler))
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)

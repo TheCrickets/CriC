@@ -1,3 +1,4 @@
+import com.fasterxml.jackson.core.type.TypeReference;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.Headers;
 import io.undertow.util.HttpString;
@@ -30,5 +31,18 @@ public class RoutingHandlers
             JsonUtilities.sendJson(exchange, "Invalid number format");
         }
 
+    }
+
+    public static void postHandler(HttpServerExchange exchange)
+    {
+        exchange.getResponseHeaders().put(HttpString.tryFromString("Access-Control-Allow-Origin"), "*");
+        exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "application/json");
+        exchange.setStatusCode(200);
+
+        PostClass result = JsonUtilities.parseJson(exchange, new TypeReference<PostClass>(){});
+        System.out.println(result);
+        result.id++;
+        // resend it with id+1
+        JsonUtilities.sendJson(exchange, result);
     }
 }
