@@ -4,3 +4,13 @@
 TheCrickets/helpers/typescript\.compile\.min\.js
 
 TheCrickets/helpers/typescript\.min\.js
+
+TheCrickets/services/mapper/\.idea/workspace\.xml
+
+TheCrickets/services/mapper/target/
+
+TheCrickets/services/test-template/\.idea/workspace\.xml
+
+TheCrickets/services/test-template/out/
+
+TheCrickets/services/SimpleMicroservice/target/
