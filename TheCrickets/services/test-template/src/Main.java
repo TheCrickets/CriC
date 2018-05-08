@@ -15,6 +15,7 @@ public class Main
     {
         if (args.length < 1)
             throw new InvalidParameterException();
+        System.out.println("Starting server number 2...");
         Server.start(Integer.parseInt(args[0]), ROUTES);
     }
 }
