@@ -92,7 +92,7 @@ public class CRUD_operations {
         } catch (SQLException exception) {
             System.err.println("Error while trying to get data from database: " + exception.getMessage());
         }
-            return null;
+            return new User(0, "", "", "", "");
     }
 
     public void deleteUser(int id) {
