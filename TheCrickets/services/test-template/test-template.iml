@@ -10,5 +10,6 @@
     <orderEntry type="library" name="services" level="project" />
     <orderEntry type="module" module-name="main1" />
     <orderEntry type="library" name="MySQL_CRUD" level="project" />
+    <orderEntry type="library" name="SimpleMicroservice" level="project" />
   </component>
 </module>
