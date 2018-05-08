@@ -79,8 +79,10 @@ xhttp.open("POST", url,   true);
  	xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
   			 console.log( xhttp.responseText );
-   			alert(email);
+   			window.location.href = "../Home/home.html";
     }
+    else 
+    	toggleError("Ati gresit email-ul sau parola!");
   };
 
 xhttp.send(params);

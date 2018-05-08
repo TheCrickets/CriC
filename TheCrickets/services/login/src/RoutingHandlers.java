@@ -28,14 +28,22 @@ public class RoutingHandlers
 
         //String mailRegex = exchange.getQueryParameters().get("email").getFirst();
 
-        CRUD_operations crudOperations = new CRUD_operations();
-        crudOperations.checkUserExists("x","y");
-
         String mailRegex = result.email;
         if(mailRegex.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])") ) {
-
+            CRUD_operations operations = new CRUD_operations();
+            if(operations.checkUserExists(result.email, result.password)) {
                 exchange.setStatusCode(200);
-                JsonUtilities.sendJson(exchange, "Email correct!");
+                JsonUtilities.sendJson(exchange, "Email si parola corecta!");
+            }
+            else
+            {
+                exchange.setStatusCode(401);
+                JsonUtilities.sendJson(exchange, "Ati gresit email-ul sau parola!");
+            }
+/*
+            exchange.setStatusCode(200);
+            JsonUtilities.sendJson(exchange, "Email si parola corecta!");
+            */
             }
 
         else
