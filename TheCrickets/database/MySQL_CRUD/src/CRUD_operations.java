@@ -15,7 +15,7 @@ public class CRUD_operations {
 
     CRUD_operations() {
         try {
-            File file = new File("databaseConfig.txt");
+            File file = new File("../databaseConfig.txt");
             Scanner sc = new Scanner(file);
             DatabaseConnection databaseConnection = new DatabaseConnection();
             databaseConnection.setDriverInitialisation(sc.nextLine());
