@@ -18,17 +18,12 @@ public class RoutingHandlers
     {
         exchange.getResponseHeaders().put(HttpString.tryFromString("Access-Control-Allow-Origin"), "*");
         exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "application/json");
-        String n1 = exchange.getQueryParameters().get("n1").getFirst();
-        String n2 = exchange.getQueryParameters().get("n2").getFirst();
-        try
-        {
-            int rez = Integer.parseInt(n1) + Integer.parseInt(n2);
-            JsonUtilities.sendJson(exchange, rez);
-        } catch (NumberFormatException e)
-        {
-            exchange.setStatusCode(400);
-            JsonUtilities.sendJson(exchange, "Invalid number format");
+        CRUD_operations crud_operations = new CRUD_operations();
+        User user = crud_operations.readUserData(exchange.getQueryParameters().get("email").getFirst());
+        if (user.getId() == 0) {
+            exchange.setStatusCode(404);
+            JsonUtilities.sendJson(exchange,"Not Found!");
         }
-
+            else JsonUtilities.sendJson(exchange, user);
     }
 }

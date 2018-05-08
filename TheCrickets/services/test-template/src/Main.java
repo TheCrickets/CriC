@@ -8,13 +8,14 @@ public class Main
 {
 
     private static final HttpHandler ROUTES = new RoutingHandler()
-            .get("/api/test/{n1}/{n2}", RoutingHandlers::testHandler)
+            .get("/api/get/{email}", RoutingHandlers::testHandler)
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)
     {
         if (args.length < 1)
             throw new InvalidParameterException();
+        System.out.println("Starting server number 2...");
         Server.start(Integer.parseInt(args[0]), ROUTES);
     }
 }
