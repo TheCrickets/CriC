@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -16,8 +15,7 @@ public class CRUD_operations {
 
     CRUD_operations() {
         try {
-            URL url = getClass().getResource("databaseConfig.txt");
-            File file = new File(url.getPath());
+            File file = new File("databaseConfig.txt");
             Scanner sc = new Scanner(file);
             DatabaseConnection databaseConnection = new DatabaseConnection();
             databaseConnection.setDriverInitialisation(sc.nextLine());
