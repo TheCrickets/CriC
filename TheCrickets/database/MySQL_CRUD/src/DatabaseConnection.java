@@ -31,7 +31,7 @@ public class DatabaseConnection {
         try {
             Class.forName(driverInitialisation);
             connection = DriverManager.getConnection(driverConnection, user, password);
-            System.out.println("Connection established successfully.");
+            System.out.println("Connection established successfully!");
         } catch (SQLException | ClassNotFoundException exception) {
             System.err.println("Exception thrown while trying to connect to database: " + exception.getMessage());
             exception.printStackTrace();

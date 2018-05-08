@@ -21,8 +21,8 @@ public class RoutingHandlers
         CRUD_operations crud_operations = new CRUD_operations();
         try
         {
-            System.out.println(crud_operations.readData(exchange.getQueryParameters().get("email").getFirst()).toString());
-            JsonUtilities.sendJson(exchange, crud_operations.readData(exchange.getQueryParameters().get("email").getFirst()));
+            System.out.println(crud_operations.readUserData(exchange.getQueryParameters().get("email").getFirst()).toString());
+            JsonUtilities.sendJson(exchange, crud_operations.readUserData(exchange.getQueryParameters().get("email").getFirst()));
         } catch (NumberFormatException e)
         {
             exchange.setStatusCode(400);

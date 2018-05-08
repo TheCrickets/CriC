@@ -32,7 +32,7 @@ public class CRUD_operations {
         }
     }
 
-    boolean checkUser(String email, String password) {
+    boolean checkUserExists(String email, String password) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
@@ -55,7 +55,7 @@ public class CRUD_operations {
         return false;
     }
 
-    public void insertData(String firstName, String lastName, String email, String password) {
+    public void insertUser(String firstName, String lastName, String email, String password) {
         PreparedStatement preparedStatement = null;
         try {
             String query = "INSERT INTO users(firstName, lastName, email, password) VALUES(?, ?, ?, ?)";
@@ -75,7 +75,7 @@ public class CRUD_operations {
         }
     }
 
-    User readData(String email) {
+    User readUserData(String email) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         StringBuilder result = new StringBuilder();
@@ -95,7 +95,7 @@ public class CRUD_operations {
             return null;
     }
 
-    public void delete(int id) {
+    public void deleteUser(int id) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
@@ -105,11 +105,11 @@ public class CRUD_operations {
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
-            System.err.println("Error while trying to delete data from database: " + exception.getMessage());
+            System.err.println("Error while trying to deleteUser data from database: " + exception.getMessage());
         }
     }
 
-    public void update(int id, String firstName, String lastName, String email, String password) {
+    public void updateUserData(int id, String firstName, String lastName, String email, String password) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
@@ -125,13 +125,13 @@ public class CRUD_operations {
             preparedStatement.setString(4, sha256hex);
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
-            System.err.println("Error while trying to update data from database: " + exception.getMessage());
+            System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
         } catch (NoSuchAlgorithmException exception) {
             System.err.println("Error while trying to encrypt the password: " + exception.getMessage());
         }
     }
 
-    public void deleteAll() {
+    public void deleteAllUsers() {
         PreparedStatement preparedStatement = null;
 
         try {
@@ -139,7 +139,7 @@ public class CRUD_operations {
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
-            System.err.println("Error while trying delete all information from database: " + exception.getMessage());
+            System.err.println("Error while trying deleteUser all information from database: " + exception.getMessage());
         }
     }
 }
