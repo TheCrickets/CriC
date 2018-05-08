@@ -134,6 +134,12 @@ xmlhttp.onreadystatechange = function() {//Call a function when the state change
     	console.log( xmlhttp.responseText);
          alert(xmlhttp.responseText);
     }
+    else {
+    	if( xmlhttp.status == 406) 
+    	{
+    		toggleError("Aceste cont exista deja!");
+			}
+    }
 };
 xmlhttp.send(params);
 
