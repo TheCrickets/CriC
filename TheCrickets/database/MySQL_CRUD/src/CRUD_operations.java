@@ -15,7 +15,11 @@ public class CRUD_operations {
 
     CRUD_operations() {
         try {
-            File file = new File("../databaseConfig.txt");
+
+            //File file = new File(".");
+            //for(String fileNames : file.list()) System.out.println(fileNames);
+
+            File file = new File("databaseConfig.txt");
             Scanner sc = new Scanner(file);
             DatabaseConnection databaseConnection = new DatabaseConnection();
             databaseConnection.setDriverInitialisation(sc.nextLine());
@@ -24,7 +28,7 @@ public class CRUD_operations {
             databaseConnection.setPassword(sc.nextLine());
             connection = databaseConnection.connect();
         } catch (FileNotFoundException exception) {
-            System.err.println("Configuration file not found: " + exception.getMessage());
+            System.err.println("Configuration file not foundd: " + exception.getMessage());
         }
     }
 
