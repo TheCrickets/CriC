@@ -1,9 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="MySQL_CRUD:jar">
-    <output-path>$PROJECT_DIR$/../../services</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/MySQL_CRUD_jar</output-path>
     <root id="archive" name="MySQL_CRUD.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../services/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="MySQL_CRUD" />
       <element id="extracted-dir" path="$PROJECT_DIR$/mysql-connector-java-8.0.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/org-apache-commons-codec.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

@@ -7,6 +7,7 @@ public class Main {
         operations.insertUser("Andreea", "Dascalu", "andreea.dascalu@gmail.com", "12345");
         System.out.println(operations.checkUserExists("martincu.petru@gmail.com", "pass123"));
         System.out.println(operations.readUserData("martincu.petru@gmail.com").toString());*/
+        operations.insertUserByEmailPassword("martincu.petru@gmail.com", "12345");
         operations.deleteAllUsers();
     }
 }
