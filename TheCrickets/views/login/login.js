@@ -119,20 +119,12 @@ var params = JSON.stringify({
 });
 xmlhttp.open("POST", url,   true);
 
-//Send the proper header information along with the request
-xmlhttp.setRequestHeader("Content-Type", "application/json");
- 
-
 xmlhttp.onreadystatechange = function() {//Call a function when the state changes.
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        // var json = JSON.parse(xmlhttp.responseText);
- // alert(json.email + ", " + json.password);
-          //console.log(json.email + ", " + json.password)
-       // alert(http.responseText);
-        alert(" registered");
-
+    	console.log( xmlhttp.responseText);
+         alert(xmlhttp.responseText);
     }
-}
+};
 xmlhttp.send(params);
 
     } else
