@@ -8,5 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="services" level="project" />
+    <orderEntry type="library" name="MySQL_CRUD" level="project" />
+    <orderEntry type="library" name="SimpleMicroservice" level="project" />
+    <orderEntry type="library" name="org-apache-commons-codec" level="project" />
   </component>
 </module>
