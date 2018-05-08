@@ -69,14 +69,22 @@ function login() {
         document.getElementsByName("loginForm")[0].submit();
 
 	var xhttp = new XMLHttpRequest();
+
+var url = "http://localhost:55557/api/login";
+var params = JSON.stringify({
+    "email": email,
+    "password":password
+});
+xhttp.open("POST", url,   true);
  	xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
   			 console.log( xhttp.responseText );
    			alert(email);
     }
   };
-  xhttp.open("GET", "http://localhost:55557/api/login/"+email, true);
-  xhttp.send();
+
+xhttp.send(params);
+
   } else
       alert("error");
 }
