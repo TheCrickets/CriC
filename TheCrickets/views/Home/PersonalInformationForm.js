@@ -90,8 +90,11 @@ var params = JSON.stringify({
     "dateOfBirth": document.getElementById('DateOfBirthContainer').value
 });
 xhttp.open("POST", url,   true);
+xhttp.setRequestHeader("sessionID", localStorage.getItem("sessionID"));
+xhttp.setRequestHeader("Access-Control-Request-Method", "POST");
+xhttp.setRequestHeader("Access-Control-Request-Headers", "X-Custom-Header");
  	xhttp.onreadystatechange = function() {
-    if (xhttp.status == 200) {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
   			 console.log( xhttp.responseText );
   			 toggleError( "Succes! ");
     }
