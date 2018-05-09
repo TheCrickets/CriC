@@ -79,6 +79,7 @@ xhttp.open("POST", url,   true);
  	xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
   			 console.log( xhttp.responseText );
+			localStorage.setItem("email",email);
    			window.location.href = "../Home/home.html";
     }
     else 
