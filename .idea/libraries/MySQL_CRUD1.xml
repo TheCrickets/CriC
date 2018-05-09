@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="MySQL_CRUD1">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/out/artifacts/MySQL_CRUD_jar/MySQL_CRUD.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
