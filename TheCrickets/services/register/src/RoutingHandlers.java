@@ -43,7 +43,7 @@ public class RoutingHandlers
             }
             else {
 
-                operations.insertUser("", "", result.email, result.password);
+                operations.insertUserByEmailPassword(result.email, result.password);
                 exchange.setStatusCode(200);
                 JsonUtilities.sendJson(exchange, "Ati fost inregistrat!");
             }

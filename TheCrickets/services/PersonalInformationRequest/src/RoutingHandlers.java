@@ -29,7 +29,7 @@ public class RoutingHandlers
         });
         System.out.println(result);
 
-        if (result.email == null || result.firstName == null || result.lastName == null)
+        if (result.email == null || result.firstName == null || result.lastName == null || result.dateOfBirth == null || result.phoneNumber == null)
         {
             exchange.setStatusCode(400);
             JsonUtilities.sendJson(exchange, "Email or lastName or firstName incorrect!");
@@ -51,7 +51,7 @@ public class RoutingHandlers
             }
             else
             {
-                operations.updateUserData(user.id, result.firstName, result.lastName);
+                operations.updateUserData(user.id, result.firstName, result.lastName, result.dateOfBirth, result.phoneNumber);
 
                 exchange.setStatusCode(200);
                 JsonUtilities.sendJson(exchange, "Date actualizate!");

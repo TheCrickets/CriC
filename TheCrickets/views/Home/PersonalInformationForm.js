@@ -85,7 +85,9 @@ var url = "http://localhost:55559/api/personalInformationForm";
 var params = JSON.stringify({
     "email": localStorage.getItem("email"),
     "firstName": document.getElementById("NameContainer").value,
-    "lastName": document.getElementById("SurnameContainer").value
+    "lastName": document.getElementById("SurnameContainer").value,
+    "phoneNumber": document.getElementById("PhoneNumberContainer").value,
+    "dateOfBirth": document.getElementById('DateOfBirthContainer').value
 });
 xhttp.open("POST", url,   true);
  	xhttp.onreadystatechange = function() {
