@@ -61,21 +61,22 @@ public class CRUD_operations
         return false;
     }
 
-    boolean checkSessionIDValid(int id) {
+    boolean checkSessionIDValid(int userID, String email) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try
         {
-            String query = "SELECT expiringDate FROM sessionID WHERE id = ?";
+            String query = "SELECT expiringDate FROM sessionID JOIN users ON sessionID.userID = users.id WHERE users.id = ? and users.email = ?";
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(1, userID);
+            preparedStatement.setString(2, email);
             resultSet = preparedStatement.executeQuery();
             if (!resultSet.next())
                 return false;
             else {
-                //if (resultSet.getDate(1).toLocalDate().compareTo(LocalDateTime.now().toInstant()))
+                if (resultSet.getTimestamp(1).before(new Timestamp(System.currentTimeMillis())))
                     return false;
-                //else return true;
+                else return true;
             }
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
@@ -208,11 +209,23 @@ public class CRUD_operations
 
         try
         {
-            String query = "TRUNCATE TABLE users";
-            preparedStatement = connection.prepareStatement(query);
+            String queryZero = "SET FOREIGN_KEY_CHECKS=0";
+            preparedStatement = connection.prepareStatement(queryZero);
             preparedStatement.executeUpdate();
-        } catch (SQLException exception)
-        {
+
+            String queryOne = "TRUNCATE TABLE sessionID";
+            preparedStatement = connection.prepareStatement(queryOne);
+            preparedStatement.executeUpdate();
+
+            String queryTwo = "TRUNCATE TABLE users";
+            preparedStatement = connection.prepareStatement(queryTwo);
+            preparedStatement.executeUpdate();
+
+            String queryThree = "SET FOREIGN_KEY_CHECKS=1";
+            preparedStatement = connection.prepareStatement(queryThree);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException exception) {
             System.err.println("Error while trying deleteUser all information from database: " + exception.getMessage());
         }
     }
