@@ -14,6 +14,7 @@ public class Main {
         operations.insertUserByEmailPassword("martincu.petru@gmail.com", "12345");
         System.out.println(operations.checkSessionIDValid(1, "martincu.petru@gmail.com"));*/
         //operations.deleteAllUsers();
-        System.out.println(operations.checkSessionIDValid(99999,"martincu.petru@gmail.com"));
+        //System.out.println(operations.checkSessionIDValid(99999,"martincu.petru@gmail.com"));
+        operations.addSessionForUser(1);
     }
 }

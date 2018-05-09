@@ -184,24 +184,22 @@ public class CRUD_operations
         }
     }
 
-   /* public void updateUserData(int id, String firstName, String lastName)
+    public void addSessionForUser(int id)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "UPDATE users SET firstName = ?, lastName = ? WHERE id = ?";
+            String query = "INSERT INTO sessionID(userID) VALUES(?)";
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, firstName);
-            preparedStatement.setString(2, lastName);
-            preparedStatement.setInt(3,id);
+            preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception)
         {
             System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
         }
-    }*/
+    }
 
     public void deleteAllUsers()
     {
