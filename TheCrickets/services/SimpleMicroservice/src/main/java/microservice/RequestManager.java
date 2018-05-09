@@ -8,11 +8,27 @@ import java.net.URL;
 
 public class RequestManager
 {
+    /**
+     * sends a post http request
+     * @param targetURL
+     * @param object to send
+     * @param typeReference type reference to the object to be received
+     * @param <T> class for the received object
+     * @return the received object
+     */
     public static <T> T executePost(String targetURL, Object object, TypeReference<T> typeReference)
     {
         return executePost(targetURL, Json.serializer().toString(object), typeReference);
     }
 
+    /**
+     * sends a post http request
+     * @param targetURL
+     * @param urlParameters body of the post
+     * @param typeReference type reference to the object to be received
+     * @param <T> class for the received object
+     * @return the received object
+     */
     public static <T> T executePost(String targetURL, String urlParameters, TypeReference<T> typeReference)
     {
         HttpURLConnection connection = null;
@@ -56,6 +72,14 @@ public class RequestManager
         }
     }
 
+    /**
+     *
+     * @param urlToRead
+     * @param typeReference type reference to the object to be received
+     * @param <T> class for the received object
+     * @return the object received
+     * @throws Exception if the GET fails
+     */
     public static <T> T executeGet(String urlToRead, TypeReference<T> typeReference) throws Exception
     {
         URL url = new URL(urlToRead);
