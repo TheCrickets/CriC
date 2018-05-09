@@ -3,10 +3,8 @@ import java.io.FileNotFoundException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class CRUD_operations
@@ -63,16 +61,40 @@ public class CRUD_operations
         return false;
     }
 
-    public void insertUser(String firstName, String lastName, String email, String password)
+    boolean checkSessionIDValid(int id) {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try
+        {
+            String query = "SELECT expiringDate FROM sessionID WHERE id = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+            if (!resultSet.next())
+                return false;
+            else {
+                //if (resultSet.getDate(1).toLocalDate().compareTo(LocalDateTime.now().toInstant()))
+                    return false;
+                //else return true;
+            }
+        } catch (SQLException exception) {
+            System.err.println("Error at checking session for validity: " + exception.getMessage());
+        }
+        return false;
+    }
+
+    public void insertUser(String firstName, String lastName, String email, String password, Date dateOfBirth, String adress)
     {
         PreparedStatement preparedStatement = null;
         try
         {
-            String query = "INSERT INTO users(firstName, lastName, email, password) VALUES(?, ?, ?, ?)";
+            String query = "INSERT INTO users(firstName, lastName, email, password, dateOfBirth, adress) VALUES(?, ?, ?, ?, ?, ?)";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.setString(3, email);
+            preparedStatement.setDate(5, dateOfBirth);
+            preparedStatement.setString(6, adress);
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
             String sha256hex = org.apache.commons.codec.digest.DigestUtils.shaHex(hash);
@@ -89,7 +111,7 @@ public class CRUD_operations
 
     public void insertUserByEmailPassword(String email, String password)
     {
-        insertUser("", "", email, password);
+        insertUser("", "", email, password, null, null);
     }
 
     User readUserData(String email)
@@ -105,14 +127,14 @@ public class CRUD_operations
             preparedStatement.setString(1, email);
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
-            user = new User(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
+            user = new User(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5), resultSet.getDate(6), resultSet.getString(7));
             return user;
 
         } catch (SQLException exception)
         {
             System.err.println("Error while trying to get data from database: " + exception.getMessage());
         }
-        return new User(0, "", "", "", "");
+        return new User(0, null, null, null, null, null, null);
     }
 
     public void deleteUser(int id)
@@ -132,22 +154,25 @@ public class CRUD_operations
         }
     }
 
-    public void updateUserData(int id, String firstName, String lastName, String email, String password)
+    public void updateUserData(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String adress)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "UPDATE users SET firstName = ?, lastName = ?, email = ?, password = ? WHERE id = ?";
+            String query = "UPDATE users SET firstName = ?, lastName = ?, email = ?, password = ?, dateOfBirth = ?, adress = ? WHERE id = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.setString(3, email);
+            preparedStatement.setDate(5, dateOfBirth);
+            preparedStatement.setString(6, adress);
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
             String sha256hex = org.apache.commons.codec.digest.DigestUtils.shaHex(hash);
             preparedStatement.setString(4, sha256hex);
+            preparedStatement.setInt(7, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception)
         {
@@ -158,7 +183,7 @@ public class CRUD_operations
         }
     }
 
-    public void updateUserData(int id, String firstName, String lastName)
+   /* public void updateUserData(int id, String firstName, String lastName)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -175,7 +200,7 @@ public class CRUD_operations
         {
             System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
         }
-    }
+    }*/
 
     public void deleteAllUsers()
     {
