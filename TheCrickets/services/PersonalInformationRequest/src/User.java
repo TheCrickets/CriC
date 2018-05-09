@@ -1,15 +1,34 @@
 public class User
 {
+    int id;
+    String lastName;
+    String firstName;
     String email;
     String password;
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "User{" +
-                "email='" + email + '\'' +
+                "id=" + id +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
+
+    public String getlastName() { return lastName; }
+
+    public void setlastName(String lastName) { this.lastName = lastName; }
+
+    public String getfirstName() { return firstName; }
+
+    public void setfirstName(String firstName) { this.firstName = firstName; }
 
     public String getEmail() {
         return email;
