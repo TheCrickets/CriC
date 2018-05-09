@@ -79,7 +79,24 @@ function saveChanges()
     if(checkName() && checkSurname() && checkBirthDate() && checkPhoneNumber())
     {
         //document.getElementsByTagName("form")[0].submit();
-        alert("Your data have been saved.");
+        var xhttp = new XMLHttpRequest();
+
+var url = "http://localhost:55559/api/personalInformationForm";
+var params = JSON.stringify({
+    "email": localStorage.getItem("email"),
+    "firstName": document.getElementById("NameContainer").value,
+    "lastName": document.getElementById("SurnameContainer").value
+});
+xhttp.open("POST", url,   true);
+ 	xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+  			 console.log( xhttp.responseText );
+    }
+    else 
+    	toggleError("Ati gresit");
+  };
+
+xhttp.send(params);
     }
     else
     {
