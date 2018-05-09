@@ -30,6 +30,9 @@ public class SimpleServer
         return undertowBuilder;
     }
 
+    /**
+     * starts the simple server and assigns a simple logger
+     */
     public void start()
     {
         Undertow undertow = undertowBuilder.build();
@@ -43,6 +46,12 @@ public class SimpleServer
                 .forEach(listenerInfo -> logger.info(listenerInfo.toString()));
     }
 
+    /**
+     * constructor
+     * @param handler handlers for the server
+     * @param port to start the server on
+     * @return
+     */
     public static SimpleServer simpleServer(HttpHandler handler, int port)
     {
         if (port <= 0)
