@@ -11,10 +11,11 @@ public class Main {
         operations.insertUser("Andreea", "Dascalu", "andreea.dascalu@gmail.com", "12345", new Date(2018, 5,9), "0754763849");
         System.out.println(operations.checkUserExists("martincu.petru@gmail.com", "pass123"));
         System.out.println(operations.readUserData("martincu.petru@gmail.com").toString());
-        operations.insertUserByEmailPassword("martincu.petru@gmail.com", "12345");
+
         System.out.println(operations.checkSessionIDValid(1, "martincu.petru@gmail.com"));*/
         //operations.deleteAllUsers();/**/
         System.out.println(operations.addSessionForUser(1));
+        operations.insertUserByEmailPassword("martincu.petru@gmail.com", "12345");
         //System.out.println(operations.checkSessionIDValid("b949041a-53c0-11e8-969f-00ffd777f783","martincu.petru@gmail.com"));
     }
 }

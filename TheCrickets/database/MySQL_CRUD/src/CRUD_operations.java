@@ -113,7 +113,7 @@ public class CRUD_operations
 
     public void insertUserByEmailPassword(String email, String password)
     {
-        insertUser("", "", email, password, null, null);
+        insertUser("", "", email, password, new Date(1, 1,1), "");
     }
 
     User readUserData(String email)
