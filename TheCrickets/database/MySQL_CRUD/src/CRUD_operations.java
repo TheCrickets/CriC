@@ -6,6 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class CRUD_operations
 {
@@ -184,21 +185,26 @@ public class CRUD_operations
         }
     }
 
-    public void addSessionForUser(int id)
+    public String addSessionForUser(int id)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "INSERT INTO sessionID(userID) VALUES(?)";
+            String query = "INSERT INTO sessionID(id, userID) VALUES(?, ?)";
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, id);
+            UUID uuid = UUID.randomUUID();
+            String randomUUIDString = uuid.toString();
+            preparedStatement.setString(1, randomUUIDString);
+            preparedStatement.setInt(2, id);
             preparedStatement.executeUpdate();
+            return randomUUIDString;
         } catch (SQLException exception)
         {
             System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
         }
+        return null;
     }
 
     public void deleteAllUsers()
