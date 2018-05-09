@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/MySQL_CRUD.iml" filepath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/MySQL_CRUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/PersonalInformationRequest/PersonalInformationRequest.iml" filepath="$PROJECT_DIR$/TheCrickets/services/PersonalInformationRequest/PersonalInformationRequest.iml" />
       <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/login/login.iml" filepath="$PROJECT_DIR$/TheCrickets/services/login/login.iml" />
       <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/mapper/src/main/main.iml" filepath="$PROJECT_DIR$/TheCrickets/services/mapper/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/main/main1.iml" filepath="$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/register/register.iml" filepath="$PROJECT_DIR$/TheCrickets/services/register/register.iml" />
       <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/test/test.iml" filepath="$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/TheCrickets/services/test-template/test-template.iml" filepath="$PROJECT_DIR$/TheCrickets/services/test-template/test-template.iml" />
     </modules>

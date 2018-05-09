@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="services">
     <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TheCrickets/services/org-apache-commons-codec.jar!/" />
       <root url="jar://$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice.jar!/" />
       <root url="jar://$PROJECT_DIR$/TheCrickets/services/MySQL_CRUD.jar!/" />
     </CLASSES>
