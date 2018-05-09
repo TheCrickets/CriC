@@ -8,7 +8,7 @@ import java.security.InvalidParameterException;
 public class Main
 {
     private static final HttpHandler ROUTES = new RoutingHandler()
-            .post("api/login",new BlockingHandler(RoutingHandlers::userHandler))
+            .post("api/personalInformationForm",new BlockingHandler(RoutingHandlers::userHandler))
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)
