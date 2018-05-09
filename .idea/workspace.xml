@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de25ed61-b1ce-4f9f-ae4b-5b09aa8a54c0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/.idea/workspace.xml" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/CRUD_operations.java" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/CRUD_operations.java" />
       <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/Main.java" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/Main.java" />

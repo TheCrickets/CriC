@@ -61,7 +61,7 @@ public class CRUD_operations
         return false;
     }
 
-    boolean checkSessionIDValid(int sessionID, String email) {
+    boolean checkSessionIDValid(String sessionID, String email) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try
@@ -69,7 +69,7 @@ public class CRUD_operations
             String query = "SELECT expiringDate FROM sessionID JOIN users on sessionID.userID = users.id and users.email = ? WHERE sessionID.id = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, email);
-            preparedStatement.setInt(2, sessionID);
+            preparedStatement.setString(2, sessionID);
             resultSet = preparedStatement.executeQuery();
             if (!resultSet.next())
                 return false;
