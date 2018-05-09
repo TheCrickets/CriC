@@ -156,6 +156,26 @@ public class CRUD_operations
         }
     }
 
+    public void updateUserData(int id, String firstName, String lastName, Date dateOfBirth, String adress) {
+
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try
+        {
+            String query = "UPDATE users SET firstName = ?, lastName = ?, dateOfBirth = ?, adress = ? WHERE id = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, firstName);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setDate(3, dateOfBirth);
+            preparedStatement.setString(4, adress);
+            preparedStatement.setInt(5, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception) {
+            System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
+        }
+    }
+
     public void updateUserData(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String adress)
     {
         PreparedStatement preparedStatement = null;
@@ -176,11 +196,9 @@ public class CRUD_operations
             preparedStatement.setString(4, sha256hex);
             preparedStatement.setInt(7, id);
             preparedStatement.executeUpdate();
-        } catch (SQLException exception)
-        {
+        } catch (SQLException exception) {
             System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
-        } catch (NoSuchAlgorithmException exception)
-        {
+        } catch (NoSuchAlgorithmException exception) {
             System.err.println("Error while trying to encrypt the password: " + exception.getMessage());
         }
     }
