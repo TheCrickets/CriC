@@ -89,7 +89,7 @@ public class CRUD_operations
         PreparedStatement preparedStatement = null;
         try
         {
-            String query = "INSERT INTO users(firstName, lastName, email, password, dateOfBirth, adress) VALUES(?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO users(firstName, lastName, email, password, dateOfBirth, adress) VALUES(?, ?, ?, ?, DATE_SUB(DATE_SUB(DATE_SUB(?, INTERVAL 1 MONTH ), INTERVAL 1900 YEAR), INTERVAL -1 DAY), ?)";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
