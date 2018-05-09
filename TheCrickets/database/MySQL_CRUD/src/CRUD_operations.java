@@ -149,6 +149,22 @@ public class CRUD_operations {
         }
     }
 
+    public void updateUserData(int id, String firstName, String lastName) {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            String query = "UPDATE users SET firstName = ?, lastName = ? WHERE id = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, firstName);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception)
+        {
+            System.err.println("Error while trying to updateUserData data from database: " + exception.getMessage());
+        }
+    }
+
     public void deleteAllUsers() {
         PreparedStatement preparedStatement = null;
 
