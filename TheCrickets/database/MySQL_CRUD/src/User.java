@@ -1,16 +1,22 @@
+import java.sql.Date;
+
 public class User {
     private int id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
+    private Date dateOfBirth;
+    private String phoneNumber;
 
-    public User(int id, String firstName, String lastName, String email, String password) {
+    User(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
     }
 
     public int getId() {
@@ -53,8 +59,25 @@ public class User {
         this.password = password;
     }
 
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getphoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setphoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     @Override
     public String toString() {
-        return (id + " " + firstName + " " + lastName + " " + email + " " + password);
+        return (id + " " + firstName + " " + lastName + " " + email + " " + password + " " + dateOfBirth + " " + phoneNumber);
     }
+
 }

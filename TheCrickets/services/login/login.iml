@@ -9,5 +9,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="services" level="project" />
     <orderEntry type="module" module-name="main1" />
+    <orderEntry type="library" name="SimpleMicroservice" level="project" />
+    <orderEntry type="library" name="org-apache-commons-codec" level="project" />
+    <orderEntry type="library" name="MySQL_CRUD" level="project" />
   </component>
 </module>

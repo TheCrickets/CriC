@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de25ed61-b1ce-4f9f-ae4b-5b09aa8a54c0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/MySQL_CRUD.xml" afterPath="$PROJECT_DIR$/.idea/libraries/MySQL_CRUD.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_commons_codec.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/services.xml" afterPath="$PROJECT_DIR$/.idea/libraries/services.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="14dea607-f2ef-43fa-87fc-2c6bfe30993f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/.idea/workspace.xml" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/MySQL_CRUD.iml" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/MySQL_CRUD.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/database/createTables.sql" afterPath="$PROJECT_DIR$/TheCrickets/database/createTables.sql" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/PersonalInformationRequest/PersonalInformationRequest.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/PersonalInformationRequest/PersonalInformationRequest.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/main/main1.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/main/main1.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/test/test.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/SimpleMicroservice/src/test/test.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/login/login.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/login/login.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/mapper/src/main/main.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/mapper/src/main/main.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/register/Register.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/register/Register.iml" />
-      <change beforePath="$PROJECT_DIR$/TheCrickets/services/test-template/test-template.iml" afterPath="$PROJECT_DIR$/TheCrickets/services/test-template/test-template.iml" />
+      <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/CRUD_operations.java" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/CRUD_operations.java" />
+      <change beforePath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/Main.java" afterPath="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD/src/Main.java" />
+      <change beforePath="$PROJECT_DIR$/TheCrickets/services/MySQL_CRUD.jar" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,10 +70,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -98,6 +85,7 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TheCrickets/database/MySQL_CRUD" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,20 +190,21 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="de25ed61-b1ce-4f9f-ae4b-5b09aa8a54c0" name="Default" comment="" />
-      <created>1525859407508</created>
+      <changelist id="14dea607-f2ef-43fa-87fc-2c6bfe30993f" name="Default" comment="" />
+      <created>1525904243771</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1525859407508</updated>
-      <workItem from="1525859410922" duration="626000" />
+      <updated>1525904243771</updated>
+      <workItem from="1525904246064" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="626000" />
+    <option name="totallyTimeSpent" value="660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -229,7 +218,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21750806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />

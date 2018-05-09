@@ -1,4 +1,4 @@
 com.mysql.cj.jdbc.Driver
-jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7237047?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false
-sql7237047
-mFDsyUyNeL
+jdbc:mysql://localhost:3306/databaseStorage?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false
+CriC_Admin
+password
