@@ -75,6 +75,24 @@ public class CRUD_operations {
         }
     }
 
+    public void insertUserByEmailPassword(String email, String password) {
+        PreparedStatement preparedStatement = null;
+        try {
+            String query = "INSERT INTO users(email, password) VALUES(?, ?)";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, email);
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
+            String sha256hex = org.apache.commons.codec.digest.DigestUtils.shaHex(hash);
+            preparedStatement.setString(2, sha256hex);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception) {
+            System.err.println("Error while trying to insert data into database: " + exception.getMessage());
+        } catch (NoSuchAlgorithmException exception) {
+            System.err.println("Error at crypting the password: " + exception.getMessage());
+        }
+    }
+
     User readUserData(String email) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;

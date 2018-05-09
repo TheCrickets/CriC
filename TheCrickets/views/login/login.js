@@ -67,9 +67,28 @@ function login() {
 
     if (mailRegex.test(email)) {
         document.getElementsByName("loginForm")[0].submit();
-        alert(email + " i wont show the password tho..");
-    } else
-        alert("error");
+
+	var xhttp = new XMLHttpRequest();
+
+var url = "http://localhost:55557/api/login";
+var params = JSON.stringify({
+    "email": email,
+    "password":password
+});
+xhttp.open("POST", url,   true);
+ 	xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+  			 console.log( xhttp.responseText );
+   			window.location.href = "../Home/home.html";
+    }
+    else 
+    	toggleError("Ati gresit email-ul sau parola!");
+  };
+
+xhttp.send(params);
+
+  } else
+      alert("error");
 }
 
 function checkPassword() {
@@ -99,7 +118,25 @@ function register() {
     var password = document.getElementById("passwordRegister").value;
     if (validation(email)) {
         document.getElementsByTagName("form")[0].submit();
-        alert(email + " registered");
+       // alert(email + " registered");
+
+
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:55558/api/register";
+var params = JSON.stringify({
+    "email": email,
+    "password":password
+});
+xmlhttp.open("POST", url,   true);
+
+xmlhttp.onreadystatechange = function() {//Call a function when the state changes.
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    	console.log( xmlhttp.responseText);
+         alert(xmlhttp.responseText);
+    }
+};
+xmlhttp.send(params);
+
     } else
         alert("error");
 }
