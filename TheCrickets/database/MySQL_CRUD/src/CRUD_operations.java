@@ -85,18 +85,18 @@ public class CRUD_operations
         return false;
     }
 
-    public void insertUser(String firstName, String lastName, String email, String password, Date dateOfBirth, String adress)
+    public void insertUser(String firstName, String lastName, String email, String password, Date dateOfBirth, String phoneNumber)
     {
         PreparedStatement preparedStatement = null;
         try
         {
-            String query = "INSERT INTO users(firstName, lastName, email, password, dateOfBirth, adress) VALUES(?, ?, ?, ?, DATE_SUB(DATE_SUB(DATE_SUB(?, INTERVAL 1 MONTH ), INTERVAL 1900 YEAR), INTERVAL -1 DAY), ?)";
+            String query = "INSERT INTO users(firstName, lastName, email, password, dateOfBirth, phoneNumber) VALUES(?, ?, ?, ?, DATE_SUB(DATE_SUB(DATE_SUB(?, INTERVAL 1 MONTH ), INTERVAL 1900 YEAR), INTERVAL -1 DAY), ?)";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.setString(3, email);
             preparedStatement.setDate(5, dateOfBirth);
-            preparedStatement.setString(6, adress);
+            preparedStatement.setString(6, phoneNumber);
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
             String sha256hex = org.apache.commons.codec.digest.DigestUtils.shaHex(hash);
@@ -156,19 +156,19 @@ public class CRUD_operations
         }
     }
 
-    public void updateUserData(int id, String firstName, String lastName, Date dateOfBirth, String adress) {
+    public void updateUserData(int id, String firstName, String lastName, Date dateOfBirth, String phoneNumber) {
 
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "UPDATE users SET firstName = ?, lastName = ?, dateOfBirth = ?, adress = ? WHERE id = ?";
+            String query = "UPDATE users SET firstName = ?, lastName = ?, dateOfBirth = ?, phoneNumber = ? WHERE id = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.setDate(3, dateOfBirth);
-            preparedStatement.setString(4, adress);
+            preparedStatement.setString(4, phoneNumber);
             preparedStatement.setInt(5, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
@@ -176,20 +176,20 @@ public class CRUD_operations
         }
     }
 
-    public void updateUserData(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String adress)
+    public void updateUserData(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String phoneNumber)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "UPDATE users SET firstName = ?, lastName = ?, email = ?, password = ?, dateOfBirth = ?, adress = ? WHERE id = ?";
+            String query = "UPDATE users SET firstName = ?, lastName = ?, email = ?, password = ?, dateOfBirth = ?, phoneNumber = ? WHERE id = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.setString(3, email);
             preparedStatement.setDate(5, dateOfBirth);
-            preparedStatement.setString(6, adress);
+            preparedStatement.setString(6, phoneNumber);
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
             String sha256hex = org.apache.commons.codec.digest.DigestUtils.shaHex(hash);

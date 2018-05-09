@@ -7,16 +7,16 @@ public class User {
     private String email;
     private String password;
     private Date dateOfBirth;
-    private String adress;
+    private String phoneNumber;
 
-    User(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String adress) {
+    User(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.dateOfBirth = dateOfBirth;
-        this.adress = adress;
+        this.phoneNumber = phoneNumber;
     }
 
     public int getId() {
@@ -67,17 +67,17 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getphoneNumber() {
+        return phoneNumber;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setphoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
     public String toString() {
-        return (id + " " + firstName + " " + lastName + " " + email + " " + password + " " + dateOfBirth + " " + adress);
+        return (id + " " + firstName + " " + lastName + " " + email + " " + password + " " + dateOfBirth + " " + phoneNumber);
     }
 
 }
