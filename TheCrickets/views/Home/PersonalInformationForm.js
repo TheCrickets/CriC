@@ -87,12 +87,10 @@ var params = JSON.stringify({
     "firstName": document.getElementById("NameContainer").value,
     "lastName": document.getElementById("SurnameContainer").value,
     "phoneNumber": document.getElementById("PhoneNumberContainer").value,
-    "dateOfBirth": document.getElementById('DateOfBirthContainer').value
+    "dateOfBirth": document.getElementById('DateOfBirthContainer').value,
+    "sessionID": localStorage.getItem("sessionID")
 });
 xhttp.open("POST", url,   true);
-xhttp.setRequestHeader("sessionID", localStorage.getItem("sessionID"));
-xhttp.setRequestHeader("Access-Control-Request-Method", "POST");
-xhttp.setRequestHeader("Access-Control-Request-Headers", "X-Custom-Header");
  	xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
   			 console.log( xhttp.responseText );
