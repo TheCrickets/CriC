@@ -91,14 +91,6 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getphoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setphoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     @Override
     public String toString() {
         return (id + " " + firstName + " " + lastName + " " + email + " " + password + " " + dateOfBirth + " " + phoneNumber);
