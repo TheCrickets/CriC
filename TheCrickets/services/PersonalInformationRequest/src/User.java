@@ -9,6 +9,28 @@ public class User {
     public Date dateOfBirth;
     public String phoneNumber;
 
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber)
+    {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getSessionID()
+    {
+        return sessionID;
+    }
+
+    public void setSessionID(String sessionID)
+    {
+        this.sessionID = sessionID;
+    }
+
+    public String sessionID;
+
     User(){}
 
     User(int id, String firstName, String lastName, String email, String password, Date dateOfBirth, String phoneNumber) {
@@ -67,14 +89,6 @@ public class User {
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getphoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setphoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     @Override

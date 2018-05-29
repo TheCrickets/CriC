@@ -80,6 +80,7 @@ xhttp.open("POST", url,   true);
     if (xhttp.readyState == 4 && xhttp.status == 200) {
   			 console.log( xhttp.responseText );
 			localStorage.setItem("email",email);
+            localStorage.setItem("sessionID",xhttp.responseText.substr(1,xhttp.responseText.length - 2));
    			window.location.href = "../Home/home.html";
     }
     else 
