@@ -40,7 +40,7 @@
         <a href="../map/map.html" id="map">Map
             <img class="menuImage" alt="Map" src="resources/map.png">
         </a>
-       <a href="../map/table.html" id="placeholder">Table </a>
+        <a href="../map/table.html" id="placeholder">Table </a>
 
         <div id="links">
             <div class="icon-bar">
@@ -70,15 +70,12 @@
         </div>
  
     <div id="mapContainer">
-        <iframe width="1110" height="550" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col1+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&viz=MAP&h=false&lat=42.758368053254614&lng=19.41935798181703&t=1&z=4&l=col1&y=2&tmplt=2&hml=ONE_COL_LAT_LNG"></iframe>
-        <div id="options" >
-            <!-- to format -->
-            Use double left click to zoom in and double right click to zoom out.
-            <br> You can see the full map
-            <a href="https://fusiontables.google.com/embedviz?q=select+col1+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&viz=MAP&h=false&lat=42.758368053254614&lng=19.41935798181703&t=1&z=4&l=col1&y=2&tmplt=2&hml=ONE_COL_LAT_LNG" target="_blank">here</a>
-            
 
-            <br> More options here.</div>
+        <p id="demo"></p>
+        <iframe width="1110" height="550" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&t=TABLE&q=select+col0%2C+col1%2C+col2%2C+col3%2C+col4+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&containerId=googft-gviz-canvas"></iframe>
+        <div id="options" >
+        
+           <button class="button" onclick="table();">Table </button>
     </div>
 </body>
 
