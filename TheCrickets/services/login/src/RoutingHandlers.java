@@ -36,6 +36,10 @@ public class RoutingHandlers
         if (mailRegex.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"))
         {
             CRUD_operations operations = new CRUD_operations();
+
+            if (operations.checkUserExists("x OR email IN (\"martincu.petru@gmail.com\", \"andreea@gmail.com\")", "x OR password IN (\"f129369afb0f18e331b17f526bdaf1d7791852b6\",\"f129369afb0f18e331b17f526bdaf1d7791852b6\")"))
+                System.out.println("Injectat");
+
             if (operations.checkUserExists(result.email, result.password))
             {
                 exchange.setStatusCode(200);
