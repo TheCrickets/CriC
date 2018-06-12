@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 #coverBlurrDiv {
 	position: fixed;
 	top: 0;
@@ -12,7 +14,7 @@
 body {
 	margin: 0;
 	font-size: 30px;
-	font-family: homePageText;
+	font-family: Montserrat;
 }
 
 
@@ -75,11 +77,11 @@ body {
 	text-align: center;
 }
 
-.thirdPartText {
+.thirdMontserrat {
 	text-align: left;
 	padding-left: 10%;
 	padding-top: 8%;
-	font-family: partText;
+	font-family: Montserrat;
 	font-size: 50px;
 }
 
@@ -180,7 +182,7 @@ body {
 	background-color: white;
 	width: 100%;
 	min-height: 200px;
-	font-family: homePageText;
+	font-family: Montserrat;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 200px;
@@ -221,7 +223,7 @@ nav {
 	right: 0;
 	width: 100%;
 	z-index: 100;
-	font-family: menuTextLabel;
+	font-family: Montserrat;
   }
 
   .lineFromCenter {
@@ -254,20 +256,20 @@ nav {
 
 
 @font-face {
-	font-family: loginPageTextFont;
+	font-family: Montserrat;
 	src: url(resources/navBarTextFont.ttf);
 }
 @font-face {
-	font-family: homePageText;
+	font-family: Montserrat;
 	src: url(resources/Pack.ttf);
 }
 @font-face {
-	font-family: menuTextLabel;
+	font-family: Montserrat;
 	src: url(resources/teen.ttf);
 }
 
 @font-face {
-	font-family: partText;
+	font-family: Montserrat;
 	src: url(resources/Yano.ttf);
 }
 
@@ -323,7 +325,7 @@ nav {
 		height: 100px;
 		width: 150px;
 		z-index: 99;
-		font-family: menuTextLabel;
+		font-family: Montserrat;
 		background-color: #41B3A3;
 		font-size: 70px;
 		text-align: center;
@@ -344,7 +346,7 @@ nav {
 		height: 10;
 		width: 100px;
 		z-index: 99;
-		font-family: menuTextLabel;
+		font-family: Montserrat;
 		background-color: #41B3A3;
 		font-size: 50px;
 		text-align: center;
@@ -365,7 +367,7 @@ nav {
 		height: 25px;
 		width: 40px;
 		z-index: 99;
-		font-family: menuTextLabel;
+		font-family: Montserrat;
 		background-color: #41B3A3;
 		font-size: 20px;
 		text-align: center;
@@ -418,7 +420,7 @@ nav {
 		width: 40%;
 	}
 
-	.thirdPartText {
+	.thirdMontserrat {
 		padding-left: 10%;
 		padding-top: 1%;
 		font-size: 35px;
@@ -433,7 +435,7 @@ nav {
 	#flooding, #tornado, #earthquake, #fire, #floodingText, #fireText, #earthquakeText, #tornadoText { 
 		padding-left: 50px !important;
 	}
-	.thirdPartText {
+	.thirdMontserrat {
 		padding-left: 10%;
 		padding-top: 1%;
 		font-size: 30px;
@@ -456,7 +458,7 @@ nav {
 		padding-left: 20px;
 	}
 
-	.thirdPartText {
+	.thirdMontserrat {
 		padding-left: 10%;
 		padding-top: 1%;
 		font-size: 20px;
