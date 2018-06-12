@@ -1,0 +1,159 @@
+#RegisterText {
+  width: 500px;
+  height: 550px;
+  position: fixed;
+  margin-left: 10%;
+  top: 10%;
+  z-index: -1;
+  color: white;
+}
+
+#RegisterText:target {
+  animation-duration: 1s;
+  animation-name: slideinText;
+
+}
+
+p#WelcomeRegister {
+  font-size: 40px;
+}
+
+.WelcomeRegister {
+  font-size: 48px;
+  color: white;
+  padding-top: 30px;
+  padding-right: 58px;
+  text-align: center;
+}
+
+
+
+#registerContainer {
+  width: 500px;
+  height: 650px;
+  margin-left: 60%;
+	top: 10%;
+	position: fixed;
+  z-index: 100;
+  visibility: hidden;
+}
+
+#registerContainer:target {
+  animation-duration: 1s;
+  animation-name: slidein;
+  visibility: visible;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 60%;
+    width: 100%;
+  }
+}
+
+.Welcome {
+  font-size: 48px;
+  color: white;
+  padding-top: 30px;
+  padding-right: 58px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#emailLabelRegister {
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#passwordLabelRegister {
+  margin-top: 46px;
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#passwordAgainLabel {
+  margin-top: 32px;
+  height: 22px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#emailRegister,
+#passwordRegister,
+#passwordAgain {
+  height: 50px;
+  padding-left: 20px;
+  width: 410px;
+  opacity: 0.4;
+  background-color: #d6d6d6;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.96);
+  color: white;
+}
+
+input[type="button"] {
+  margin-top: 40px;
+  width: 409px;
+  height: 53px;
+  margin-left: 15px;
+  background-color: #4286f4;
+  font-family: loginPageTextFont;
+  font-size: 36px;
+  color: #ffffff;
+  border-color: #091e44;
+  border-style: solid;
+  cursor: pointer;
+}
+
+input[type="button"]:active
+{
+  background-color: #124496;
+}
+
+.passEyeRegister {
+  position: relative;
+  display: block;
+  top: -33px;
+  left: 380px;
+  cursor: pointer;
+}
+
+#errorRegister{
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: red;
+  display: block;
+  margin-left: -64px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#acceptContainer {
+  position: relative;
+  top: 10px;
+  left: -5px;
+  font-family: loginPageTextFont;
+  font-size: 18px;
+  color: white;
+}
+
+#acceptBox {
+  width: 20px;
+  height: 20px;
+  background: #F5F2F2;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+

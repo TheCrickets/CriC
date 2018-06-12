@@ -4,11 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
-	<link href = "loginStyleSheet.css" rel = "stylesheet" type = "text/css">
-    <link href="loginBox.css" rel="stylesheet" type="text/css">
-    <link href="registerBox.css" rel="stylesheet" type="text/css">
-    <script src="login.js"></script>
-    <script src="menuButtonAttachedFunctions.js"></script>
+	<link href = "http://localhost:3000/static/login/loginStyleSheet.css" rel = "stylesheet" type = "text/css">
+    <link href = "http://localhost:3000/static/login/loginBox.css" rel="stylesheet" type="text/css">
+    <link href = "http://localhost:3000/static/login/registerBox.css" rel="stylesheet" type="text/css">
+    <script src = "http://localhost:3000/static/login/login.js"></script>
+    <script src = "http://localhost:3000/static/login/menuButtonAttachedFunctions.js"></script>
 </head>
 
 <body onload="onLoad();">
@@ -18,10 +18,10 @@
 	<div id="navDivWrapper">
 		<nav>
             <div class="lineFromCenter"><a href="#"></a></div>
-			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButAbout()"><img class = "navBarImage" src="resources/about.png" alt="About">About</a></div>
-			<div class="lineFromCenter"><a href="#loginBox" onclick="removeOtherTextButLogin()" ><img class = "navBarImage" src="resources/login.png" alt="Login">Login</a></div>
-			<div class="lineFromCenter"><a href="#registerContainer" onclick="removeOtherTextButRegister()"><img class = "navBarImage" src="resources/register.png" alt="Register">Register</a></div>
-			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButContact()"><img class = "navBarImage" src="resources/contact.png" alt="Contact">Contact</a></div>
+			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButAbout()"><img class = "navBarImage" src="http://localhost:3000/static/login/resources/about.png" alt="About">About</a></div>
+			<div class="lineFromCenter"><a href="#loginBox" onclick="removeOtherTextButLogin()" ><img class = "navBarImage" src="http://localhost:3000/static/login/resources/login.png" alt="Login">Login</a></div>
+			<div class="lineFromCenter"><a href="#registerContainer" onclick="removeOtherTextButRegister()"><img class = "navBarImage" src="http://localhost:3000/static/login/resources/register.png" alt="Register">Register</a></div>
+			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButContact()"><img class = "navBarImage" src="http://localhost:3000/static/login/resources/contact.png" alt="Contact">Contact</a></div>
 		</nav>
 	</div>
 	<div id = "loginBox" class = "loginContainer">
@@ -38,7 +38,7 @@
 
             <br>
 
-            <img src="resources/eye/006-eye.png" id="passEyeLogin" onclick="togglePassLogin();" alt = "404">
+            <img src="http://localhost:3000/static/login/resources/eye/006-eye.png" id="passEyeLogin" onclick="togglePassLogin();" alt = "404">
 
             <label id="rememberContainer">
                 <input type="checkbox" id="rememberBox"> Remember me
@@ -88,7 +88,7 @@
                 <input type="password" id="passwordRegister" placeholder="*****************">
                 <br>
     
-                <img src="resources/eye/006-eye.png" class="passEyeRegister" onclick="togglePassRegister();" alt = "404">
+                <img src="http://localhost:3000/static/login/resources/eye/006-eye.png" class="passEyeRegister" onclick="togglePassRegister();" alt = "404">
     
                 <div id="passwordAgainLabel">
                     Confirm Password
@@ -97,7 +97,7 @@
                 <input type="password" id="passwordAgain" placeholder="*****************" onchange="checkPassword();">
                 <br>
     
-                <img src="resources/eye/006-eye.png" class="passEyeRegister" onclick="togglePassAgain();" alt = "404">
+                <img src="http://localhost:3000/static/login/resources/eye/006-eye.png" class="passEyeRegister" onclick="togglePassAgain();" alt = "404">
     
                 <label id="acceptContainer">
                     <p><input type="checkbox" id="acceptBox"> I accept the terms and conditions</p>
@@ -138,21 +138,21 @@
 
 <div class = "thirdPart">
         <div class = "thirdPartOne"><p class = "thirdPartText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
-        <div class = "thirdPartTwo"><img src="resources/flood.png" style="height: 50%; width: 50%" alt = "FLOOD.PNG"></div>
+        <div class = "thirdPartTwo"><img src="http://localhost:3000/static/login/resources/flood.png" style="height: 50%; width: 50%" alt = "FLOOD.PNG"></div>
 </div>
 
 <div class = "thirdPart">
-        <div class = "thirdPartTwo"><img src="resources/bonfire.png" style = "height: 40%; width: 40%" alt = "BONFIRE.PNG"><img src="resources/fire-truck.png" style = "height: 40%; width: 40%" alt = "FIRETRUCK.PNG"></div>
+        <div class = "thirdPartTwo"><img src="http://localhost:3000/static/login/resources/bonfire.png" style = "height: 40%; width: 40%" alt = "BONFIRE.PNG"><img src="http://localhost:3000/static/login/resources/fire-truck.png" style = "height: 40%; width: 40%" alt = "FIRETRUCK.PNG"></div>
         <div class = "thirdPartOne"><p class = "thirdPartText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
 </div>
 
 <div class = "thirdPart">
         <div class = "thirdPartOne"><p class = "thirdPartText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
-        <div class = "thirdPartTwo"><img src="resources/earthquake.png" style="height: 50%; width: 50%" alt = "EARTHQUAKE.PNG"></div>
+        <div class = "thirdPartTwo"><img src="http://localhost:3000/static/login/resources/earthquake.png" style="height: 50%; width: 50%" alt = "EARTHQUAKE.PNG"></div>
 </div>
 
 <div class = "thirdPart">
-        <div class = "thirdPartTwo"><img src="resources/umbrella.png" style="height: 50%; width: 50%" alt = "UMBRELLA.PNG"></div>
+        <div class = "thirdPartTwo"><img src="http://localhost:3000/static/login/resources/umbrella.png" style="height: 50%; width: 50%" alt = "UMBRELLA.PNG"></div>
         <div class = "thirdPartOne"><p class = "thirdPartText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
 
 </div>

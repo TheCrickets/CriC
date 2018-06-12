@@ -1,0 +1,142 @@
+<!doctype html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=loginPageTextFont" rel="stylesheet">
+    <link href = "PersonalInformationForm.css" rel = "stylesheet" type = "text/css">
+    <script src="PersonalInformationForm.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+
+    <title>Crisis Containment Service</title>
+
+
+</head>
+<body>
+
+
+
+
+    <nav>
+        <a id="leftMostMenuItem" href="#">
+            <img class="navBarImage" alt="Notifications" src="resources/Alet_2.png">Notifications</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img class="navBarImage" alt="Profile" src="resources/user.png"> Profile
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <!--fa fa.. e pt sageata de jos-->
+            <div class="dropdown-content">
+                <a href="#"> &raquo; Your profile</a>
+                <a href="PersonalInformationFrom.html"> &raquo; Settings </a>
+            </div>
+        </div>
+
+        <a href="#">
+            <img class="navBarImage" alt="Logout" src="resources/logout.png">Logout</a>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+          <a href="Home.html" id="home">Home
+            <img class="menuImage" alt="Home" src="resources/home.png">
+        </a>
+        <a href="#" id="map">Map
+            <img class="menuImage" alt="Map" src="resources/map.png">
+        </a>
+        <a href="#" id="placeholder">Place Holder </a>
+
+        <div id="links">
+            <div class="icon-bar">
+                <a href="https://ro-ro.facebook.com/" class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/twitter" class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.google.ro" class="google">
+                    <i class="fa fa-google"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+            </div>
+            <img id="menuImageForLinks" alt="Links" src="resources/social.png">
+
+        </div>
+
+    </div>
+
+
+
+
+
+        <div class="photouser">
+            <img src="resources/userphoto.png" alt="User">
+            <div id="textUserName">User Name</div>
+        </div>
+     
+
+
+
+
+
+
+<div id="continut">
+
+    <div id="error"></div>
+    
+    <div id="PersonalInformation">
+        Personal Information
+    </div>
+    <div id="personalInformationContainer">
+    <form>
+        <input type="upload" id="ProfilePicture" placeholder=" Profile picture ">
+        
+        <div id="Name"> 
+            Name
+        </div>
+        <input type="text" id="NameContainer" placeholder="Tucsi" onchange="checkName();">
+        
+        <div id="Surname">
+            Surname
+        </div>
+        <input type="text" id="SurnameContainer" placeholder="Pinguinescu" onchange="checkSurname();">
+        
+        <div id="DateOfBirth">
+            Date of Birth
+        </div>
+        <input type="date" id="DateOfBirthContainer" onchange="checkBirthDate();">
+        
+        <div id="PhoneNumber">
+            Phone Number
+        </div>
+        <input type="tel" id="PhoneNumberContainer" onchange="checkPhoneNumber();">
+
+        <br>
+
+        <label class="checkboxContainer">
+            <input type="checkbox" class="UseMyLocationBox"> Use my location
+        </label>
+
+        <br>
+
+        <label class="checkboxContainer">
+                <input type="checkbox" class="UseMyLocationBox"> placeholder
+        </label>
+        
+        <br>
+        <input type="button" value="Save" name="form" onclick="saveChanges();">
+        <br>
+        <br>
+    </form>
+    <br>
+    <br>
+    </div>
+    <br>
+    <br>
+
+
+</div>
+</body>
+</html>

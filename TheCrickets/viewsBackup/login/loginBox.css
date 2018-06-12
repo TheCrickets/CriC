@@ -1,0 +1,157 @@
+.loginContainer {
+  width: 500px;
+  height: 550px;
+  position: fixed;
+  margin-left: 60%;
+	top: 20%;
+  z-index: 100;
+  visibility: hidden;
+}
+
+.loginContainer:target {
+  animation-duration: 1s;
+  animation-name: slidein;
+  visibility: visible;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 60%;
+    width: 100%;
+  }
+}
+
+#loginText {
+  width: 500px;
+  height: 550px;
+  position: fixed;
+  margin-left: 10%;
+	top: 10%;
+  z-index: -1;
+  color: white;
+}
+
+#loginText:target {
+  animation-duration: 1s;
+  animation-name: slideinText;
+
+}
+
+p#Welcome {
+  font-size: 40px;
+}
+
+@keyframes slideinText {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 60%;
+    width: 100%;
+  }
+}
+
+.Welcome {
+  font-size: 48px;
+  color: white;
+  padding-top: 30px;
+  padding-right: 58px;
+	text-align: center;
+}
+
+#emailLabelLogin {
+  height: 22px;
+  font-size: 18px;
+  color: white;
+}
+
+#passwordLabelLogin {
+  margin-top: 46px;
+  height: 22px;
+  font-size: 18px;
+  color: white;
+}
+
+#emailLogin,
+#passwordLogin {
+  height: 50px;
+  padding-left: 20px;
+  width: 410px;
+  opacity: 0.4;
+  background-color: #d6d6d6;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.96);
+}
+
+#rememberContainer {
+  position: relative;
+  left: -5px;
+  top: 35px;
+  font-size: 18px;
+  color: white;
+}
+
+#rememberBox {
+  width: 20px;
+  height: 20px;
+  background: #F5F2F2;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#forgotPassword {
+  position: relative;
+  left: 266px;
+  top: 14px;
+  height: 22px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input[type="button"] {
+  margin-top: 40px;
+  width: 409px;
+  height: 53px;
+  margin-left: 15px;
+  background-color: steelblue;;
+  font-size: 36px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px 30px 30px 30px;
+  outline: none;
+}
+
+input[type="button"]:active
+{
+  background-color: #124496;
+}
+
+#passEyeLogin {
+  position: relative;
+  display: block;
+  top: -32px;
+  left: 380px;
+  cursor: pointer;
+}
+
+#errorLogin{
+  font-size: 18px;
+  color: red;
+  display: block;
+  margin-left: -64px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
