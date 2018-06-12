@@ -30,13 +30,5 @@ public class RoutingHandlers
         } catch (MalformedURLException e) {
             System.out.println("URL problem!");
         }
-        /*CRUD_operations crud_operations = new CRUD_operations();
-        User user = crud_operations.readUserData(exchange.getQueryParameters().get("email").getFirst());
-        if (user.getId() == 0) {
-            exchange.setStatusCode(404);
-            JsonUtilities.sendJson(exchange,"Not Found!");
-        }
-            else JsonUtilities.sendJson(exchange, user);
-        */
     }
 }

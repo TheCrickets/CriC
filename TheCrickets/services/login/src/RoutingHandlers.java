@@ -37,9 +37,6 @@ public class RoutingHandlers
         {
             CRUD_operations operations = new CRUD_operations();
 
-            if (operations.checkUserExists("x OR email IN (\"martincu.petru@gmail.com\", \"andreea@gmail.com\")", "x OR password IN (\"f129369afb0f18e331b17f526bdaf1d7791852b6\",\"f129369afb0f18e331b17f526bdaf1d7791852b6\")"))
-                System.out.println("Injectat");
-
             if (operations.checkUserExists(result.email, result.password))
             {
                 exchange.setStatusCode(200);
