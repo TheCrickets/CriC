@@ -9,6 +9,7 @@ public class Main
     private static final HttpHandler ROUTES = new RoutingHandler()
             .get("/login", RoutingHandlers::testHandler)
             .get("/home", RoutingHandlersTwo::testHandler)
+            .get("/profile", RoutingHandlersThree::testHandler)
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)
