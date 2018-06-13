@@ -137,7 +137,7 @@ xmlhttp.onreadystatechange = function() {//Call a function when the state change
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
     	console.log( xmlhttp.responseText);
         alert(xmlhttp.responseText);
-        stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+        stringBuilder = ("http://localhost:3000/static/redirect/redirect.html");
    		window.location = stringBuilder;
     }
     else {

@@ -16,24 +16,12 @@ public class CRUD_operations
 
     CRUD_operations()
     {
-        //try
-        //{
-            //File file = new File("http://localhost:3000/static/databaseConfig.txt");
-            //Scanner sc = new Scanner(file);
-            DatabaseConnection databaseConnection = new DatabaseConnection();
-
-
-            databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
-            databaseConnection.setDriverConnection("jdbc:mysql://138.68.64.239:3306/CRIC?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
-            databaseConnection.setUser("test");
-            databaseConnection.setPassword("");
-
-
-            connection = databaseConnection.connect();
-        //} catch (FileNotFoundException exception)
-        //{
-        //    System.err.println("Configuration file not foundd: " + exception.getMessage());
-        //}
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
+        databaseConnection.setDriverConnection("jdbc:mysql://138.68.64.239:3306/CRIC?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
+        databaseConnection.setUser("test");
+        databaseConnection.setPassword("");
+        connection = databaseConnection.connect();
     }
 
     void insertDisaster(Disaster disaster) {
@@ -229,8 +217,12 @@ public class CRUD_operations
             preparedStatement.setString(1, email);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis())))
+                if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis()-43200000)))
+                {
+                    System.out.println(resultSet.getTimestamp(1));
+                    System.out.println(new Timestamp(System.currentTimeMillis()-43200000));
                     return true;
+                }
             }
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());

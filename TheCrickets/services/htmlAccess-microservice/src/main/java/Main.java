@@ -10,6 +10,7 @@ public class Main
     private static final HttpHandler ROUTES = new RoutingHandler()
             .get("/login", RoutingHandlers::testHandler)
             .get("/home/{sessionID}/{email}", RoutingHandlersTwo::testHandler)
+            .get("/home/{sessionID}/{email}/{checked}", RoutingHandlersTen::testHandler)
             .get("/profile/{sessionID}/{email}", RoutingHandlersThree::testHandler)
             .get("/contact", RoutingHandlersFour::testHandler)
             .get("/logout/{sessionID}/{email}", RoutingHandlersFive::testHandler)
