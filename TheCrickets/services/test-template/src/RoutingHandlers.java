@@ -28,4 +28,12 @@ public class RoutingHandlers
         }
             else JsonUtilities.sendJson(exchange, user);
     }
+
+    public static void helloHandler(HttpServerExchange exchange)
+    {
+        exchange.getResponseHeaders().put(HttpString.tryFromString("Access-Control-Allow-Origin"), "*");
+        exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "application/json");
+        exchange.setStatusCode(200);
+        JsonUtilities.sendJson(exchange,"Hello there!");
+    }
 }
