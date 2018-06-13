@@ -58,4 +58,9 @@ public class Disaster {
     public void setLongitude(float longitude) {
         this.longitude = longitude;
     }
+
+    @Override
+    public String toString() {
+        return getID() + " " + getType() + " " + getTime() + " " + getLatitude() + " " + getLongitude();
+    }
 }

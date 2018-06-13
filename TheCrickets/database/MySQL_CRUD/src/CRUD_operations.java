@@ -24,9 +24,9 @@ public class CRUD_operations
 
 
             databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
-            databaseConnection.setDriverConnection("jdbc:mysql://localhost:3306/databaseStorage?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
-            databaseConnection.setUser("CriC_Admin");
-            databaseConnection.setPassword("password");
+            databaseConnection.setDriverConnection("jdbc:mysql://138.68.64.239:3306/CRIC?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
+            databaseConnection.setUser("test");
+            databaseConnection.setPassword("");
 
 
             connection = databaseConnection.connect();
@@ -34,6 +34,22 @@ public class CRUD_operations
         //{
         //    System.err.println("Configuration file not foundd: " + exception.getMessage());
         //}
+    }
+
+    void insertDisaster(Disaster disaster) {
+        try {
+            PreparedStatement preparedStatement = null;
+            String query = "INSERT INTO disasters VALUES (?, ?, ?, ?, ?)";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, disaster.getID());
+            preparedStatement.setString(2, disaster.getType());
+            preparedStatement.setTimestamp(3, disaster.getTime());
+            preparedStatement.setFloat(4, disaster.getLatitude());
+            preparedStatement.setFloat(5, disaster.getLongitude());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("SQL error: " + e.getMessage());
+        }
     }
 
     boolean checkUserExists(String email, String password)
@@ -81,8 +97,8 @@ public class CRUD_operations
                 disaster.setLatitude(resultSet.getFloat(4));
                 disaster.setLongitude(resultSet.getFloat(5));
                 disasters.add(disaster);
-                return disasters;
             }
+            return disasters;
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
         }
