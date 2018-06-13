@@ -13,8 +13,8 @@ function contact() {
     var params = JSON.stringify({
 
             "firstName": firstName,
-            "lastName": lastName
-            "email": email
+            "lastName": lastName,
+            "email": email,
             "comment": comment
 
         });

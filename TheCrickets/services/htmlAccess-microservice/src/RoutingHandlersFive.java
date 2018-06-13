@@ -14,7 +14,7 @@ public class RoutingHandlersFive {
 
         exchange.setStatusCode(200);
 
-        Contact result = JsonUtilities.parseJson(exchange, new TypeReference<>() {});
+        Contact result = JsonUtilities.parseJson(exchange, new TypeReference<Contact>() {});
 
         System.out.println(result);
 
