@@ -9,6 +9,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Map</title>
+    <script type="text/javascript">
+           function profile() {
+            stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email")).concat("/personalPage");
+            window.location = stringBuilder;
+        }
+
+        function settings() {
+            stringBuilder = ("http://localhost:55557/profile/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+            window.location = stringBuilder;
+        function logout() {
+            stringBuilder = ("http://localhost:55557/logout/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+            window.location = stringBuilder;
+        }
+
+        function home() {
+            stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email")).concat("/home");
+            window.location = stringBuilder;
+        }
+}
+    </script>
 </head>
 
 <body>
@@ -23,17 +43,17 @@
             </button>
             <!--fa fa.. e pt sageata de jos-->
             <div class="dropdown-content">
-                <a href="#"> &raquo; Your profile</a>
-                <a href="../Home/PersonalInformationFrom.html"> &raquo; Settings </a>
+                <a href="#" onclick="profile();"> &raquo; Your profile</a>
+                <a href="#" onclick="settings();"> &raquo; Settings </a>
             </div>
         </div>
 
-        <a href="#">
+        <a href="#" onclick="logout();">
             <img class="navBarImage" alt="Logout" src="http://localhost:3000/static/map/resources/logout.png">Logout</a>
     </nav>
 
     <div id="mySidenav" class="sidenav">
-        <a href="../Home/Home.html" id="home">Home
+        <a href="#" onclick="home();">Home
             <img class="menuImage" alt="Home" src="http://localhost:3000/static/map/resources/home.png">
         </a>
         <a href="#" id="map">Map

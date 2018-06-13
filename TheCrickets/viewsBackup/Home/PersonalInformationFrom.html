@@ -15,6 +15,15 @@
             stringBuilder = ("http://localhost:55557/logout/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
             window.location = stringBuilder;
         }
+        function map() {
+            stringBuilder = ("http://localhost:55557/map/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+            window.location = stringBuilder;
+            }
+            function home() {
+            stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email")).concat("/home");
+            window.location = stringBuilder;
+        }
+        
     </script>
 
 </head>
@@ -43,10 +52,10 @@
     </nav>
 
     <div id="mySidenav" class="sidenav">
-          <a href="http://localhost:3000/static/Home/Home.html" id="home">Home
+          <a href="#" id="home" onclick="home();">Home
             <img class="menuImage" alt="Home" src="http://localhost:3000/static/Home/resources/home.png">
         </a>
-        <a href="#" id="map">Map
+        <a href="#" id="map" onclick="map();">Map
             <img class="menuImage" alt="Map" src="http://localhost:3000/static/Home/resources/map.png">
         </a>
         <a href="#" id="placeholder">Place Holder </a>

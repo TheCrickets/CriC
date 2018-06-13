@@ -14,6 +14,7 @@ public class Main
             .get("/profile/{sessionID}/{email}", RoutingHandlersThree::testHandler)
             .get("/contact", RoutingHandlersFour::testHandler)
             .get("/logout/{sessionID}/{email}", RoutingHandlersFive::testHandler)
+            .get("/map/{sessionID}/{email}", RoutingHandlerOLD::testHandler)
             .post("/contact/submit",new BlockingHandler(RoutingHandlersSix::userHandler))
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
