@@ -30,8 +30,8 @@
 
 <body background="#41B3A3">
 
-<h1 style = "font-size : 45px"><p align="center">You are already Logged In</p><p align="center">Redirecting you to the Home page...</p></h1>
-<p><img class="center" src = "http://localhost:3000/static/loggedIn/wrench.png" height="400"></image></p>
+<h1 style = "font-size : 45px"><p align="center">No instance of logged user found!</p><p align="center">Redirecting you to the Home page...</p></h1>
+<p><img class="center" src = "http://localhost:3000/static/noLoggedOut/warning.png" height="400"></image></p>
 
 </body>
 
@@ -39,7 +39,7 @@
 
 
 	window.onload = setTimeout(function() { 
-		stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email")).concat("/g");
+		stringBuilder = ("http://localhost:55557/login");
 	    window.location = stringBuilder; 
 	}, 2000);
 

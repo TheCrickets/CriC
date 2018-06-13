@@ -29,12 +29,7 @@ public class RoutingHandlers
         exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "application/json");
 
         exchange.setStatusCode(200);
-        User result = JsonUtilities.parseJson(exchange, new TypeReference<User>()
-        {
-        });
-        //System.out.println(result);
-
-        //String mailRegex = exchange.getQueryParameters().get("email").getFirst();
+        User result = JsonUtilities.parseJson(exchange, new TypeReference<User>() {});
 
         String mailRegex = result.email;
         /**
@@ -63,10 +58,6 @@ public class RoutingHandlers
                 exchange.setStatusCode(401);
                 JsonUtilities.sendJson(exchange, "Ati gresit email-ul sau parola!");
             }
-/*
-            exchange.setStatusCode(200);
-            JsonUtilities.sendJson(exchange, "Email si parola corecta!");
-            */
         }
 
         else

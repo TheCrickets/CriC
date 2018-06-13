@@ -16,24 +16,12 @@ public class CRUD_operations
 
     CRUD_operations()
     {
-        //try
-        //{
-            //File file = new File("http://localhost:3000/static/databaseConfig.txt");
-            //Scanner sc = new Scanner(file);
-            DatabaseConnection databaseConnection = new DatabaseConnection();
-
-
-            databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
-            databaseConnection.setDriverConnection("jdbc:mysql://138.68.64.239:3306/CRIC?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
-            databaseConnection.setUser("test");
-            databaseConnection.setPassword("");
-
-
-            connection = databaseConnection.connect();
-        //} catch (FileNotFoundException exception)
-        //{
-        //    System.err.println("Configuration file not foundd: " + exception.getMessage());
-        //}
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
+        databaseConnection.setDriverConnection("jdbc:mysql://138.68.64.239:3306/CRIC?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
+        databaseConnection.setUser("test");
+        databaseConnection.setPassword("");
+        connection = databaseConnection.connect();
     }
 
     void insertDisaster(Disaster disaster) {
@@ -117,16 +105,23 @@ public class CRUD_operations
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, sessionID);
             resultSet = preparedStatement.executeQuery();
-            if (!resultSet.next())
+            if (!resultSet.next()) {
+                System.out.println("[BD] nu avem valori!!!!!");
                 return false;
+            }
             else {
-                if (resultSet.getTimestamp(1).before(new Timestamp(System.currentTimeMillis())))
+                if (resultSet.getTimestamp(1).before(new Timestamp(System.currentTimeMillis()-43200000)))
+                {
+                    System.out.println( "BD " + resultSet.getTimestamp(1));
+                    System.out.println("[BD]" + new Timestamp(System.currentTimeMillis()-43200000));
                     return false;
+                }
                 else return true;
             }
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
         }
+        System.out.println("bau");
         return false;
     }
 
@@ -202,16 +197,18 @@ public class CRUD_operations
     }
 
 
-    public void deleteSessionID(String sessionID)
+    public void deleteSessionID(String sessionID, String id)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "DELETE FROM sessionID WHERE ID = ?";
+
+            String query = "DELETE FROM sessionID WHERE ID = ? or userID = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, sessionID);
+            preparedStatement.setString(2, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception)
         {
@@ -219,7 +216,7 @@ public class CRUD_operations
         }
     }
 
-    public boolean checkSessionExists(String email) {
+    public int checkSessionExists(String email) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try
@@ -228,14 +225,22 @@ public class CRUD_operations
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, email);
             resultSet = preparedStatement.executeQuery();
+            int logari = 0;
             while (resultSet.next()) {
-                if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis())))
-                    return true;
+                if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis()-43200000)))
+                {
+                    System.out.println("logareGasita!");
+                    System.out.println(resultSet.getTimestamp(1));
+                    System.out.println(new Timestamp(System.currentTimeMillis()-43200000));
+                    logari++;
+                }
             }
+                return logari;
+
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
         }
-        return false;
+        return 0;
     }
 
 

@@ -15,14 +15,10 @@ public class RoutingHandlersTwo
         String sessionID = exchange.getQueryParameters().get("sessionID").getFirst();
         String email = exchange.getQueryParameters().get("email").getFirst();
 
-        System.out.println(sessionID + "- we now have sessionID and " + email);
-
         CRUD_operations operations = new CRUD_operations();
 
 
-
-
-        if(operations.checkSessionExists(email))
+        if(operations.checkSessionExists(email)>2)
         {
             exchange.setStatusCode(400);
             exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/html");
