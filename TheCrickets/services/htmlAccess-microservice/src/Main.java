@@ -1,5 +1,6 @@
 import io.undertow.server.HttpHandler;
 import io.undertow.server.RoutingHandler;
+import io.undertow.server.handlers.BlockingHandler;
 import microservice.Server;
 
 import java.security.InvalidParameterException;
@@ -10,6 +11,8 @@ public class Main
             .get("/login", RoutingHandlers::testHandler)
             .get("/home", RoutingHandlersTwo::testHandler)
             .get("/profile", RoutingHandlersThree::testHandler)
+            .get("/contact", RoutingHandlersFour::testHandler)
+            .post("contact/submit",new BlockingHandler(RoutingHandlersFive::userHandler))
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)

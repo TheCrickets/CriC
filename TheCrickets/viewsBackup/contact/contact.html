@@ -5,10 +5,11 @@
 	<meta charset="utf-8">
 	<title>Contact</title>
 	<link href = "http://localhost:3000/static/login/loginStyleSheet.css" rel = "stylesheet" type = "text/css">
-	<link href = "Form.css" rel = "stylesheet" type = "text/css">
+	<link href = "http://localhost:3000/static/Contact/Form.css" rel = "stylesheet" type = "text/css">
+	<script src = "http://localhost:3000/static/Contact/contact.js"></script>
 </head>
 
-<body onload="onLoad();">
+<body>
     <div id = "coverBlurrDiv"></div>
     <div id = "logoWrapper"><div class = "redLetter">C</div>riC</div>
 
@@ -28,15 +29,15 @@
 		</div>
 
 		<div class="form-style-5">
-			<form>
+			<form name="contactForm">
 			<fieldset>
 			<legend><span class="number"></span>Your opinion matters</legend>
 			<input type="text" name="field1" placeholder="First Name *">
-			<input type="text" name="field1" placeholder="Last Name *">
-			<input type="email" name="field2" placeholder="Your Email *">
-			<textarea name="field3" placeholder="Would you like to say something?"></textarea>     
+			<input type="text" name="field2" placeholder="Last Name *">
+			<input type="email" name="field3" placeholder="Your Email *">
+			<textarea name="field4" placeholder="Would you like to say something?"></textarea>     
 			</fieldset>
-			<input type="submit" value="Submit" />
+			<input type="submit" value="Submit" onclick="contact();" />
 			</form>
 		</div> 
 	</div>
