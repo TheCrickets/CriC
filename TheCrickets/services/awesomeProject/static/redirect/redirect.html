@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+	<title>The Crickets</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<style type="text/css">
+		p {
+			font-family: 'Raleway', sans-serif;
+			color: white;
+		}
+
+		body {
+			background-color: #41B3A3;
+		}
+
+		#demo {
+		    height: 300px;
+		    width: 300px;
+		}
+
+		.center {        
+		  display:block;
+		  margin-left:auto;
+		  margin-right:auto;
+		}
+
+	</style>
+</head>
+
+<body background="#41B3A3">
+
+<h1 style = "font-size : 45px"><p align="center">You have been successfully registered!</p><p align="center">Redirecting you back to the login page...</p></h1>
+<p><img class="center" src = "http://localhost:3000/static/redirect/link.png" height="400"></image></p>
+
+</body>
+
+<script type="text/javascript">
+
+
+	window.onload = setTimeout(function() { 
+		stringBuilder = ("http://localhost:55557/login");
+	    window.location = stringBuilder; 
+	}, 2000);
+
+
+</script>
+
+</html>
