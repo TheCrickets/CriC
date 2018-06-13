@@ -105,16 +105,23 @@ public class CRUD_operations
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, sessionID);
             resultSet = preparedStatement.executeQuery();
-            if (!resultSet.next())
+            if (!resultSet.next()) {
+                System.out.println("[BD] nu avem valori!!!!!");
                 return false;
+            }
             else {
                 if (resultSet.getTimestamp(1).before(new Timestamp(System.currentTimeMillis()-43200000)))
+                {
+                    System.out.println( "BD " + resultSet.getTimestamp(1));
+                    System.out.println("[BD]" + new Timestamp(System.currentTimeMillis()-43200000));
                     return false;
+                }
                 else return true;
             }
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
         }
+        System.out.println("bau");
         return false;
     }
 
@@ -209,7 +216,7 @@ public class CRUD_operations
         }
     }
 
-    public boolean checkSessionExists(String email) {
+    public int checkSessionExists(String email) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try
@@ -228,13 +235,12 @@ public class CRUD_operations
                     logari++;
                 }
             }
-            if(logari>1)
-                return true;
+                return logari;
 
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
         }
-        return false;
+        return 0;
     }
 
 

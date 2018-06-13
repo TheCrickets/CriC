@@ -19,6 +19,8 @@ public class RoutingHandlersThree
 
         CRUD_operations operations = new CRUD_operations();
 
+        System.out.println(operations.checkSessionIDValid(sessionID, email));
+
         if (!operations.checkSessionIDValid(sessionID, email)) {
             System.out.println("SessionID Nu-i BUNNNNNNNNNNNNNNNNNNNNNNNn");
             exchange.setStatusCode(403);

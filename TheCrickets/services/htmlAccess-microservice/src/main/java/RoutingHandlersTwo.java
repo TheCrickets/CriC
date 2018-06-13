@@ -18,7 +18,7 @@ public class RoutingHandlersTwo
         CRUD_operations operations = new CRUD_operations();
 
 
-        if(operations.checkSessionExists(email))
+        if(operations.checkSessionExists(email)>2)
         {
             exchange.setStatusCode(400);
             exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/html");

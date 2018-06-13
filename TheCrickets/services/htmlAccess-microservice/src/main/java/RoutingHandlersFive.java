@@ -24,6 +24,13 @@ public class RoutingHandlersFive
 
         try {
 
+            if(operations.checkSessionExists(email) == 0) {
+                exchange.setStatusCode(400);
+                exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/html");
+                url = new URL("http://localhost:3000/static/noLoggedOut/nolog.html");
+                exchange.getResponseSender().send(FileUtils.readFile(url));
+            }
+
             operations.deleteSessionID(sessionID, String.valueOf(operations.readUserData(email).getId()));
 
             url = new URL("http://localhost:3000/static/logout/loggedOut.html");
