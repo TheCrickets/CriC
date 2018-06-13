@@ -10,14 +10,18 @@ import java.util.Deque;
 public class RoutingHandlers
 {
 
-
+    /**
+     *  Checking if the page exist
+     */
     public static void notFoundHandler(HttpServerExchange exchange)
     {
         exchange.setStatusCode(404);
         exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/plain");
         exchange.getResponseSender().send("Page Not Found!!");
     }
-
+    /**
+     * Checking if the email and the password is correct
+     */
     public static void userHandler(HttpServerExchange exchange)
     {
         exchange.getResponseHeaders().put(HttpString.tryFromString("Access-Control-Allow-Origin"), "*");
@@ -33,17 +37,18 @@ public class RoutingHandlers
         //String mailRegex = exchange.getQueryParameters().get("email").getFirst();
 
         String mailRegex = result.email;
-
-        //System.out.println(result);
-
-
+        /**
+         * Checking if the email is correct
+         */
         if (mailRegex.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"))
         {
 
             System.out.println("matches");
 
             CRUD_operations operations = new CRUD_operations();
-
+            /**
+             * Checking if the email and the password exist
+             */
             if (operations.checkUserExists(result.email, result.password))
             {
 

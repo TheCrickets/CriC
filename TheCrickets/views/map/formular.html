@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="map.css" rel="stylesheet" type="text/css">
+    <link href="formular.css" rel="stylesheet" type="text/css">
+
+    <title>Map</title>
+    <script src="formular.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <a id="leftMostMenuItem" href="#">
+            <img class="navBarImage" alt="Notifications" src="resources/Alet_2.png">Notifications</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img class="navBarImage" alt="Profile" src="resources/user.png"> Profile
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <!--fa fa.. e pt sageata de jos-->
+            <div class="dropdown-content">
+                <a href="#"> &raquo; Your profile</a>
+                <a href="../Home/PersonalInformationFrom.html"> &raquo; Settings </a>
+            </div>
+        </div>
+
+        <a href="#">
+            <img class="navBarImage" alt="Logout" src="resources/logout.png">Logout</a>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="../Home/Home.html" id="home">Home
+            <img class="menuImage" alt="Home" src="resources/home.png">
+        </a>
+        <a href="../map/map.html" id="map">Map
+            <img class="menuImage" alt="Map" src="resources/map.png">
+        </a>
+        <a href="../map/table.html" id="placeholder"  >Table </a>
+
+        <div id="links">
+            <div class="icon-bar">
+                <a href="https://ro-ro.facebook.com/" class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/twitter" class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.google.ro" class="google">
+                    <i class="fa fa-google"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+            </div>
+            <img id="menuImageForLinks" alt="Links" src="resources/social.png">
+
+        </div>
+
+    </div>
+
+    <div class="photouser">
+            <img src="resources/userphoto.png" alt="User">
+            <div id="textUserName">User Name</div>
+        </div>
+ 
+    <div id="mapContainer">
+        <div id="error"></div>
+ <form>
+          <div id="Text">Type</div>
+        <input type="text" id="Type" placeholder="Type">
+         <div id="Text"> Latitude</div>
+         <input type="number" id="Latitude" placeholder="Latitude">
+          <div id="Text"> Longitude</div>
+         <input type="number" id="Longitude" placeholder="Longitude">
+         <br>
+         <br>
+           
+        <input id="Submit" type="button" value="Submit" name="submit" onclick="adaugare();">
+    
+    </form>
+
+      </div>
+       
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+#Type, #Latitude, #Longitude
+{
+    margin-left: 245px;
+    width: 540px;
+    padding-left: 20px; 
+    height: 50px;    
+    opacity: 0.4;
+    background-color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.96);
+    color: black;
+}
+  #Text
+{
+    margin-left: 245px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-family: Roboto;
+    font-size: 24px;
+    
+    color: #000000;
+}
+#Submit
+{
+     margin-left: 245px;
+    width: 211px;
+    height: 59px;
+    left: 473px;
+    top: 902px;
+  
+    background: #66c2b5;
+}
+input[type="button"] {
+    margin-top: 40px;
+    width: 409px;
+    height: 53px;
+    margin-left: 300px;
+    background-color: #4286f4;
+    font-family: Roboto;
+    font-size: 36px;
+    color: #ffffff;
+    border-color:#66c2b5;
+    border-style: solid;
+    cursor: pointer;
+  }
+   #error
+  {
+    font-family: Roboto;
+    font-size: 18px;
+    color: red;
+    display: block;
+    margin-left: -164px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
