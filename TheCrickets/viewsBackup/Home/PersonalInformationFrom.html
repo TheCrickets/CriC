@@ -10,7 +10,12 @@
     <meta charset="utf-8">
 
     <title>Crisis Containment Service</title>
-
+    <script type="text/javascript">
+        function logout() {
+            stringBuilder = ("http://localhost:55557/logout/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+            window.location = stringBuilder;
+        }
+    </script>
 
 </head>
 <body>
@@ -33,7 +38,7 @@
             </div>
         </div>
 
-        <a href="#">
+        <a href="#" onclick="logout();">
             <img class="navBarImage" alt="Logout" src="http://localhost:3000/static/Home/resources/logout.png">Logout</a>
     </nav>
 

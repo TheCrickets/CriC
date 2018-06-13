@@ -12,7 +12,8 @@ public class Main
             .get("/home/{sessionID}/{email}", RoutingHandlersTwo::testHandler)
             .get("/profile/{sessionID}/{email}", RoutingHandlersThree::testHandler)
             .get("/contact", RoutingHandlersFour::testHandler)
-            .post("contact/submit",new BlockingHandler(RoutingHandlersSix::userHandler))
+            .get("/logout/{sessionID}/{email}", RoutingHandlersFive::testHandler)
+            .post("/contact/submit",new BlockingHandler(RoutingHandlersSix::userHandler))
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)

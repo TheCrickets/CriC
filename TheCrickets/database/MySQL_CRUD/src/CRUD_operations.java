@@ -156,6 +156,43 @@ public class CRUD_operations
         }
     }
 
+
+    public void deleteSessionID(String sessionID)
+    {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try
+        {
+            String query = "DELETE FROM sessionID WHERE ID = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, sessionID);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception)
+        {
+            System.err.println("Error while trying to deleteSessionID data from database: " + exception.getMessage());
+        }
+    }
+
+    public boolean checkSessionExists(String email) {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try
+        {
+            String query = "SELECT expiringDate FROM sessionID JOIN users on sessionID.userID = users.id and users.email = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, email);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis())))
+                    return true;
+            }
+        } catch (SQLException exception) {
+            System.err.println("Error at checking session for validity: " + exception.getMessage());
+        }
+        return false;
+    }
+
     public void updateUserData(int id, String firstName, String lastName, Date dateOfBirth, String phoneNumber) {
 
         PreparedStatement preparedStatement = null;

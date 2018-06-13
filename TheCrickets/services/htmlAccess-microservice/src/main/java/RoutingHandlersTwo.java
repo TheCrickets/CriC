@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class RoutingHandlersTwo
 {
-
+    
     public static void testHandler(HttpServerExchange exchange)
     {
         exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/html");
@@ -19,18 +19,36 @@ public class RoutingHandlersTwo
 
         CRUD_operations operations = new CRUD_operations();
 
-        if(!operations.checkSessionIDValid(sessionID, email)) {
-            exchange.setStatusCode(403);
-            exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/plain");
-            exchange.getResponseSender().send("Not authorized to enter this page!");
-        }
-        else {
-            URL url = null;
+
+
+
+        if(operations.checkSessionExists(email))
+        {
+            exchange.setStatusCode(400);
+            exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/html");
             try {
-                url = new URL("http://localhost:3000/static/Home/Home.html");
+                URL url = new URL("http://localhost:3000/static/loggedIn/loggedIn.html");
                 exchange.getResponseSender().send(FileUtils.readFile(url));
             } catch (MalformedURLException e) {
                 System.out.println("URL problem!");
+            }
+
+        }
+        else {
+
+            if(!operations.checkSessionIDValid(sessionID, email)) {
+                exchange.setStatusCode(403);
+                exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/plain");
+                exchange.getResponseSender().send("Not authorized to enter this page!");
+            }
+            else {
+                URL url = null;
+                try {
+                    url = new URL("http://localhost:3000/static/Home/Home.html");
+                    exchange.getResponseSender().send(FileUtils.readFile(url));
+                } catch (MalformedURLException e) {
+                    System.out.println("URL problem!");
+                }
             }
         }
     }
