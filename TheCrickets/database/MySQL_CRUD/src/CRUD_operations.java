@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -61,6 +62,34 @@ public class CRUD_operations
         }
         return false;
     }
+
+
+    ArrayList<Disaster> getAllEvents() {
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        try
+        {
+            String query = "SELECT * FROM disasters";
+            preparedStatement = connection.prepareStatement(query);
+            resultSet = preparedStatement.executeQuery();
+            ArrayList<Disaster> disasters = new ArrayList<>();
+            while (resultSet.next()) {
+                Disaster disaster = new Disaster();
+                disaster.setID(resultSet.getInt(1));
+                disaster.setType(resultSet.getString(2));
+                disaster.setTime(resultSet.getTimestamp(3));
+                disaster.setLatitude(resultSet.getFloat(4));
+                disaster.setLongitude(resultSet.getFloat(5));
+                disasters.add(disaster);
+                return disasters;
+            }
+        } catch (SQLException exception) {
+            System.err.println("Error at checking session for validity: " + exception.getMessage());
+        }
+        return null;
+    }
+
+
 
     boolean checkSessionIDValid(String sessionID, String email) {
         PreparedStatement preparedStatement = null;
@@ -192,6 +221,9 @@ public class CRUD_operations
         }
         return false;
     }
+
+
+
 
     public void updateUserData(int id, String firstName, String lastName, Date dateOfBirth, String phoneNumber) {
 

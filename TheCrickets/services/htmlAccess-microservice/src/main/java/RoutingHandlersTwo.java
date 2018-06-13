@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class RoutingHandlersTwo
 {
-    
+
     public static void testHandler(HttpServerExchange exchange)
     {
         exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/html");
