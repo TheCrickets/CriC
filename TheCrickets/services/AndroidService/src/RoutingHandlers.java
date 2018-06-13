@@ -27,7 +27,14 @@ public class RoutingHandlers
         RequestData requestData = JsonUtilities.parseJson(exchange, new TypeReference<RequestData>(){});
 
         System.out.println(requestData.toString());
-        JsonUtilities.sendJson(exchange, "Hello world!");
+        StringBuilder message = new StringBuilder();
+
+        // here make the first part of the message
+        message.append("Check earthquake out!");
+
+        //here give the link where the user will be redirected as soon as he/she taps on the notificatiom
+        message.append("http://students.info.uaic.ro/~lucian.covaliu/");
+        JsonUtilities.sendJson(exchange, message);
 
     }
 }
