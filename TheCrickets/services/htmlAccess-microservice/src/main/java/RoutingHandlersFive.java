@@ -24,7 +24,8 @@ public class RoutingHandlersFive
 
         try {
 
-            operations.deleteSessionID(sessionID);
+            operations.deleteSessionID(sessionID, String.valueOf(operations.readUserData(email).getId()));
+
             url = new URL("http://localhost:3000/static/logout/loggedOut.html");
             exchange.getResponseSender().send(FileUtils.readFile(url));
         } catch (MalformedURLException e) {

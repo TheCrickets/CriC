@@ -20,6 +20,7 @@ public class RoutingHandlersThree
         CRUD_operations operations = new CRUD_operations();
 
         if (!operations.checkSessionIDValid(sessionID, email)) {
+            System.out.println("SessionID Nu-i BUNNNNNNNNNNNNNNNNNNNNNNNn");
             exchange.setStatusCode(403);
             exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/plain");
             exchange.getResponseSender().send("Not authorized to enter this page!");

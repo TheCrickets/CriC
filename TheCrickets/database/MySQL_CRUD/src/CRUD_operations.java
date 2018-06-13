@@ -108,7 +108,7 @@ public class CRUD_operations
             if (!resultSet.next())
                 return false;
             else {
-                if (resultSet.getTimestamp(1).before(new Timestamp(System.currentTimeMillis())))
+                if (resultSet.getTimestamp(1).before(new Timestamp(System.currentTimeMillis()-43200000)))
                     return false;
                 else return true;
             }
@@ -190,16 +190,18 @@ public class CRUD_operations
     }
 
 
-    public void deleteSessionID(String sessionID)
+    public void deleteSessionID(String sessionID, String id)
     {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try
         {
-            String query = "DELETE FROM sessionID WHERE ID = ?";
+
+            String query = "DELETE FROM sessionID WHERE ID = ? or userID = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, sessionID);
+            preparedStatement.setString(2, id);
             preparedStatement.executeUpdate();
         } catch (SQLException exception)
         {
@@ -216,14 +218,19 @@ public class CRUD_operations
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, email);
             resultSet = preparedStatement.executeQuery();
+            int logari = 0;
             while (resultSet.next()) {
                 if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis()-43200000)))
                 {
+                    System.out.println("logareGasita!");
                     System.out.println(resultSet.getTimestamp(1));
                     System.out.println(new Timestamp(System.currentTimeMillis()-43200000));
-                    return true;
+                    logari++;
                 }
             }
+            if(logari>1)
+                return true;
+
         } catch (SQLException exception) {
             System.err.println("Error at checking session for validity: " + exception.getMessage());
         }
