@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="1.0" />
-        <module name="SimpleMicroservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1.0" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

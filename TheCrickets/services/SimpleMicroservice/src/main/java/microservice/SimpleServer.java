@@ -7,11 +7,13 @@ import io.undertow.Undertow;
 import io.undertow.UndertowOptions;
 import io.undertow.server.HttpHandler;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class SimpleServer
 {
     private static final Logger logger = LoggerFactory.getLogger(SimpleServer.class);
     private static final int DEFAULT_PORT = 55555;
-    private static final String DEFAULT_HOST = "localhost";
 
     private final Undertow.Builder undertowBuilder;
 
@@ -56,13 +58,20 @@ public class SimpleServer
     {
         if (port <= 0)
             port = DEFAULT_PORT;
-        Undertow.Builder undertow = Undertow.builder()
-                /*
-                 * This setting is needed if you want to allow '=' as a value in a cookie.
-                 * If you base64 encode any cookie values you probably want it on.
-                 */
-                .setServerOption(UndertowOptions.ALLOW_EQUALS_IN_COOKIE_VALUE, true)
-                .addHttpListener(port, DEFAULT_HOST, handler);
+        Undertow.Builder undertow = null;
+        try
+        {
+            undertow = Undertow.builder()
+                    /*
+                     * This setting is needed if you want to allow '=' as a value in a cookie.
+                     * If you base64 encode any cookie values you probably want it on.
+                     */
+                    .setServerOption(UndertowOptions.ALLOW_EQUALS_IN_COOKIE_VALUE, true)
+                    .addHttpListener(port, InetAddress.getLocalHost().getHostAddress(), handler);
+        } catch (UnknownHostException e)
+        {
+            e.printStackTrace();
+        }
         return new SimpleServer(undertow);
     }
 }
