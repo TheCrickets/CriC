@@ -12,7 +12,7 @@
     <script src="map.js"></script>
 </head>
 
-<body>
+<body onload="table('Id');">
 
     <nav>
         <a id="leftMostMenuItem" href="#">
@@ -40,7 +40,7 @@
         <a href="../map/map.html" id="map">Map
             <img class="menuImage" alt="Map" src="resources/map.png">
         </a>
-        <a href="../map/table.html" id="placeholder">Table </a>
+        <a href="../map/table.html" id="placeholder"  >Table </a>
 
         <div id="links">
             <div class="icon-bar">
@@ -72,10 +72,19 @@
     <div id="mapContainer">
 
         <p id="demo"></p>
-        <iframe width="1110" height="550" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&t=TABLE&q=select+col0%2C+col1%2C+col2%2C+col3%2C+col4+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&containerId=googft-gviz-canvas"></iframe>
-        <div id="options" >
-        
-           <button class="button" onclick="table();">Table </button>
+
+      
+        <div id="options" > 
+         <!-- <iframe width="1110" height="550" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&t=TABLE&q=select+col0%2C+col1%2C+col2%2C+col3%2C+col4+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&containerId=googft-gviz-canvas"></iframe>
+           <button class="button" onclick="table();">Table </button> -->
+           <select id="myselect" onchange="table(this.value)">
+            <option value="">Choose an option:</option>
+<option value="Id">Id</option>
+<option value="Administrative_Unit">Administrative Unit</option>
+<option value="Suspension">Suspension</option>
+<option value="Effective">Effective</option>
+<option value="Area">Area</option>
+</select>
     </div>
 </body>
 

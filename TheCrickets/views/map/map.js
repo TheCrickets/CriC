@@ -1,9 +1,9 @@
 
-function table() {
+function table(nr) {
     
 	var xhttp = new XMLHttpRequest();
 
-var url = "https://www.googleapis.com/fusiontables/v2/query?sql=SELECT * FROM 16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH order by Id&key=AIzaSyCZM6ADktRUOURrnm1DCvTodYP_HLlSJnU";
+var url = "https://www.googleapis.com/fusiontables/v2/query?sql=SELECT * FROM 16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH order by "+ nr+"&key=AIzaSyCZM6ADktRUOURrnm1DCvTodYP_HLlSJnU";
 xhttp.open("POST", url,   true);
    
  var txt="" , x , myObj;
@@ -23,7 +23,7 @@ xhttp.open("POST", url,   true);
         txt += "</table>"        
         document.getElementById("demo").innerHTML = txt;
     }
-       console.log(xhttp.responseText);
+     //  console.log(xhttp.responseText);
   }
 xhttp.send();
 }
