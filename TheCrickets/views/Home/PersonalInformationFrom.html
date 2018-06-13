@@ -12,7 +12,7 @@
 
 
 </head>
-<body>
+<body  id="pagina">
 
 
 
@@ -40,11 +40,10 @@
           <a href="Home.html" id="home">Home
             <img class="menuImage" alt="Home" src="resources/home.png">
         </a>
-        <a href="#" id="map">Map
+        <a href="../map/map.html" id="map">Map
             <img class="menuImage" alt="Map" src="resources/map.png">
         </a>
-        <a href="#" id="placeholder">Place Holder </a>
-
+        <a href="../map/table.html" id="placeholder">Table </a>
         <div id="links">
             <div class="icon-bar">
                 <a href="https://ro-ro.facebook.com/" class="facebook">
@@ -71,12 +70,12 @@
 
 
 
+
         <div class="photouser">
             <img src="resources/userphoto.png" alt="User">
             <div id="textUserName">User Name</div>
         </div>
      
-
 
 
 
@@ -126,7 +125,9 @@
         </label>
         
         <br>
-        <input type="button" value="Save" name="form" onclick="saveChanges();">
+        <div id="Save">
+        <input id="Save" type="button" value="Save" name="form" onclick="saveChanges();">
+    </div>
         <br>
         <br>
     </form>
@@ -138,5 +139,6 @@
 
 
 </div>
+
 </body>
 </html>

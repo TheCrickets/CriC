@@ -474,7 +474,7 @@ div#textUserName {
 
 #mapContainer {
   position: relative;
-  top: 21%;
+  top: 24%;
   left: 8%;
   width: 95%;
   height: 77%;
@@ -522,3 +522,17 @@ body {
     height: 88%;
   }
 }
+
+.button {
+    background-color: #41B3A3;
+    border: none;
+    color: white;
+
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

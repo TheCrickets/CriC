@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Map</title>
+    <script src="map.js"></script>
 </head>
 
 <body>
@@ -36,10 +37,10 @@
         <a href="../Home/Home.html" id="home">Home
             <img class="menuImage" alt="Home" src="resources/home.png">
         </a>
-        <a href="#" id="map">Map
+        <a href="../map/map.html" id="map">Map
             <img class="menuImage" alt="Map" src="resources/map.png">
         </a>
-        <a href="#" id="placeholder">Place Holder </a>
+       <a href="../map/table.html" id="placeholder">Table </a>
 
         <div id="links">
             <div class="icon-bar">
@@ -67,14 +68,15 @@
             <img src="resources/userphoto.png" alt="User">
             <div id="textUserName">User Name</div>
         </div>
-
+ 
     <div id="mapContainer">
-        <iframe allowfullscreen src="http://google.org/crisismap/weather_and_events?hl=en-GB&embedded=true" id="mapFrame"></iframe>
-        <div id="options">
+        <iframe width="1110" height="550" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col1+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&viz=MAP&h=false&lat=42.758368053254614&lng=19.41935798181703&t=1&z=4&l=col1&y=2&tmplt=2&hml=ONE_COL_LAT_LNG"></iframe>
+        <div id="options" >
             <!-- to format -->
             Use double left click to zoom in and double right click to zoom out.
             <br> You can see the full map
-            <a href="http://google.org/crisismap/weather_and_events?hl=en-GB" target="_blank">here</a>
+            <a href="https://fusiontables.google.com/embedviz?q=select+col1+from+16MVlANGXdtndx6ouQaufWzvPyzlfGPsl1DfTDJkH&viz=MAP&h=false&lat=42.758368053254614&lng=19.41935798181703&t=1&z=4&l=col1&y=2&tmplt=2&hml=ONE_COL_LAT_LNG" target="_blank">here</a>
+           
             <br> More options here.</div>
     </div>
 </body>

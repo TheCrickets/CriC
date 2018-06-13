@@ -1,12 +1,36 @@
 import java.sql.Date;
 
+/**
+ * The User class is used to get and set the information of a user
+ */
 public class User {
+    /**
+     *  id of a user
+     */
     public int id;
+    /**
+     *  the name  of a user
+     */
     public String firstName;
+    /**
+     *  the last name of a user
+     */
     public String lastName;
+    /**
+     * the email of a user
+     */
     public String email;
+    /**
+     *  the password  of a user
+     */
     public String password;
+    /**
+     *  date of Birth  of a user
+     */
     public Date dateOfBirth;
+    /**
+     *  the phone number of a user
+     */
     public String phoneNumber;
 
     User(){}
@@ -29,10 +53,18 @@ public class User {
         this.id = id;
     }
 
+    /**
+     * to get the name of a user
+     * @return the first name of a user
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * To set a name of a user
+     * @param firstName the first name of a user
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

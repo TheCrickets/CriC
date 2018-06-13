@@ -2,6 +2,10 @@
   position:relative;
   left: 300px;
   top:50px;
+    background-color: #41B3A3;
+}
+#pagina{
+ background-color: #85DCBE;
 }
 
 #PersonalInformation
@@ -9,7 +13,7 @@
     text-align: center;
     font-family: Roboto;
     font-size: 48px;
-    
+     background-color: #66c2b5;
     color: #000000;
 }
 
@@ -18,10 +22,10 @@
     left: 59px;
     top: 169px;
    
-    background-color: #1abc9c;
+    background-color: #c6e8e3;
     padding-left: 58px;
     z-index: 100;
-    background: #F0EDED;
+     
 }
 
 #ProfilePicture
@@ -74,7 +78,7 @@
     left: 473px;
     top: 822px;
   
-    background: #C4C4C4;
+    background: #66c2b5;
 }
 
 .UseMyLocationBox
@@ -130,7 +134,7 @@ input[type="button"] {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) 
-{
+{ 
     #continut 
     {
         width: 50%;
@@ -184,7 +188,7 @@ input[type="button"] {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
-{
+{ 
     #continut 
     {
         width: 50%;
@@ -239,6 +243,7 @@ input[type="button"] {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) 
 {
+
     #continut 
     {
         width: 60%;
@@ -300,6 +305,7 @@ input[type="button"] {
 
         overflow: hidden;
     }
+
     #PersonalInformation 
     {
         font-size: 44px;
@@ -354,6 +360,7 @@ input[type="button"] {
 
         overflow: hidden;
     }
+
     #PersonalInformation 
     {
         font-size: 48px;
