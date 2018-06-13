@@ -61,6 +61,8 @@ public class SimpleServer
         Undertow.Builder undertow = null;
         try
         {
+            System.out.println("Starting server on " + InetAddress.getLocalHost().getHostAddress() + ":" + port);
+
             undertow = Undertow.builder()
                     /*
                      * This setting is needed if you want to allow '=' as a value in a cookie.
