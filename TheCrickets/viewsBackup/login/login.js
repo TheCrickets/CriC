@@ -81,7 +81,9 @@ xhttp.open("POST", url,   true);
   			 console.log( xhttp.responseText );
 			localStorage.setItem("email",email);
             localStorage.setItem("sessionID",xhttp.responseText.substr(1,xhttp.responseText.length - 2));
-   			window.location.href = "../Home/home.html";
+   			//window.location.href = "../Home/home.html";
+   			stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+   			window.location = stringBuilder;
     }
     else 
     	toggleError("Ati gresit email-ul sau parola!");
@@ -134,7 +136,9 @@ xmlhttp.open("POST", url,   true);
 xmlhttp.onreadystatechange = function() {//Call a function when the state changes.
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
     	console.log( xmlhttp.responseText);
-         alert(xmlhttp.responseText);
+        alert(xmlhttp.responseText);
+        stringBuilder = ("http://localhost:55557/home/").concat(localStorage.getItem("sessionID")).concat("/").concat(localStorage.getItem("email"));
+   		window.location = stringBuilder;
     }
     else {
     	if( xmlhttp.status == 406) 

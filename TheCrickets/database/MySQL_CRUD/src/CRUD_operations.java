@@ -15,24 +15,24 @@ public class CRUD_operations
 
     CRUD_operations()
     {
-        try
-        {
-
-            //File file = new File(".");
-            //for(String fileNames : file.list()) System.out.println(fileNames);
-
-            File file = new File("databaseConfig.txt");
-            Scanner sc = new Scanner(file);
+        //try
+        //{
+            //File file = new File("http://localhost:3000/static/databaseConfig.txt");
+            //Scanner sc = new Scanner(file);
             DatabaseConnection databaseConnection = new DatabaseConnection();
-            databaseConnection.setDriverInitialisation(sc.nextLine());
-            databaseConnection.setDriverConnection(sc.nextLine());
-            databaseConnection.setUser(sc.nextLine());
-            databaseConnection.setPassword(sc.nextLine());
+
+
+            databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
+            databaseConnection.setDriverConnection("jdbc:mysql://localhost:3306/databaseStorage?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
+            databaseConnection.setUser("CriC_Admin");
+            databaseConnection.setPassword("password");
+
+
             connection = databaseConnection.connect();
-        } catch (FileNotFoundException exception)
-        {
-            System.err.println("Configuration file not foundd: " + exception.getMessage());
-        }
+        //} catch (FileNotFoundException exception)
+        //{
+        //    System.err.println("Configuration file not foundd: " + exception.getMessage());
+        //}
     }
 
     boolean checkUserExists(String email, String password)

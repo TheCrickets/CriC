@@ -4,9 +4,9 @@ import io.undertow.util.Headers;
 import io.undertow.util.HttpString;
 import microservice.JsonUtilities;
 
-public class RoutingHandlersFive {
+public class RoutingHandlersSix {
 
-    public static String SENDTO = "martincu.petru@gmail.com";
+    public static String SENDTO = "luciancovaliu41@gmail.com ";
 
     public static void userHandler(HttpServerExchange exchange)
     {

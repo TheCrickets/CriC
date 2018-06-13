@@ -9,10 +9,10 @@ public class Main
 {
     private static final HttpHandler ROUTES = new RoutingHandler()
             .get("/login", RoutingHandlers::testHandler)
-            .get("/home", RoutingHandlersTwo::testHandler)
-            .get("/profile", RoutingHandlersThree::testHandler)
+            .get("/home/{sessionID}/{email}", RoutingHandlersTwo::testHandler)
+            .get("/profile/{sessionID}/{email}", RoutingHandlersThree::testHandler)
             .get("/contact", RoutingHandlersFour::testHandler)
-            .post("contact/submit",new BlockingHandler(RoutingHandlersFive::userHandler))
+            .post("contact/submit",new BlockingHandler(RoutingHandlersSix::userHandler))
             .setFallbackHandler(RoutingHandlers::notFoundHandler);
 
     public static void main(String[] args)
