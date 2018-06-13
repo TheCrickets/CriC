@@ -72,6 +72,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="databaseConfig.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseConfig.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -92,6 +101,7 @@
         <option value="$PROJECT_DIR$/src/Server.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
+        <option value="$PROJECT_DIR$/databaseConfig.txt" />
         <option value="$PROJECT_DIR$/src/RoutingHandlers.java" />
       </list>
     </option>
@@ -106,26 +116,25 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="190" />
-    <option name="width" value="1555" />
-    <option name="height" value="1040" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="login" type="b2602c69:ProjectViewProjectNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="login" type="b2602c69:ProjectViewProjectNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="login" type="b2602c69:ProjectViewProjectNode" />

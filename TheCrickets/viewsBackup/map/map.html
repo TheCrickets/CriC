@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="map.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=loginPageTextFont" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map</title>
+</head>
+
+<body>
+
+    <nav>
+        <a id="leftMostMenuItem" href="#">
+            <img class="navBarImage" alt="Notifications" src="resources/Alet_2.png">Notifications</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img class="navBarImage" alt="Profile" src="resources/user.png"> Profile
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <!--fa fa.. e pt sageata de jos-->
+            <div class="dropdown-content">
+                <a href="#"> &raquo; Your profile</a>
+                <a href="../Home/PersonalInformationFrom.html"> &raquo; Settings </a>
+            </div>
+        </div>
+
+        <a href="#">
+            <img class="navBarImage" alt="Logout" src="resources/logout.png">Logout</a>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="../Home/Home.html" id="home">Home
+            <img class="menuImage" alt="Home" src="resources/home.png">
+        </a>
+        <a href="#" id="map">Map
+            <img class="menuImage" alt="Map" src="resources/map.png">
+        </a>
+        <a href="#" id="placeholder">Place Holder </a>
+
+        <div id="links">
+            <div class="icon-bar">
+                <a href="https://ro-ro.facebook.com/" class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/twitter" class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.google.ro" class="google">
+                    <i class="fa fa-google"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+            </div>
+            <img id="menuImageForLinks" alt="Links" src="resources/social.png">
+
+        </div>
+
+    </div>
+
+    <div class="photouser">
+            <img src="resources/userphoto.png" alt="User">
+            <div id="textUserName">User Name</div>
+        </div>
+
+    <div id="mapContainer">
+        <iframe allowfullscreen src="http://google.org/crisismap/weather_and_events?hl=en-GB&embedded=true" id="mapFrame"></iframe>
+        <div id="options">
+            <!-- to format -->
+            Use double left click to zoom in and double right click to zoom out.
+            <br> You can see the full map
+            <a href="http://google.org/crisismap/weather_and_events?hl=en-GB" target="_blank">here</a>
+            <br> More options here.</div>
+    </div>
+</body>
+
+</html>

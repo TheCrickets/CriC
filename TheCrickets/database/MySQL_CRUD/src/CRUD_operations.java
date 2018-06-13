@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -15,23 +16,39 @@ public class CRUD_operations
 
     CRUD_operations()
     {
-        try
-        {
-
-            //File file = new File(".");
-            //for(String fileNames : file.list()) System.out.println(fileNames);
-
-            File file = new File("databaseConfig.txt");
-            Scanner sc = new Scanner(file);
+        //try
+        //{
+            //File file = new File("http://localhost:3000/static/databaseConfig.txt");
+            //Scanner sc = new Scanner(file);
             DatabaseConnection databaseConnection = new DatabaseConnection();
-            databaseConnection.setDriverInitialisation(sc.nextLine());
-            databaseConnection.setDriverConnection(sc.nextLine());
-            databaseConnection.setUser(sc.nextLine());
-            databaseConnection.setPassword(sc.nextLine());
+
+
+            databaseConnection.setDriverInitialisation("com.mysql.cj.jdbc.Driver");
+            databaseConnection.setDriverConnection("jdbc:mysql://138.68.64.239:3306/CRIC?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false");
+            databaseConnection.setUser("test");
+            databaseConnection.setPassword("");
+
+
             connection = databaseConnection.connect();
-        } catch (FileNotFoundException exception)
-        {
-            System.err.println("Configuration file not foundd: " + exception.getMessage());
+        //} catch (FileNotFoundException exception)
+        //{
+        //    System.err.println("Configuration file not foundd: " + exception.getMessage());
+        //}
+    }
+
+    void insertDisaster(Disaster disaster) {
+        try {
+            PreparedStatement preparedStatement = null;
+            String query = "INSERT INTO disasters VALUES (?, ?, ?, ?, ?)";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, disaster.getID());
+            preparedStatement.setString(2, disaster.getType());
+            preparedStatement.setTimestamp(3, disaster.getTime());
+            preparedStatement.setFloat(4, disaster.getLatitude());
+            preparedStatement.setFloat(5, disaster.getLongitude());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("SQL error: " + e.getMessage());
         }
     }
 
@@ -61,6 +78,34 @@ public class CRUD_operations
         }
         return false;
     }
+
+
+    ArrayList<Disaster> getAllEvents() {
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        try
+        {
+            String query = "SELECT * FROM disasters";
+            preparedStatement = connection.prepareStatement(query);
+            resultSet = preparedStatement.executeQuery();
+            ArrayList<Disaster> disasters = new ArrayList<>();
+            while (resultSet.next()) {
+                Disaster disaster = new Disaster();
+                disaster.setID(resultSet.getInt(1));
+                disaster.setType(resultSet.getString(2));
+                disaster.setTime(resultSet.getTimestamp(3));
+                disaster.setLatitude(resultSet.getFloat(4));
+                disaster.setLongitude(resultSet.getFloat(5));
+                disasters.add(disaster);
+            }
+            return disasters;
+        } catch (SQLException exception) {
+            System.err.println("Error at checking session for validity: " + exception.getMessage());
+        }
+        return null;
+    }
+
+
 
     boolean checkSessionIDValid(String sessionID, String email) {
         PreparedStatement preparedStatement = null;
@@ -155,6 +200,46 @@ public class CRUD_operations
             System.err.println("Error while trying to deleteUser data from database: " + exception.getMessage());
         }
     }
+
+
+    public void deleteSessionID(String sessionID)
+    {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try
+        {
+            String query = "DELETE FROM sessionID WHERE ID = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, sessionID);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception)
+        {
+            System.err.println("Error while trying to deleteSessionID data from database: " + exception.getMessage());
+        }
+    }
+
+    public boolean checkSessionExists(String email) {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try
+        {
+            String query = "SELECT expiringDate FROM sessionID JOIN users on sessionID.userID = users.id and users.email = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, email);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                if(resultSet.getTimestamp(1).after(new Timestamp(System.currentTimeMillis())))
+                    return true;
+            }
+        } catch (SQLException exception) {
+            System.err.println("Error at checking session for validity: " + exception.getMessage());
+        }
+        return false;
+    }
+
+
+
 
     public void updateUserData(int id, String firstName, String lastName, Date dateOfBirth, String phoneNumber) {
 

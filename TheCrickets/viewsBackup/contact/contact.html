@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<title>Contact</title>
+	<link href = "http://localhost:3000/static/login/loginStyleSheet.css" rel = "stylesheet" type = "text/css">
+	<link href = "http://localhost:3000/static/Contact/Form.css" rel = "stylesheet" type = "text/css">
+	<script src = "http://localhost:3000/static/Contact/contact.js"></script>
+</head>
+
+<body>
+    <div id = "coverBlurrDiv"></div>
+    <div id = "logoWrapper"><div class = "redLetter">C</div>riC</div>
+
+	<div id="navDivWrapper">
+		<nav>
+            <div class="lineFromCenter"><a href="#"></a></div>
+			<div class="lineFromCenter"><a href="http://localhost:55557/login" onclick="removeOtherTextButAbout()"><img class = "navBarImage" src="http://localhost:3000/static/login/resources/about.png" alt="About">About</a></div>
+			<div class="lineFromCenter"><a href="#loginBox" onclick="removeOtherTextButLogin()" ><img class = "navBarImage" src="http://localhost:3000/static/login/resources/login.png" alt="Login">Login</a></div>
+			<div class="lineFromCenter"><a href="#registerContainer" onclick="removeOtherTextButRegister()"><img class = "navBarImage" src="http://localhost:3000/static/login/resources/register.png" alt="Register">Register</a></div>
+			<div class="lineFromCenter"><a href="#" onclick="removeOtherTextButContact()"><img class = "navBarImage" src="http://localhost:3000/static/login/resources/contact.png" alt="Contact">Contact</a></div>
+		</nav>
+	</div>
+
+
+		<div id = "firstPart">
+			
+		</div>
+
+		<div class="form-style-5">
+			<form name="contactForm">
+			<fieldset>
+			<legend><span class="number"></span>Your opinion matters</legend>
+			<input type="text" id="field1" placeholder="First Name *">
+			<input type="text" id="field2" placeholder="Last Name *">
+			<input type="email" id="field3" placeholder="Your Email *">
+			<textarea id="field4" placeholder="Would you like to say something?"></textarea>     
+			</fieldset>
+			<input type="button" value="Submit" onclick="contact();" />
+			</form>
+		</div> 
+	</div>
+	<div id = "secondPart">
+	</div>
+
+</body>
+</html>
