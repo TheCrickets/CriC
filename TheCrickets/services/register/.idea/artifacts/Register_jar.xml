@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Register:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Register_jar</output-path>
+    <root id="archive" name="Register.jar">
+      <element id="module-output" name="Register" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../database/MySQL_CRUD/out/artifacts/MySQL_CRUD_jar/MySQL_CRUD.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../org-apache-commons-codec.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SimpleMicroservice.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

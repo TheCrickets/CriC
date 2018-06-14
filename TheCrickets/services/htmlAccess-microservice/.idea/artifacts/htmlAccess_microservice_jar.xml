@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="htmlAccess-microservice:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/htmlAccess_microservice_jar</output-path>
+    <root id="archive" name="htmlAccess-microservice.jar">
+      <element id="module-output" name="htmlAccess-microservice" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../MySQL_CRUD.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SimpleMicroservice.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/mail/mail/1.4.7/mail-1.4.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

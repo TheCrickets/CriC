@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="login:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/login_jar</output-path>
+    <root id="archive" name="login.jar">
+      <element id="module-output" name="login" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../database/MySQL_CRUD/org-apache-commons-codec.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SimpleMicroservice.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../MySQL_CRUD.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

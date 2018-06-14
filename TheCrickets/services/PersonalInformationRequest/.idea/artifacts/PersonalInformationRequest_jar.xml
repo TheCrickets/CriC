@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PersonalInformationRequest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PersonalInformationRequest_jar</output-path>
+    <root id="archive" name="PersonalInformationRequest.jar">
+      <element id="module-output" name="PersonalInformationRequest" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../org-apache-commons-codec.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../MySQL_CRUD.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SimpleMicroservice.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
